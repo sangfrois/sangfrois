@@ -2,6 +2,8 @@
 
 **Transdisciplinary researcher surfing on the edges of their Consciousness with More-than-Human Creativity🌌**
 
+***Sorry for the mess but... this is a revolution***
+
 - 🔭 I’m currently working on interactive installations and performance research with GenAI and neurotechnologies
 - 🌱 I’m currently learning how to train « old school » GANs with my archives 
 - 👯 I’m looking to collaborate on LLM-assisted descriptive phenomenology for interview data
