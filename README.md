@@ -1,6 +1,6 @@
 ## François Lespinasse 🧠🤖
 
-**Transdisciplinary researcher surfing on the edges of their Consciousness with More-than-Human Creativity🌌**
+**Transdisciplinary researcher and artist surfing on the edges of their Consciousness with More-than-Human Creativity🌌**
 
 ***Sorry for the mess but... this is a revolution***
 
