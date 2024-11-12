@@ -1,6 +1,8 @@
 ## François Lespinasse 🧠🤖
 
-**Transdisciplinary researcher and artist surfing on the edges of their Consciousness with More-than-Human Creativity🌌**
+**Transdisciplinary Trailblazer 🌎 🌍 🌏**
+
+I see myself as a [cyber](https://en.wikipedia.org/wiki/Cybernetics)-[maverick](https://www.merriam-webster.com/dictionary/maverick) blurring boundaries and bending the rules of disciplines.
 
 ***Sorry for the mess but... this is a revolution***
 
