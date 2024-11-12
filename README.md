@@ -1,6 +1,6 @@
 ## ♒🌻 François Lespinasse  🧠🤖
 
- **Transdisciplinary Trailblazer // PhD student @ ConcordiaUni**
+ **Transdisciplinary Trailblazer // PhD student @ ConcordiaUni Tio'tia:keh**
 
 I see myself as a [cyber](https://en.wikipedia.org/wiki/Cybernetics)-[maverick](https://www.merriam-webster.com/dictionary/maverick) blurring boundaries and bending the rules of disciplines.
 
