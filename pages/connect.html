@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Connect - François Lespinasse</title>
+    <link rel="icon" type="image/x-icon" href="../images/favicon/favicon.ico">
+    <link rel="icon" type="image/png" sizes="96x96" href="../images/favicon/favicon-96x96.png">
+    <link rel="icon" type="image/svg+xml" href="../images/favicon/favicon.svg">
+    <link rel="apple-touch-icon" href="../images/favicon/web-app-manifest-512x512.png">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <div id="particles-js"></div>
+    <div class="content">
+        <nav>
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="cv.html">CV</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+                <li><a href="publications.html">Publications</a></li>
+                <li><a href="insights.html">Insights</a></li>
+                <li><a href="connect.html">Connect</a></li>
+            </ul>
+        </nav>
+        <main class="social-links">
+
+            <h2 class="section-title">Connect With Me</h2>
+            <div class="social-links-container" style="text-align: center;">
+                <a href="https://scholar.google.com/citations?user=VjJntXAAAAAJ&hl=en&oi=ao" class="social-button">Google Scholar</a>
+                <a href="https://www.researchgate.net/profile/Francois-Lespinasse" class="social-button">ResearchGate</a>
+                <a href="https://www.instagram.com/sangfrois/" class="social-button">Instagram</a>
+                <a href="https://soundcloud.com/franc0isl" class="social-button">Soundcloud</a>
+                <a href="https://twitter.com/franclespinas" class="social-button">X (Twitter)</a>
+            </div>
+
+            <div class="contact-form-container">
+                <h3>Send me a message</h3>
+                <form id="contact-form" action="https://formspree.io/f/your-form-id" method="POST">
+                    <div class="form-group">
+                        <label for="name">Name:</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="subject">Subject:</label>
+                        <input type="text" id="subject" name="subject" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message:</label>
+                        <textarea id="message" name="message" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="social-button">Send Message</button>
+                </form>
+            </div>
+        </main>
+    </div>
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="../js/main.js"></script>
+</body>
+</html>
