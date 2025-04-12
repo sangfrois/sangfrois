@@ -21,8 +21,16 @@
     font-style: normal;
 }
 
+@font-face {
+    font-family: 'Supreme'; /* Define the base 'Supreme' font */
+    src: url('../assets/font/Fonts/WEB/fonts/Supreme-Regular.woff2') format('woff2'),
+         url('../assets/font/Fonts/WEB/fonts/Supreme-Regular.ttf') format('truetype');
+    font-weight: 400; /* Regular weight */
+    font-style: normal;
+}
+
 body {
-    font-family: 'Supreme', sans-serif;
+    font-family: 'Supreme', sans-serif; /* Now this should load the correct font file */
     background: #0a0a0a;
     color: #e0e0ff;
     line-height: 1.6;
