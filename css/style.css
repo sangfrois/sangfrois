@@ -325,6 +325,46 @@ main {
     border-color: #f7c8a3;
 }
 
+/* Instagram section styles */
+.instagram-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    padding: 2rem 0;
+    max-width: 800px; /* Adjust as needed */
+    margin: 0 auto; /* Center the grid */
+}
+
+.instagram-card {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 8px;
+    padding: 1.5rem;
+    transition: transform 0.3s ease, background 0.3s ease;
+    text-align: center; /* Center content */
+}
+
+.instagram-card:hover {
+    transform: translateY(-5px);
+    background: rgba(255, 255, 255, 0.08);
+}
+
+.instagram-card h3 {
+    color: #f7c8a3;
+    margin-bottom: 1rem;
+    font-weight: bold;
+}
+
+.instagram-card p {
+    color: #ccc;
+    font-size: 0.95rem;
+    margin-bottom: 1.5rem;
+}
+
+.instagram-card .social-button {
+    display: inline-block; /* Ensure button behaves correctly */
+    margin-top: auto;
+}
+
 
 /* Responsive design */
 @media (max-width: 768px) {
