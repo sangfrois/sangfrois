@@ -102,8 +102,9 @@
 
             <div id="publication-stats" class="publication-stats-container">
                 <span>Total Publications: 3</span> |
-                <a href="[https://orcid.org/0000-0002-6897-2119](https://orcid.org/0000-0002-6897-2119)" target="_blank" rel="noopener noreferrer">ORCID Profile</a> |
-                <a href="[https://scholar.google.com/citations?user=YOUR_SCHOLAR_ID](https://scholar.google.com/citations?user=YOUR_SCHOLAR_ID)" target="_blank" rel="noopener noreferrer">Google Scholar</a> </div>
+                <a href="https://orcid.org/0000-0002-6897-2119" target="_blank" rel="noopener noreferrer">ORCID Profile</a> |
+                <a href="https://scholar.google.com/citations?user=YOUR_SCHOLAR_ID" target="_blank" rel="noopener noreferrer">Google Scholar</a>
+            </div>
 
             <ul class="publication-list">
 
@@ -116,10 +117,10 @@
                         arXiv preprint arXiv:2405.13012 (2024)
                     </div>
                     <div class="publication-links">
-                        <a href="[https://arxiv.org/abs/2405.13012](https://arxiv.org/abs/2405.13012)" target="_blank" rel="noopener noreferrer">arXiv Link</a>
-                        </div>
+                        <a href="https://arxiv.org/abs/2405.13012" target="_blank" rel="noopener noreferrer">arXiv Link</a>
+                    </div>
                     <div class="publication-metrics">
-                         <span class="citation-count" data-arxiv-id="2405.13012">Loading citations...</span>
+                        <span class="citation-count" data-arxiv-id="2405.13012">Loading citations...</span>
                         <div class="altmetric-container">
                             <div data-badge-type="donut" data-badge-popover="right" data-hide-no-mentions="true" data-arxiv-id="2405.13012"></div>
                         </div>
@@ -153,10 +154,10 @@
                         Behavior research methods (2021)
                     </div>
                     <div class="publication-links">
-                        <a href="[https://doi.org/10.3758/s13428-020-01516-y](https://doi.org/10.3758/s13428-020-01516-y)" target="_blank" rel="noopener noreferrer">DOI Link</a>
-                        </div>
-                     <div class="publication-metrics">
-                         <span class="citation-count" data-doi="10.3758/s13428-020-01516-y">Loading citations...</span>
+                        <a href="https://doi.org/10.3758/s13428-020-01516-y" target="_blank" rel="noopener noreferrer">DOI Link</a>
+                    </div>
+                    <div class="publication-metrics">
+                        <span class="citation-count" data-doi="10.3758/s13428-020-01516-y">Loading citations...</span>
                         <div class="altmetric-container">
                             <div data-badge-type="donut" data-badge-popover="right" data-hide-no-mentions="true" data-doi="10.3758/s13428-020-01516-y"></div>
                         </div>
@@ -164,9 +165,9 @@
                 </li>
 
             </ul>
-            </main>
-    </div> <script type='text/javascript' src='[https://d1bxh8uas1mnw7.cloudfront.net/assets/embed.js](https://d1bxh8uas1mnw7.cloudfront.net/assets/embed.js)'></script>
-
+        </main>
+    </div>
+    <script type='text/javascript' src='https://d1bxh8uas1mnw7.cloudfront.net/assets/embed.js'></script>
     <script>
         /**
          * Fetches citation count for a given identifier (DOI or arXiv ID) from the OpenAlex API.
@@ -180,9 +181,9 @@
             if (type === 'doi') {
                 apiUrl = `https://api.openalex.org/works/doi:${identifier}`;
             } else if (type === 'arxiv') {
-                 // arXiv IDs might need version numbers removed (e.g., v1) for OpenAlex lookup
-                 const baseArxivId = identifier.split('v')[0];
-                 apiUrl = `https://api.openalex.org/works/arxiv:${baseArxivId}`;
+                // arXiv IDs might need version numbers removed (e.g., v1) for OpenAlex lookup
+                const baseArxivId = identifier.split('v')[0];
+                apiUrl = `https://api.openalex.org/works/arxiv:${baseArxivId}`;
             } else {
                 console.error("Unsupported identifier type:", type);
                 return null;
@@ -192,10 +193,10 @@
                 // Fetch data from OpenAlex API
                 // Add mailto for polite pool access (replace with your actual email if desired)
                 const response = await fetch(apiUrl, {
-                     headers: {
-                         'User-Agent': 'mailto:your-email@example.com' // Optional: Be polite to OpenAlex API
-                     }
-                 });
+                    headers: {
+                        'User-Agent': 'mailto:your-email@example.com' // Optional: Be polite to OpenAlex API
+                    }
+                });
 
                 // Check if the request was successful
                 if (!response.ok) {
@@ -253,12 +254,10 @@
                 if (count !== null && count > 0) {
                     span.textContent = `Citations (OpenAlex): ${count}`;
                 } else if (count === 0 && identifierValue) {
-                     span.textContent = `Citations (OpenAlex): 0`; // Explicitly show 0
-                }
-                 else if (!identifierValue) {
-                     // This case is handled by the default HTML for items without identifiers
-                 }
-                 else {
+                    span.textContent = `Citations (OpenAlex): 0`; // Explicitly show 0
+                } else if (!identifierValue) {
+                    // This case is handled by the default HTML for items without identifiers
+                } else {
                     span.textContent = 'Citations unavailable'; // Error or not found
                 }
             }
