@@ -12,7 +12,7 @@
     <!-- Inline styles removed -->
 </head>
 <body>
-<div id="particles-js"></div> <div class="content">
+<div class="content"> <!-- Removed particles-js div from here -->
         <nav>
             <ul>
                 <li><a href="../index.html">Home</a></li>
@@ -25,6 +25,15 @@
         </nav>
         <main>
             <h2 class="section-title">Publications</h2>
+
+            <!-- Re-add the Google Scholar link section -->
+            <div class="scholar-link-container">
+                <p class="scholar-prompt">For a comprehensive and up-to-date list, please visit my Google Scholar profile:</p>
+                <a href="https://scholar.google.com/citations?user=YOUR_SCHOLAR_ID" target="_blank" rel="noopener noreferrer" class="scholar-button">
+                    View on Google Scholar
+                </a>
+            </div>
+
             <div class="publications-container"> <!-- Added container -->
                 <ul> <!-- Removed publication-list class -->
 
@@ -79,5 +88,6 @@
     <script src="../js/particles.min.js"></script>
     <script src="../js/main.js"></script>
 
+    <div id="particles-js"></div> <!-- Moved particles-js div here -->
     </body>
 </html>
