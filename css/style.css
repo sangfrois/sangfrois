@@ -349,6 +349,18 @@ main {
     color: #ffffff; /* Brighter title */
 }
 
+/* Style links within publication titles */
+.pub-title a {
+    color: inherit; /* Inherit the color from .pub-title (white) */
+    text-decoration: none; /* Remove default underline */
+    transition: color 0.3s ease;
+}
+
+.pub-title a:hover {
+    color: #f7c8a3; /* Change to accent color on hover */
+    text-decoration: underline; /* Add underline on hover for clarity */
+}
+
 .pub-source {
     font-size: 0.95rem;
     color: #bbb;
