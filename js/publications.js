@@ -60,7 +60,15 @@ document.addEventListener('DOMContentLoaded', () => {
                 publicationData.forEach((pub, index) => {
                     // Extract data safely
                     const title = pub.title || 'No Title';
-                    const authors = pub.author ? pub.author.map(a => `${a.given ? a.given + ' ' : ''}${a.family || ''}`).join(', ') : 'No Authors';
+                    // Format authors: Handle potential variations in structure
+                    let authors = 'No Authors';
+                    if (pub.author && Array.isArray(pub.author)) {
+                        authors = pub.author.map(a => {
+                            if (a.literal) return a.literal; // Handle literal names like {Company Name}
+                            return `${a.given ? a.given + ' ' : ''}${a.family || ''}`;
+                        }).join(', ');
+                    }
+                    
                     const year = pub.issued && pub.issued['date-parts'] ? pub.issued['date-parts'][0][0] : 'No Year';
                     
                     let containerTitle = 'Unknown Source';
@@ -83,8 +91,14 @@ document.addEventListener('DOMContentLoaded', () => {
                     // Extract arXiv ID more robustly
                     let arxivLink = '';
                     if (pub.eprint && (pub.archivePrefix === 'arXiv' || (pub.journal && pub.journal.toLowerCase().includes('arxiv')))) {
+                         // Use eprint field directly if available and context suggests arXiv
                          arxivLink = `<a href="https://arxiv.org/abs/${pub.eprint}" target="_blank" rel="noopener noreferrer">arXiv:${pub.eprint}</a>`;
+                    } else if (pub.journal && pub.journal.match(/arxiv[: ](\d+\.\d+)/i)) {
+                         // Fallback: try to extract from journal field if eprint is missing
+                         const match = pub.journal.match(/arxiv[: ](\d+\.\d+)/i);
+                         arxivLink = `<a href="https://arxiv.org/abs/${match[1]}" target="_blank" rel="noopener noreferrer">arXiv:${match[1]}</a>`;
                     }
+
 
                     // Build links section
                     let linksHTML = [doi, arxivLink, url].filter(Boolean).join(' | '); // Filter out empty strings and join
