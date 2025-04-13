@@ -253,6 +253,78 @@ main {
     }
 }
 
+/* CV Page Specific Styles */
+.cv-content {
+    max-width: 900px; /* Adjust width as needed */
+    margin: 2rem auto; /* Center the content */
+    padding: 2rem;
+    background: rgba(255, 255, 255, 0.03); /* Subtle background */
+    border-radius: 8px;
+    color: #e0e0e0; /* Ensure text color contrasts */
+}
+
+.cv-section {
+    margin-bottom: 2.5rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1); /* Separator line */
+}
+
+.cv-section:last-child {
+    border-bottom: none; /* No line after the last section */
+    margin-bottom: 0;
+}
+
+.cv-section h2 {
+    color: #f7c8a3; /* Use theme accent color */
+    font-size: 1.6rem;
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid rgba(247, 200, 163, 0.3); /* Accent under H2 */
+    display: inline-block; /* Keep border tight to text */
+}
+
+.cv-entry {
+    margin-bottom: 1.5rem;
+}
+
+.cv-entry h3 {
+    font-size: 1.2rem;
+    color: #ffffff; /* Slightly brighter for subheadings */
+    margin-bottom: 0.3rem;
+    font-weight: 500; /* Medium weight */
+}
+
+.cv-entry p {
+    margin-bottom: 0.5rem;
+    line-height: 1.7;
+}
+
+.cv-entry strong {
+    font-weight: 500; /* Medium weight for emphasis */
+    color: #f0f0f0;
+}
+
+ul.cv-list {
+    list-style: disc; /* Standard bullet points */
+    margin-left: 1.5rem; /* Indentation for lists */
+    padding-left: 0.5rem;
+}
+
+ul.cv-list li {
+    margin-bottom: 0.4rem;
+    line-height: 1.7;
+}
+
+.cv-content a {
+    color: #f7c8a3; /* Link color consistent with theme */
+    text-decoration: underline;
+    transition: color 0.3s ease;
+}
+
+.cv-content a:hover {
+    color: #ffffff;
+}
+
 /* Insights styles */
 .insights-grid {
     display: grid;

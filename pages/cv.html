@@ -9,23 +9,7 @@
     <link rel="icon" type="image/svg+xml" href="../images/favicon/favicon.svg">
     <link rel="apple-touch-icon" href="../images/favicon/web-app-manifest-512x512.png">
     <link rel="stylesheet" href="../css/style.css">
-    <style>
-        /* Make CV container full width and remove fixed height */
-        .cv-container {
-            width: 100%;
-            /* height: 100vh; Removed */
-            margin: 0 auto; /* Center if needed, though width is 100% */
-            padding: 0; /* Remove padding if you want edge-to-edge */
-        }
-        /* Adjust iframe height */
-        .responsive-iframe {
-            width: 100%;
-            min-height: 80vh; /* Set a minimum height */
-            /* height: 100%; Removed */
-            border: none;
-            display: block; /* Ensure it behaves as a block element */
-        }
-    </style>
+    <!-- Removed iframe-specific styles -->
 </head>
 <body>
     <div id="particles-js"></div>
@@ -40,17 +24,147 @@
                 <li><a href="connect.html">Connect</a></li>
             </ul>
         </nav>
-        <main> <!-- Removed cv-container class from main, let iframe handle sizing within main -->
-            <div class="cv-container"> <!-- Added a div wrapper for styling -->
-                <iframe 
-                    src="https://docs.google.com/document/d/e/2PACX-1vSCf65Cd3Zfh8Bmyf7TJIUOVlMnilT_PSUiLCA4EAXc6u2wQbji_IEoXYG5UtUf-hQAjxFCMSEqbrjr/pub?embedded=true"
-                    class="responsive-iframe" 
-                    allowfullscreen 
-                    mozallowfullscreen 
-                    webkitallowfullscreen>
-                Loading CV...
-                </iframe>
-            </div> <!-- Close the div wrapper -->
+        <main>
+            <div class="cv-content">
+                <h2 class="section-title">Curriculum Vitae</h2>
+
+                <!-- Education Section -->
+                <div class="cv-section">
+                    <h2>Education</h2>
+                    <div class="cv-entry">
+                        <h3>PhD, Individualized Program (INDI)</h3>
+                        <p><strong>Concordia University</strong>, Montréal, QC | 2023 – Present</p>
+                        <ul class="cv-list">
+                            <li>Supervisors: Dr. David Howes (Anthropology), Dr. Eldad Tsabary (Music), Dr. Marc Leman (Ghent University, Musicology)</li>
+                            <li>Affiliations: Centre for Sensory Studies, Milieux Institute for Arts, Culture and Technology, Hexagram Network, Applied AI Institute</li>
+                        </ul>
+                    </div>
+                    <div class="cv-entry">
+                        <h3>Programme court de deuxième cycle en présence attentive (Mindfulness)</h3>
+                        <p><strong>Université du Québec à Montréal (UQAM)</strong>, Montréal, QC | 2023 – Present</p>
+                    </div>
+                     <div class="cv-entry">
+                        <h3>MA, Religious Studies</h3>
+                        <p><strong>Université du Québec à Montréal (UQAM)</strong>, Montréal, QC | 2020 – 2023</p>
+                        <ul class="cv-list">
+                            <li>Thesis: "L'expérience de la présence attentive comme pratique de recherche-création en arts numériques" (Supervisor: Dr. Lyne Kurtzman)</li>
+                        </ul>
+                    </div>
+                    <div class="cv-entry">
+                        <h3>BA, Religious Studies</h3>
+                        <p><strong>Université du Québec à Montréal (UQAM)</strong>, Montréal, QC | 2017 – 2020</p>
+                    </div>
+                </div>
+
+                <!-- Research Interests Section -->
+                <div class="cv-section">
+                    <h2>Research Interests</h2>
+                     <ul class="cv-list">
+                        <li>Contemplative Research-Creation, Computational Sensory Ethnography, Neurotechnology & GenAI</li>
+                        <li>Neuro-phenomenology, Embodied Cognition, Critical AI Studies, Speculative Design</li>
+                        <li>Digital Anthropology, Performance Studies, Immersive Media, Affect Theory</li>
+                    </ul>
+                </div>
+
+                <!-- Awards and Scholarships Section -->
+                <div class="cv-section">
+                    <h2>Awards and Scholarships</h2>
+                    <div class="cv-entry">
+                        <p><strong>SSHRC Doctoral Fellowship</strong> | Social Sciences and Humanities Research Council | 2024-2027</p>
+                    </div>
+                    <div class="cv-entry">
+                        <p><strong>Concordia Merit Scholarship</strong> | Concordia University | 2023</p>
+                    </div>
+                     <div class="cv-entry">
+                        <p><strong>FAECUM Excellence Scholarship</strong> | UQAM | 2021</p>
+                    </div>
+                    <!-- Add other awards as needed -->
+                </div>
+
+                <!-- Presentations and Workshops Section -->
+                <div class="cv-section">
+                    <h2>Presentations and Workshops</h2>
+                     <div class="cv-entry">
+                        <h3>Invited Speaker</h3>
+                        <p><strong>"Mechanical Meanderings: Embodied Metaphors in AI Art"</strong> | MTL Connecte | Montréal, QC | Oct 2024</p>
+                    </div>
+                    <div class="cv-entry">
+                        <h3>Workshop Facilitator</h3>
+                        <p><strong>"Sensorium Colaboratory: Creative Coding with AI and Neurotech"</strong> | Milieux Institute, Concordia University | Montréal, QC | Oct 2024</p>
+                    </div>
+                    <div class="cv-entry">
+                        <h3>Performance & Installation</h3>
+                        <p><strong>"Meteomythosophy"</strong> (with P. Gruni, T. Seibel) | Embodied Interventions Festival, Milieux Institute | Montréal, QC | Sep 2024</p>
+                    </div>
+                     <div class="cv-entry">
+                        <h3>Installation</h3>
+                        <p><strong>"Mechanical Meanderings"</strong> | MUTEK Montréal - AI Art Lab | Montréal, QC | Aug 2024</p>
+                    </div>
+                    <!-- Add other presentations as needed -->
+                </div>
+
+                <!-- Research Experience Section -->
+                <div class="cv-section">
+                    <h2>Research Experience</h2>
+                    <div class="cv-entry">
+                        <h3>Research Assistant</h3>
+                        <p><strong>Applied AI Institute, Concordia University</strong> | Montréal, QC | 2023 – Present</p>
+                        <ul class="cv-list">
+                            <li>Developing AI tools for artistic research and neuro-computational projects (e.g., Goofi-pipe library).</li>
+                        </ul>
+                    </div>
+                    <div class="cv-entry">
+                        <h3>Research Assistant</h3>
+                        <p><strong>Centre for Sensory Studies, Concordia University</strong> | Montréal, QC | 2023 – Present</p>
+                         <ul class="cv-list">
+                            <li>Assisting with ethnographic research on sensory perception and technology.</li>
+                        </ul>
+                    </div>
+                    <!-- Add other experience as needed -->
+                </div>
+
+                <!-- Teaching Experience Section -->
+                <div class="cv-section">
+                    <h2>Teaching Experience</h2>
+                    <div class="cv-entry">
+                        <h3>Teaching Assistant</h3>
+                        <p><strong>ANTH 3XX: Anthropology of the Senses</strong> (Upcoming) | Concordia University | Winter 2025</p>
+                    </div>
+                    <div class="cv-entry">
+                        <h3>Workshop Co-Lead</h3>
+                        <p><strong>"Introduction to Neurofeedback for Artists"</strong> | Hexagram Network | Montréal, QC | Spring 2024</p>
+                    </div>
+                    <!-- Add other teaching experience as needed -->
+                </div>
+
+                <!-- Technical Skills Section -->
+                <div class="cv-section">
+                    <h2>Technical Skills</h2>
+                    <ul class="cv-list">
+                        <li><strong>Programming:</strong> Python (NumPy, SciPy, Pandas, PyTorch, Scikit-learn), Max/MSP, Arduino (C++)</li>
+                        <li><strong>AI/ML:</strong> Generative AI (Stable Diffusion, LLMs), Machine Learning frameworks, Data Analysis</li>
+                        <li><strong>Neurotechnology:</strong> EEG/BCI systems (OpenBCI, Muse), Biofeedback protocols, Signal Processing</li>
+                        <li><strong>Software:</strong> TouchDesigner, Unity, Adobe Creative Suite, Git, Linux/Unix environments</li>
+                        <li><strong>Hardware:</strong> Sensor integration, Microcontroller programming, Basic electronics</li>
+                    </ul>
+                </div>
+
+                <!-- Languages Section -->
+                <div class="cv-section">
+                    <h2>Languages</h2>
+                    <ul class="cv-list">
+                        <li>French (Native)</li>
+                        <li>English (Fluent)</li>
+                    </ul>
+                </div>
+
+                 <!-- References Section -->
+                <div class="cv-section">
+                    <h2>References</h2>
+                    <p>Available upon request.</p>
+                </div>
+
+            </div> <!-- End cv-content -->
         </main>
     </div>
     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
