@@ -63,21 +63,9 @@
              gap: 15px; /* Space between items */
              font-size: 0.9em;
         }
-        .citation-count {
-            color: #666; /* Muted color for citation text */
-            white-space: nowrap; /* Prevent wrapping */
-        }
         .altmetric-container {
              /* No extra margin needed due to flex gap */
              line-height: 1; /* Prevent extra space around badge */
-        }
-        .publication-stats-container {
-            margin-bottom: 2em;
-            padding: 1em;
-            background-color: #f9f9f9; /* Light background for stats */
-            border-radius: 5px;
-            text-align: center;
-            font-size: 0.9em;
         }
          /* Ensure main content area allows scrolling if needed */
         main {
@@ -100,12 +88,6 @@
         </nav>
         <main> <h2 class="section-title">Publications</h2>
 
-            <div id="publication-stats" class="publication-stats-container">
-                <span>Total Publications: 3</span> |
-                <a href="https://orcid.org/0000-0002-6897-2119" target="_blank" rel="noopener noreferrer">ORCID Profile</a> |
-                <a href="https://scholar.google.com/citations?user=YOUR_SCHOLAR_ID" target="_blank" rel="noopener noreferrer">Google Scholar</a>
-            </div>
-
             <ul class="publication-list">
 
                 <li class="publication-item">
@@ -120,7 +102,6 @@
                         <a href="https://arxiv.org/abs/2405.13012" target="_blank" rel="noopener noreferrer">arXiv Link</a>
                     </div>
                     <div class="publication-metrics">
-                        <span class="citation-count" data-arxiv-id="2405.13012">Loading citations...</span>
                         <div class="altmetric-container">
                             <div data-badge-type="donut" data-badge-popover="right" data-hide-no-mentions="true" data-arxiv-id="2405.13012"></div>
                         </div>
@@ -138,7 +119,6 @@
                     <div class="publication-links">
                         </div>
                      <div class="publication-metrics">
-                         <span class="citation-count">Citations unavailable</span>
                         <div class="altmetric-container">
                             <small>(Altmetric badge requires DOI or other supported identifier)</small>
                         </div>
@@ -157,7 +137,6 @@
                         <a href="https://doi.org/10.3758/s13428-020-01516-y" target="_blank" rel="noopener noreferrer">DOI Link</a>
                     </div>
                     <div class="publication-metrics">
-                        <span class="citation-count" data-doi="10.3758/s13428-020-01516-y">Loading citations...</span>
                         <div class="altmetric-container">
                             <div data-badge-type="donut" data-badge-popover="right" data-hide-no-mentions="true" data-doi="10.3758/s13428-020-01516-y"></div>
                         </div>
@@ -169,102 +148,9 @@
     </div>
     <script type='text/javascript' src='https://d1bxh8uas1mnw7.cloudfront.net/assets/embed.js'></script>
     <script>
-        /**
-         * Fetches citation count for a given identifier (DOI or arXiv ID) from the OpenAlex API.
-         * @param {string} identifier - The DOI or arXiv ID.
-         * @param {string} type - The type of identifier ('doi' or 'arxiv'). Defaults to 'doi'.
-         * @returns {Promise<number|null>} - The citation count, or null if an error occurs or count is zero.
-         */
-        async function getOpenAlexCitations(identifier, type = 'doi') {
-            // Construct the API URL based on the identifier type
-            let apiUrl;
-            if (type === 'doi') {
-                apiUrl = `https://api.openalex.org/works/doi:${identifier}`;
-            } else if (type === 'arxiv') {
-                // arXiv IDs might need version numbers removed (e.g., v1) for OpenAlex lookup
-                const baseArxivId = identifier.split('v')[0];
-                apiUrl = `https://api.openalex.org/works/arxiv:${baseArxivId}`;
-            } else {
-                console.error("Unsupported identifier type:", type);
-                return null;
-            }
-
-            try {
-                // Fetch data from OpenAlex API
-                // Add mailto for polite pool access (replace with your actual email if desired)
-                const response = await fetch(apiUrl, {
-                    headers: {
-                        'User-Agent': 'mailto:your-email@example.com' // Optional: Be polite to OpenAlex API
-                    }
-                });
-
-                // Check if the request was successful
-                if (!response.ok) {
-                    // Don't throw an error for 404 (Not Found), just return null
-                    if (response.status === 404) {
-                        console.warn(`OpenAlex work not found for ${type}: ${identifier}`);
-                        return null;
-                    }
-                    throw new Error(`HTTP error! Status: ${response.status} for ${type}: ${identifier}`);
-                }
-
-                // Parse the JSON response
-                const data = await response.json();
-
-                // Return the citation count (or 0 if undefined/null)
-                return data.cited_by_count || 0;
-
-            } catch (error) {
-                // Log any errors during the fetch process
-                console.error(`Could not fetch OpenAlex citations for ${type} ${identifier}:`, error);
-                return null; // Return null to indicate an error
-            }
-        }
-
-        /**
-         * Updates the citation count display elements on the page.
-         */
-        async function displayCitationCounts() {
-            // Find all elements designated to display citation counts
-            const citationSpans = document.querySelectorAll('.citation-count');
-
-            // Process each citation span
-            for (const span of citationSpans) {
-                const doi = span.dataset.doi;
-                const arxivId = span.dataset.arxivId;
-                let count = null;
-                let identifierType = '';
-                let identifierValue = '';
-
-                // Determine which identifier to use (prefer DOI)
-                if (doi) {
-                    identifierType = 'doi';
-                    identifierValue = doi;
-                } else if (arxivId) {
-                    identifierType = 'arxiv';
-                    identifierValue = arxivId;
-                }
-
-                // If an identifier exists, fetch the citation count
-                if (identifierValue) {
-                    count = await getOpenAlexCitations(identifierValue, identifierType);
-                }
-
-                // Update the span's text based on the fetched count
-                if (count !== null && count > 0) {
-                    span.textContent = `Citations (OpenAlex): ${count}`;
-                } else if (count === 0 && identifierValue) {
-                    span.textContent = `Citations (OpenAlex): 0`; // Explicitly show 0
-                } else if (!identifierValue) {
-                    // This case is handled by the default HTML for items without identifiers
-                } else {
-                    span.textContent = 'Citations unavailable'; // Error or not found
-                }
-            }
-        }
-
-        // Run the citation count display function after the page loads
-        document.addEventListener('DOMContentLoaded', displayCitationCounts);
+        // Citation count functionality removed as requested.
+        // The Altmetric embed script above will still attempt to load badges
+        // based on the data attributes in the HTML.
     </script>
 
     </body>
