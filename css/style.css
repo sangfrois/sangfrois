@@ -297,6 +297,12 @@ main {
     padding: 0 1rem; /* Add some horizontal padding */
 }
 
+/* Remove bullet points from the publication list */
+.publications-container ul {
+    list-style: none;
+    padding-left: 0; /* Remove default padding */
+}
+
 .publication-entry {
     background: rgba(255, 255, 255, 0.03);
     border-radius: 8px;
@@ -323,6 +329,18 @@ main {
 .pub-authors {
     font-weight: 500; /* Medium weight for authors */
     color: #f0f0f0;
+}
+
+/* Style links within author list (e.g., highlighted names) */
+.pub-authors a {
+    color: inherit; /* Inherit color from parent (.pub-authors) */
+    text-decoration: none; /* Remove default underline */
+    transition: color 0.3s ease, text-decoration 0.3s ease;
+}
+
+.pub-authors a:hover {
+    color: #ffffff; /* White color on hover */
+    text-decoration: underline; /* Underline on hover */
 }
 
 .pub-title {
