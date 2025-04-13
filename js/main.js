@@ -1,7 +1,10 @@
-// Particles.js configuration
-particlesJS('particles-js', {
-    particles: {
-        number: {
+// Wait for the DOM to be fully loaded before initializing particles.js
+document.addEventListener('DOMContentLoaded', function() {
+    // Check if the particles-js element exists before initializing
+    if (document.getElementById('particles-js')) {
+        particlesJS('particles-js', {
+            particles: {
+                number: {
             value: 80,
             density: {
                 enable: true,
@@ -70,10 +73,14 @@ particlesJS('particles-js', {
             }
         }
     },
-    retina_detect: true
+            retina_detect: true
+        });
+    } else {
+        console.warn("particles.js: container #particles-js not found.");
+    }
 });
 
-// Add smooth scroll behavior
+// Add smooth scroll behavior (can remain outside DOMContentLoaded)
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
         e.preventDefault();
