@@ -253,6 +253,88 @@ main {
     }
 }
 
+/* Publication Page Styles */
+.publication-stats-container {
+    max-width: 800px;
+    margin: 1rem auto 2rem auto; /* Center and add spacing */
+    padding: 1rem;
+    background: rgba(255, 255, 255, 0.04);
+    border-radius: 8px;
+    text-align: center;
+    color: #ccc;
+    font-size: 1.1rem;
+}
+
+.publications-container {
+    max-width: 800px;
+    margin: 2rem auto; /* Center the list */
+    padding: 0 1rem; /* Add some horizontal padding */
+}
+
+.publication-entry {
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    border-left: 3px solid #f7c8a3; /* Accent border */
+    transition: background 0.3s ease;
+}
+
+.publication-entry:hover {
+     background: rgba(255, 255, 255, 0.06);
+}
+
+.publication-entry p {
+    margin-bottom: 0.6rem;
+    line-height: 1.7;
+    color: #e0e0e0;
+}
+
+.publication-entry p:last-child {
+    margin-bottom: 0;
+}
+
+.pub-authors {
+    font-weight: 500; /* Medium weight for authors */
+    color: #f0f0f0;
+}
+
+.pub-title {
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #ffffff; /* Brighter title */
+}
+
+.pub-source {
+    font-size: 0.95rem;
+    color: #bbb;
+}
+
+.pub-source i { /* Style for italicized journal/conference titles */
+    font-style: italic;
+}
+
+.pub-links {
+    margin-top: 0.8rem; /* Add some space above links */
+}
+
+.pub-links a {
+    color: #f7c8a3; /* Use theme accent color for links */
+    text-decoration: none;
+    margin-right: 1rem;
+    transition: color 0.3s ease, text-decoration 0.3s ease;
+    font-size: 0.9rem; /* Slightly smaller links */
+}
+
+.pub-links a:last-child {
+    margin-right: 0;
+}
+
+.pub-links a:hover {
+    color: #ffffff;
+    text-decoration: underline;
+}
+
 /* CV Page Specific Styles */
 .cv-content {
     max-width: 900px; /* Adjust width as needed */
