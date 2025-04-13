@@ -298,7 +298,7 @@ main {
 }
 
 /* Remove bullet points from the publication list */
-.publications-container ul {
+.publications-container > ul { /* Use child combinator for specificity */
     list-style: none;
     padding-left: 0; /* Remove default padding */
 }
@@ -333,7 +333,7 @@ main {
 
 /* Style links within author list (e.g., highlighted names) */
 .pub-authors a {
-    color: inherit; /* Inherit color from parent (.pub-authors) */
+    color: inherit; /* Inherit color from parent (.pub-authors) - Removes blue */
     text-decoration: none; /* Remove default underline */
     transition: color 0.3s ease, text-decoration 0.3s ease;
 }
