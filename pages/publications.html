@@ -16,16 +16,31 @@
             padding-left: 0;
         }
         .publication-item {
+            background-color: rgba(255, 255, 255, 0.05); /* Subtle background for the card */
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 8px; /* Rounded corners */
+            padding: 1.5em; /* Internal padding */
             margin-bottom: 2em;
-            padding-bottom: 1.5em;
-            border-bottom: 1px solid #eee; /* Light separator */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+            transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover */
+            /* Removed border-bottom as card provides separation */
         }
-        .publication-item:last-child {
-            border-bottom: none;
+        .publication-item:hover {
+            transform: translateY(-5px); /* Move card up on hover */
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
         }
+        /* Removed :last-child border rule as it's no longer needed */
         .publication-item h3 {
             margin-bottom: 0.3em;
             font-size: 1.1em; /* Slightly smaller than section title */
+            margin-bottom: 0.3em;
+        }
+        .publication-item h3 a {
+            color: inherit; /* Title link color matches surrounding text */
+            text-decoration: none; /* No underline for title link */
+        }
+        .publication-item h3 a:hover {
+            text-decoration: underline; /* Underline on hover */
         }
         .publication-authors {
             margin-bottom: 0.5em;
@@ -34,7 +49,15 @@
         }
         .publication-authors .author-highlight {
             font-weight: bold; /* Highlight your name */
-            color: #333;
+            color: #333; /* This might need adjustment based on overall site theme */
+        }
+        .publication-authors .author-highlight a {
+            color: inherit; /* Highlighted name link color matches surrounding text */
+            font-weight: bold; /* Keep the bold style */
+            text-decoration: none; /* No underline */
+        }
+         .publication-authors .author-highlight a:hover {
+            text-decoration: underline; /* Underline on hover */
         }
         .publication-venue {
             font-style: italic;
@@ -91,9 +114,9 @@
             <ul class="publication-list">
 
                 <li class="publication-item">
-                    <h3>Divergent creativity in humans and large language models</h3>
+                    <h3><a href="https://arxiv.org/abs/2405.13012" target="_blank" rel="noopener noreferrer">Divergent creativity in humans and large language models</a></h3>
                     <div class="publication-authors">
-                        Antoine Bellemare-Pepin, <span class="author-highlight">François Lespinasse</span>, Philipp Thölke, Yann Harel, Kory Mathewson, Jay A Olson, Yoshua Bengio, Karim Jerbi
+                        Antoine Bellemare-Pepin, <span class="author-highlight"><a href="https://orcid.org/0000-0002-6897-2119" target="_blank" rel="noopener noreferrer">François Lespinasse</a></span>, Philipp Thölke, Yann Harel, Kory Mathewson, Jay A Olson, Yoshua Bengio, Karim Jerbi
                     </div>
                     <div class="publication-venue">
                         arXiv preprint arXiv:2405.13012 (2024)
@@ -111,7 +134,7 @@
                 <li class="publication-item">
                     <h3>Bio-Mechanical Poet: An Immersive Audiovisual Playground for Brain Signals and Generative AI</h3>
                     <div class="publication-authors">
-                        Philipp Thölke, Antoine Bellemare-Pepin, Yann Harel, <span class="author-highlight">François Lespinasse</span>, Karim Jerbi
+                        Philipp Thölke, Antoine Bellemare-Pepin, Yann Harel, <span class="author-highlight"><a href="https://orcid.org/0000-0002-6897-2119" target="_blank" rel="noopener noreferrer">François Lespinasse</a></span>, Karim Jerbi
                     </div>
                     <div class="publication-venue">
                         Proceedings of the 15th International Conference on Computational Creativity (2024)
@@ -126,9 +149,9 @@
                 </li>
 
                 <li class="publication-item">
-                    <h3>NeuroKit2: A Python toolbox for neurophysiological signal processing</h3>
+                    <h3><a href="https://doi.org/10.3758/s13428-020-01516-y" target="_blank" rel="noopener noreferrer">NeuroKit2: A Python toolbox for neurophysiological signal processing</a></h3>
                     <div class="publication-authors">
-                        Dominique Makowski, Tam Pham, Zen J Lau, Jan C Brammer, <span class="author-highlight">François Lespinasse</span>, Hung Pham, Christopher Schölzel, SH Annabel Chen
+                        Dominique Makowski, Tam Pham, Zen J Lau, Jan C Brammer, <span class="author-highlight"><a href="https://orcid.org/0000-0002-6897-2119" target="_blank" rel="noopener noreferrer">François Lespinasse</a></span>, Hung Pham, Christopher Schölzel, SH Annabel Chen
                     </div>
                     <div class="publication-venue">
                         Behavior research methods (2021)
