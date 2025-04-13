@@ -40,13 +40,14 @@
                 <li><a href="connect.html">Connect</a></li>
             </ul>
         </nav>
-        <main class="cv-container">
-            <iframe 
-                src="https://docs.google.com/document/d/e/2PACX-1vSCf65Cd3Zfh8Bmyf7TJIUOVlMnilT_PSUiLCA4EAXc6u2wQbji_IEoXYG5UtUf-hQAjxFCMSEqbrjr/pub?embedded=true"
-                class="responsive-iframe" 
-                allowfullscreen 
-                mozallowfullscreen 
-                webkitallowfullscreen>
+        <main> <!-- Removed cv-container class from main, let iframe handle sizing within main -->
+            <div class="cv-container"> <!-- Added a div wrapper for styling -->
+                <iframe 
+                    src="https://docs.google.com/document/d/e/2PACX-1vSCf65Cd3Zfh8Bmyf7TJIUOVlMnilT_PSUiLCA4EAXc6u2wQbji_IEoXYG5UtUf-hQAjxFCMSEqbrjr/pub?embedded=true"
+                    class="responsive-iframe" 
+                    allowfullscreen 
+                    mozallowfullscreen 
+                    webkitallowfullscreen>
                 Loading CV...
                 </iframe>
             </div> <!-- Close the div wrapper -->
