@@ -9,93 +9,7 @@
     <link rel="icon" type="image/svg+xml" href="../images/favicon/favicon.svg">
     <link rel="apple-touch-icon" href="../images/favicon/web-app-manifest-512x512.png">
     <link rel="stylesheet" href="../css/style.css">
-    <style>
-        /* Basic styling for publication list */
-        .publication-list {
-            list-style: none;
-            padding-left: 0;
-        }
-        .publication-item {
-            background-color: rgba(255, 255, 255, 0.05); /* Subtle background for the card */
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            border-radius: 8px; /* Rounded corners */
-            padding: 1.5em; /* Internal padding */
-            margin-bottom: 2em;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
-            transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover */
-            /* Removed border-bottom as card provides separation */
-        }
-        .publication-item:hover {
-            transform: translateY(-5px); /* Move card up on hover */
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
-        }
-        /* Removed :last-child border rule as it's no longer needed */
-        .publication-item h3 {
-            margin-bottom: 0.3em;
-            font-size: 1.1em; /* Slightly smaller than section title */
-            margin-bottom: 0.3em;
-        }
-        .publication-item h3 a {
-            color: inherit; /* Title link color matches surrounding text */
-            text-decoration: none; /* No underline for title link */
-        }
-        .publication-item h3 a:hover {
-            text-decoration: underline; /* Underline on hover */
-        }
-        .publication-authors {
-            margin-bottom: 0.5em;
-            font-size: 0.95em;
-            color: #555; /* Slightly muted author text */
-        }
-        .publication-authors .author-highlight {
-            font-weight: bold; /* Highlight your name */
-            color: #333; /* This might need adjustment based on overall site theme */
-        }
-        .publication-authors .author-highlight a {
-            color: inherit; /* Highlighted name link color matches surrounding text */
-            font-weight: bold; /* Keep the bold style */
-            text-decoration: none; /* No underline */
-        }
-         .publication-authors .author-highlight a:hover {
-            text-decoration: underline; /* Underline on hover */
-        }
-        .publication-venue {
-            font-style: italic;
-            color: #444;
-            margin-bottom: 0.7em;
-        }
-        .publication-links {
-             margin-bottom: 0.5em; /* Add margin below links */
-        }
-        .publication-links a,
-        .publication-stats-container a {
-            margin-right: 15px;
-            text-decoration: none;
-            color: #007bff; /* Standard link color */
-            font-size: 0.9em;
-        }
-        .publication-links a:hover,
-        .publication-stats-container a:hover {
-            text-decoration: underline;
-        }
-        .publication-metrics { /* Container for citation count + altmetric */
-             margin-top: 10px;
-             display: flex; /* Use flexbox for alignment */
-             align-items: center; /* Vertically align items */
-             flex-wrap: wrap; /* Allow wrapping on small screens */
-             gap: 15px; /* Space between items */
-             font-size: 0.9em;
-        }
-        .altmetric-container {
-             /* No extra margin needed due to flex gap */
-             line-height: 1; /* Prevent extra space around badge */
-        }
-         /* Ensure main content area allows scrolling if needed */
-        main {
-            overflow-y: auto; /* Add scroll if content exceeds viewport height */
-            padding-bottom: 2em; /* Add some space at the bottom */
-        }
-    </style>
+    <!-- Inline styles removed -->
 </head>
 <body>
 <div id="particles-js"></div> <div class="content">
@@ -109,72 +23,59 @@
                 <li><a href="connect.html">Connect</a></li>
             </ul>
         </nav>
-        <main> <h2 class="section-title">Publications</h2>
+        <main>
+            <h2 class="section-title">Publications</h2>
+            <div class="publications-container"> <!-- Added container -->
+                <ul> <!-- Removed publication-list class -->
 
-            <ul class="publication-list">
-
-                <li class="publication-item">
-                    <h3><a href="https://arxiv.org/abs/2405.13012" target="_blank" rel="noopener noreferrer">Divergent creativity in humans and large language models</a></h3>
-                    <div class="publication-authors">
-                        Antoine Bellemare-Pepin, <span class="author-highlight"><a href="https://orcid.org/0000-0002-6897-2119" target="_blank" rel="noopener noreferrer">François Lespinasse</a></span>, Philipp Thölke, Yann Harel, Kory Mathewson, Jay A Olson, Yoshua Bengio, Karim Jerbi
-                    </div>
-                    <div class="publication-venue">
-                        arXiv preprint arXiv:2405.13012 (2024)
-                    </div>
-                    <div class="publication-links">
-                        <a href="https://arxiv.org/abs/2405.13012" target="_blank" rel="noopener noreferrer">arXiv Link</a>
-                    </div>
-                    <div class="publication-metrics">
-                        <div class="altmetric-container">
-                            <div data-badge-type="donut" data-badge-popover="right" data-hide-no-mentions="true" data-arxiv-id="2405.13012"></div>
+                    <li class="publication-entry"> <!-- Use correct class -->
+                        <h3 class="pub-title"><a href="https://arxiv.org/abs/2405.13012" target="_blank" rel="noopener noreferrer">Divergent creativity in humans and large language models</a></h3>
+                        <p class="pub-authors"> <!-- Use correct tag and class -->
+                            Antoine Bellemare-Pepin, <a href="https://orcid.org/0000-0002-6897-2119" target="_blank" rel="noopener noreferrer">François Lespinasse</a>, Philipp Thölke, Yann Harel, Kory Mathewson, Jay A Olson, Yoshua Bengio, Karim Jerbi <!-- Removed author-highlight span -->
+                        </p>
+                        <p class="pub-source"> <!-- Use correct tag and class -->
+                            arXiv preprint arXiv:2405.13012 (2024)
+                        </p>
+                        <div class="pub-links"> <!-- Use correct class -->
+                            <a href="https://arxiv.org/abs/2405.13012" target="_blank" rel="noopener noreferrer">arXiv Link</a>
                         </div>
-                    </div>
-                </li>
+                        <!-- Removed publication-metrics div -->
+                    </li>
 
-                <li class="publication-item">
-                    <h3>Bio-Mechanical Poet: An Immersive Audiovisual Playground for Brain Signals and Generative AI</h3>
-                    <div class="publication-authors">
-                        Philipp Thölke, Antoine Bellemare-Pepin, Yann Harel, <span class="author-highlight"><a href="https://orcid.org/0000-0002-6897-2119" target="_blank" rel="noopener noreferrer">François Lespinasse</a></span>, Karim Jerbi
-                    </div>
-                    <div class="publication-venue">
-                        Proceedings of the 15th International Conference on Computational Creativity (2024)
-                    </div>
-                    <div class="publication-links">
+                    <li class="publication-entry"> <!-- Use correct class -->
+                        <h3 class="pub-title">Bio-Mechanical Poet: An Immersive Audiovisual Playground for Brain Signals and Generative AI</h3>
+                        <p class="pub-authors"> <!-- Use correct tag and class -->
+                            Philipp Thölke, Antoine Bellemare-Pepin, Yann Harel, <a href="https://orcid.org/0000-0002-6897-2119" target="_blank" rel="noopener noreferrer">François Lespinasse</a>, Karim Jerbi <!-- Removed author-highlight span -->
+                        </p>
+                        <p class="pub-source"> <!-- Use correct tag and class -->
+                            Proceedings of the 15th International Conference on Computational Creativity (2024)
+                        </p>
+                        <div class="pub-links"> <!-- Use correct class -->
+                            <!-- No link provided in original -->
                         </div>
-                     <div class="publication-metrics">
-                        <div class="altmetric-container">
-                            <small>(Altmetric badge requires DOI or other supported identifier)</small>
-                        </div>
-                    </div>
-                </li>
+                        <!-- Removed publication-metrics div -->
+                    </li>
 
-                <li class="publication-item">
-                    <h3><a href="https://doi.org/10.3758/s13428-020-01516-y" target="_blank" rel="noopener noreferrer">NeuroKit2: A Python toolbox for neurophysiological signal processing</a></h3>
-                    <div class="publication-authors">
-                        Dominique Makowski, Tam Pham, Zen J Lau, Jan C Brammer, <span class="author-highlight"><a href="https://orcid.org/0000-0002-6897-2119" target="_blank" rel="noopener noreferrer">François Lespinasse</a></span>, Hung Pham, Christopher Schölzel, SH Annabel Chen
-                    </div>
-                    <div class="publication-venue">
-                        Behavior research methods (2021)
-                    </div>
-                    <div class="publication-links">
-                        <a href="https://doi.org/10.3758/s13428-020-01516-y" target="_blank" rel="noopener noreferrer">DOI Link</a>
-                    </div>
-                    <div class="publication-metrics">
-                        <div class="altmetric-container">
-                            <div data-badge-type="donut" data-badge-popover="right" data-hide-no-mentions="true" data-doi="10.3758/s13428-020-01516-y"></div>
+                    <li class="publication-entry"> <!-- Use correct class -->
+                        <h3 class="pub-title"><a href="https://doi.org/10.3758/s13428-020-01516-y" target="_blank" rel="noopener noreferrer">NeuroKit2: A Python toolbox for neurophysiological signal processing</a></h3>
+                        <p class="pub-authors"> <!-- Use correct tag and class -->
+                            Dominique Makowski, Tam Pham, Zen J Lau, Jan C Brammer, <a href="https://orcid.org/0000-0002-6897-2119" target="_blank" rel="noopener noreferrer">François Lespinasse</a>, Hung Pham, Christopher Schölzel, SH Annabel Chen <!-- Removed author-highlight span -->
+                        </p>
+                        <p class="pub-source"> <!-- Use correct tag and class -->
+                            <i>Behavior research methods</i> (2021) <!-- Added <i> for source title per CSS -->
+                        </p>
+                        <div class="pub-links"> <!-- Use correct class -->
+                            <a href="https://doi.org/10.3758/s13428-020-01516-y" target="_blank" rel="noopener noreferrer">DOI Link</a>
                         </div>
-                    </div>
-                </li>
+                        <!-- Removed publication-metrics div -->
+                    </li>
 
-            </ul>
+                </ul>
+            </div> <!-- Close publications-container -->
         </main>
     </div>
-    <script type='text/javascript' src='https://d1bxh8uas1mnw7.cloudfront.net/assets/embed.js'></script>
-    <script>
-        // Citation count functionality removed as requested.
-        // The Altmetric embed script above will still attempt to load badges
-        // based on the data attributes in the HTML.
-    </script>
+    <!-- Altmetric script removed -->
+    <!-- Removed script block -->
 
     </body>
 </html>
