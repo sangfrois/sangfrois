@@ -256,42 +256,7 @@ main {
 }
 
 /* Publication Page Styles */
-.scholar-link-container { /* Renamed from publication-stats-container for clarity */
-    max-width: 800px;
-    margin: 2rem auto 3rem auto; /* Center and add more spacing */
-    padding: 2rem; /* More padding */
-    background: rgba(255, 255, 255, 0.04); /* Subtle background */
-    border-radius: 8px; /* Rounded corners */
-    text-align: center;
-    border: 1px solid rgba(255, 255, 255, 0.1); /* Subtle border */
-}
-
-.scholar-prompt {
-    color: #ccc;
-    font-size: 1.1rem;
-    margin-bottom: 1.5rem; /* Space before button */
-}
-
-/* Style the Google Scholar button */
-.scholar-button {
-    /* Inherits base styles from .social-button */
-    background: rgba(66, 133, 244, 0.1); /* Google Blue subtle */
-    border: 1px solid rgba(66, 133, 244, 0.5);
-    color: #4285F4; /* Google Blue */
-    padding: 1rem 2.5rem; /* Make it prominent */
-    font-size: 1.15rem; /* Slightly larger text */
-    font-weight: 500;
-    border-radius: 5px; /* Less rounded than default social button */
-    transition: all 0.3s ease;
-}
-
-.scholar-button:hover {
-    background: rgba(66, 133, 244, 0.2);
-    color: #ffffff;
-    border-color: #4285F4;
-    transform: translateY(-3px); /* More pronounced hover effect */
-    box-shadow: 0 4px 8px rgba(66, 133, 244, 0.2);
-}
+/* Removed .scholar-link-container, .scholar-prompt, .scholar-button styles */
 
 .publications-container {
     max-width: 800px;
