@@ -9,8 +9,7 @@
     <link rel="icon" type="image/svg+xml" href="../images/favicon/favicon.svg">
     <link rel="apple-touch-icon" href="../images/favicon/web-app-manifest-512x512.png">
     <link rel="stylesheet" href="../css/style.css">
-    <!-- Load Citation.js library in the head -->
-    <script src="https://unpkg.com/citation-js@0.7.1/build/citation.min.js"></script>
+    <!-- Removed Citation.js library -->
 </head>
 <body>
     <div id="particles-js"></div>
@@ -28,28 +27,50 @@
         <main> <!-- Removed publications-container class from main -->
             <h2 class="section-title">Publications</h2>
             
-            <!-- Statistics Section -->
+            <!-- ResearchGate Stats Link Section -->
             <div id="publication-stats" class="publication-stats-container">
-                <p>Loading statistics...</p>
+                 <a href="https://www.researchgate.net/profile/Francois-Lespinasse" target="_blank" rel="noopener noreferrer" class="social-button rg-button">
+                    View Live Stats & Publications on ResearchGate
+                 </a>
             </div>
 
-            <!-- Publication List Container -->
-            <div id="publications-list" class="publications-container"> <!-- Added class here -->
-                <p style="text-align: center;">Loading publications...</p> 
-            </div>
+            <!-- Static Publication List Container -->
+            <div id="publications-list" class="publications-container"> 
+                
+                <!-- Manually generated entries from assets/pubs.bib (Sorted Descending by Year) -->
+                
+                <div class="publication-entry">
+                    <p class="pub-authors">Bellemare-Pepin, Antoine, Lespinasse, François, Thölke, Philipp, Harel, Yann, Mathewson, Kory, Olson, Jay A, Bengio, Yoshua, Jerbi, Karim (2024).</p>
+                    <p class="pub-title">Divergent creativity in humans and large language models.</p>
+                    <p class="pub-source"><i>arXiv preprint arXiv:2405.13012</i>.</p>
+                    <p class="pub-links"><a href="https://arxiv.org/abs/2405.13012" target="_blank" rel="noopener noreferrer">arXiv:2405.13012</a></p>
+                </div>
+
+                <div class="publication-entry">
+                    <p class="pub-authors">Thölke, Philipp, Bellemare-Pepin, Antoine, Harel, Yann, Lespinasse, François, Jerbi, Karim (2024).</p>
+                    <p class="pub-title">Bio-Mechanical Poet: An Immersive Audiovisual Playground for Brain Signals and Generative AI.</p>
+                    <p class="pub-source">In <i>Proceedings of the 15th International Conference on Computational Creativity</i>.</p>
+                    <!-- No DOI/Link provided in bib -->
+                </div>
+
+                <div class="publication-entry">
+                    <p class="pub-authors">Makowski, Dominique, Pham, Tam, Lau, Zen J, Brammer, Jan C, Lespinasse, François, Pham, Hung, Schölzel, Christopher, Chen, SH Annabel (2021).</p>
+                    <p class="pub-title">NeuroKit2: A Python toolbox for neurophysiological signal processing.</p>
+                    <p class="pub-source"><i>Behavior research methods</i>.</p>
+                    <!-- No DOI/Link provided in bib -->
+                </div>
+
+            </div> <!-- End publications-list -->
             
         </main>
     </div>
-    
-    <!-- Removed Citation.js from here -->
-    
+        
     <!-- Particles.js -->
     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
     
     <!-- Your existing main script -->
     <script src="../js/main.js"></script> 
     
-    <!-- New script to handle publications -->
-    <script src="../js/publications.js" defer></script> 
+    <!-- Removed publications.js script -->
 </body>
 </html>
