@@ -11,54 +11,78 @@
     <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
-    <div id="particles-js"></div>
-    <div class="content">
-        <nav>
+    <header class="site-header">
+        <div class="header-brand">
+            <!-- Using Text Title -->
+            <a href="../index.html" class="header-title-main">François Lespinasse</a>
+            <span class="header-title-sub">Contemplative Research-Creation</span>
+        </div>
+        <nav class="header-nav">
             <ul>
-                <li><a href="../index.html">Home</a></li>
-                <li><a href="cv.html">CV</a></li>
-                <li><a href="portfolio.html">Portfolio</a></li>
+                <li><a href="portfolio.html">Works</a></li>
                 <li><a href="publications.html">Publications</a></li>
                 <li><a href="insights.html">Insights</a></li>
-                <li><a href="connect.html">Connect</a></li>
+                <li><a href="cv.html">CV</a></li>
+                <li><a href="connect.html">Contact</a></li> <!-- Add class="active-nav" if needed -->
             </ul>
         </nav>
-        <main class="social-links">
+    </header>
 
-            <h2 class="section-title">Connect With Me</h2>
-            <div class="social-links-container" style="text-align: center;">
-                <a href="https://scholar.google.com/citations?user=VjJntXAAAAAJ&hl=en&oi=ao" class="social-button">Google Scholar</a>
-                <a href="https://www.researchgate.net/profile/Francois-Lespinasse" class="social-button">ResearchGate</a>
-                <a href="https://www.instagram.com/sangfrois/" class="social-button">Instagram</a>
-                <a href="https://soundcloud.com/franc0isl" class="social-button">Soundcloud</a>
-                <a href="https://twitter.com/franclespinas" class="social-button">X (Twitter)</a>
-            </div>
+    <main>
+        <section class="content-section connect-section">
+            <div class="section-column-full">
+                <h2>Connect</h2>
 
-            <div class="contact-form-container">
-                <h3>Send me a message</h3>
-                <form id="contact-form" action="https://formspree.io/f/mvgkekbg" method="POST">
-                    <div class="form-group">
-                        <label for="name">Name:</label>
-                        <input type="text" id="name" name="name" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="email">Email:</label>
-                        <input type="email" id="email" name="email" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="subject">Subject:</label>
-                        <input type="text" id="subject" name="subject" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="message">Message:</label>
-                        <textarea id="message" name="message" rows="5" required></textarea>
-                    </div>
-                    <button type="submit" class="social-button">Send Message</button>
-                </form>
+                <div class="connect-links">
+                    <h3>Find me on</h3>
+                    <a href="https://scholar.google.com/citations?user=VjJntXAAAAAJ&hl=en&oi=ao" target="_blank" rel="noopener noreferrer" class="text-link">Google Scholar ↗</a>
+                    <a href="https://www.researchgate.net/profile/Francois-Lespinasse" target="_blank" rel="noopener noreferrer" class="text-link">ResearchGate ↗</a>
+                    <a href="https://www.instagram.com/sangfrois/" target="_blank" rel="noopener noreferrer" class="text-link">Instagram ↗</a>
+                    <a href="https://soundcloud.com/franc0isl" target="_blank" rel="noopener noreferrer" class="text-link">Soundcloud ↗</a>
+                    <a href="https://twitter.com/franclespinas" target="_blank" rel="noopener noreferrer" class="text-link">X (Twitter) ↗</a>
+                </div>
+
+                <div class="contact-form-wrapper">
+                    <h3>Send a Message</h3>
+                    <form id="contact-form" action="https://formspree.io/f/mvgkekbg" method="POST" class="contact-form">
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="subject">Subject</label>
+                            <input type="text" id="subject" name="subject" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" rows="6" required></textarea>
+                        </div>
+                        <button type="submit" class="form-submit-button">Send Message ↗</button>
+                    </form>
+                </div>
             </div>
-        </main>
-    </div>
-    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-    <script src="../js/main.js"></script>
+        </section>
+    </main>
+
+    <footer class="site-footer-bottom">
+        <div class="footer-contact">
+            <h3>Contact Me</h3>
+            <a href="connect.html" class="arrow-link">Inquiries & Collaborations ↗</a>
+        </div>
+        <div class="footer-credits">
+            <p>Design inspired by Editorial Template. Development by François Lespinasse.</p>
+            <p>&copy; <span id="current-year"></span> François Lespinasse. All Rights Reserved.</p>
+            <div class="footer-social">
+                 <a href="https://scholar.google.com/citations?user=VjJntXAAAAAJ&hl=en&oi=ao" target="_blank" rel="noopener noreferrer">Scholar ↗</a>
+                 <a href="https://www.researchgate.net/profile/Francois-Lespinasse" target="_blank" rel="noopener noreferrer">ResearchGate ↗</a>
+                 <a href="https://www.instagram.com/sangfrois/" target="_blank" rel="noopener noreferrer">Instagram ↗</a>
+            </div>
+        </div>
+        <script>document.getElementById('current-year').textContent = new Date().getFullYear();</script>
+    </footer>
 </body>
 </html>

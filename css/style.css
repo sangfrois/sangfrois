@@ -271,6 +271,90 @@ main {
     color: #555;
 }
 
+/* Connect Page Specific Styles */
+.connect-links {
+    margin-bottom: 4rem;
+    padding-bottom: 3rem;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.connect-links h3 {
+    font-size: 1.6rem; /* Slightly smaller than item titles */
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+}
+
+.connect-links a {
+    margin-right: 1.5rem; /* Spacing between links */
+    margin-bottom: 0.5rem; /* Spacing if they wrap */
+    display: inline-block;
+}
+
+.contact-form-wrapper {
+    max-width: 700px; /* Limit form width */
+}
+
+.contact-form-wrapper h3 {
+    font-size: 1.6rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+}
+
+.contact-form .form-group {
+    margin-bottom: 1.5rem;
+}
+
+.contact-form label {
+    display: block;
+    font-size: 0.9rem;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+    color: #555;
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form textarea {
+    width: 100%;
+    padding: 0.8rem 1rem;
+    border: 1px solid #ccc;
+    background-color: #fff; /* White background for fields */
+    font-family: inherit;
+    font-size: 1rem;
+    line-height: 1.5;
+    transition: border-color 0.3s ease;
+}
+
+.contact-form input[type="text"]:focus,
+.contact-form input[type="email"]:focus,
+.contact-form textarea:focus {
+    outline: none;
+    border-color: #1a1a1a; /* Darker border on focus */
+}
+
+.contact-form textarea {
+    resize: vertical; /* Allow vertical resize */
+}
+
+.form-submit-button {
+    display: inline-block;
+    background-color: #1a1a1a;
+    color: #f8f8f8;
+    border: none;
+    padding: 0.8rem 1.8rem;
+    font-size: 1rem;
+    font-weight: 500;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.form-submit-button:hover {
+    background-color: #555;
+    color: #fff;
+}
+
+
 /* CV Page Specific Styles */
 .cv-category {
     margin-bottom: 3.5rem;
