@@ -11,100 +11,124 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <div id="particles-js"></div>
-    <div class="content">
-        <nav>
+    <header class="site-header">
+        <div class="header-brand">
+            <!-- Option 1: Use Logo -->
+            <!-- <img src="images/logo.png" alt="Site Logo" class="header-logo"> -->
+            <!-- Option 2: Use Text Title -->
+            <a href="index.html" class="header-title-main">François Lespinasse</a>
+            <span class="header-title-sub">Contemplative Research-Creation</span>
+        </div>
+        <nav class="header-nav">
             <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="pages/cv.html">CV</a></li>
-                <li><a href="pages/portfolio.html">Portfolio</a></li>
+                <li><a href="pages/portfolio.html">Works</a></li>
                 <li><a href="pages/publications.html">Publications</a></li>
                 <li><a href="pages/insights.html">Insights</a></li>
-                <li><a href="pages/connect.html">Connect</a></li>
+                <li><a href="pages/cv.html">CV</a></li>
+                <li><a href="pages/connect.html">Contact</a></li>
             </ul>
         </nav>
-        <main>
-            <div class="intro">
-                <h1>François Lespinasse</h1>
-                <p class="tagline">Contemplative Research-Creation<br>
-                    Computational Sensory Ethnography<br>
-                    Neurotechnology &amp; GenAI</p>
+    </header>
+
+    <main>
+        <section class="hero-section">
+            <h1 class="hero-heading">
+                Contemplative<br>
+                Research<br>
+                Creation
+            </h1>
+            <p class="hero-tagline">
+                Computational Sensory Ethnography<br>
+                Neurotechnology &amp; GenAI
+            </p>
+            <div class="hero-links">
+                <a href="pages/portfolio.html" class="arrow-link">Explore Works ↗</a>
+                <a href="pages/connect.html" class="arrow-link">Connect ↗</a>
             </div>
+        </section>
 
-            <h2 class="section-title">About Me</h2>
-            <div class="about-section">
-                <div class="bio-container">
-                    <img src="images/new_bio_photo.jpg" alt="François Lespinasse" class="bio-headshot">
-                </div>
-                <div class="project-description">
-                    <p>
-                    I bend the rules of disciplines. 
-                    Enrolled since Fall 2023 as a PhD student at Concordia University in Tio'tia:keh/Montréal, I'm a member of 
-                    the Centre for Sensory Studies, the Hexagram network, the Milieux Institute, and the Applied AI Institute. 
-                    I'm a proud SSHRC Doctoral Fellow even though I skipped classes a lot when I was in high school.
-                    </p>
-                    <p>
-                    I practice ethnographic research-creation in the realm Neuro-AI. 
-                    I'm crafting interactive installations and performing speculative methodologies with GenAI and neurotechnologies. 
-                    The idea is to create queer cyber-ecosystems as transdisciplinary spaces of improvisation with embodied, analog and computational instruments. 
-                    </p>
-                    <p>
+        <section class="content-section about-section">
+            <div class="section-column-text">
+                <h2>About</h2>
+                <p>
+                    I bend the rules of disciplines. Enrolled since Fall 2023 as a PhD student at Concordia University in Tio'tia:keh/Montréal, I'm a member of the Centre for Sensory Studies, the Hexagram network, the Milieux Institute, and the Applied AI Institute. I'm a proud SSHRC Doctoral Fellow even though I skipped classes a lot when I was in high school.
+                </p>
+                <p>
+                    I practice ethnographic research-creation in the realm Neuro-AI. I'm crafting interactive installations and performing speculative methodologies with GenAI and neurotechnologies. The idea is to create queer cyber-ecosystems as transdisciplinary spaces of improvisation with embodied, analog and computational instruments.
+                </p>
+                <p>
                     This website is "vibe-coded" ephemeral archive.
-                    </p>
-                </div>
+                </p>
+            </div>
+            <div class="section-column-image">
+                <img src="images/new_bio_photo.jpg" alt="François Lespinasse" class="bio-image">
+                <!-- Or use images/bio_headshot.jpg if preferred -->
+            </div>
+        </section>
 
-            <h2 class="section-title">Current focus</h2>
-            <div class="social-grid">
-                <div class="project-card">
+        <section class="content-section focus-section">
+            <div class="section-column-full">
+                <h2>Current Focus</h2>
+                <div class="focus-item">
                     <h3>Mechanical Meanderings</h3>
                     <p>
-                        Mechanical Meanderings is an interactive installation that explores embodiement of metaphors and self-perception. 
-                        Participants speak words which are analyzed by AI systems that formats their query into text-to-image prompts. 
-                        These prompts are used in real-time with the camera capturing movements, blending their silhouettes with their metaphors.
-                        The installation is a solo project of mine, currently in development. It was exhbited at MUTEK Montréal 2024 and at MTL Connect 2024.
+                        An interactive installation exploring embodiment of metaphors and self-perception using AI analysis of speech and real-time visual blending. Exhibited at MUTEK Montréal 2024 and MTL Connect 2024.
                     </p>
-                    <a href="https://photos.app.goo.gl/wJ11HxQotbqHF4Fr8" class = "social-button">View Video</a>
+                    <a href="https://photos.app.goo.gl/wJ11HxQotbqHF4Fr8" class="text-link">View Video ↗</a>
                 </div>
-                <div class="project-card">
+                <div class="focus-item">
                     <h3>Meteomythosophy</h3>
-                    <p>Meteomythosophy is a transdisciplinary framework for immersive performances, connecting neuro-computational arts, religious studies, and laboratory theater. 
-                        It uses meteorological metaphors to express the fluid and unpredictable aspects of consciousness and sense-making. 
-                        The project was showcased at Embodied Interventions Festival 2024.
-                        It is a collaboration between Paolo Gruni, Thomas Seibel and I.</p>
-                    <a href="https://drive.google.com/file/d/190fRz0Px14MtXogU2zKSo4u3O-imztwe/view?usp=drive_link" class="social-button">View Video</a>
-                </div>
-                <div class="project-card">
-                    <h3>Goofi-pipe</h3>
-                    <p>A versatile Python library for real-time data streaming and analysis, designed for applications of neurotechnology and GenAI in arts.
-                        it is a collaboration between Philipp Thölke, Antoine Bellemare-Pépin, Yann Harel and I.
+                    <p>
+                        A transdisciplinary framework for immersive performances connecting neuro-computational arts, religious studies, and laboratory theater, using meteorological metaphors for consciousness. Showcased at Embodied Interventions Festival 2024. (Collaboration: Paolo Gruni, Thomas Seibel).
                     </p>
-                    <a href="https://github.com/PhilippThoelke/goofi-pipe" class="social-button">View Project</a>
+                    <a href="https://drive.google.com/file/d/190fRz0Px14MtXogU2zKSo4u3O-imztwe/view?usp=drive_link" class="text-link">View Video ↗</a>
+                </div>
+                <div class="focus-item">
+                    <h3>Goofi-pipe</h3>
+                    <p>
+                        A versatile Python library for real-time data streaming and analysis, designed for applications of neurotechnology and GenAI in arts. (Collaboration: Philipp Thölke, Antoine Bellemare-Pépin, Yann Harel).
+                    </p>
+                    <a href="https://github.com/PhilippThoelke/goofi-pipe" class="text-link">View Project ↗</a>
                 </div>
             </div>
+        </section>
 
-            <h2 class="section-title">Follow on Instagram</h2>
-            <div class="instagram-grid" style="overflow-x: auto; display: flex; flex-wrap: nowrap; -webkit-overflow-scrolling: touch;">
-                <div class="instagram-card">
+        <section class="content-section instagram-section">
+             <div class="section-column-full">
+                <h2>Follow</h2>
+                <div class="follow-item">
                     <h3>@sangfrois</h3>
-                    <p>digital arts, archives and what not.</p>
-                    <a href="https://www.instagram.com/sangfrois/" target="_blank" rel="noopener noreferrer" class="social-button">View Profile</a>
+                    <p>Digital arts, archives and what not.</p>
+                    <a href="https://www.instagram.com/sangfrois/" target="_blank" rel="noopener noreferrer" class="text-link">Instagram ↗</a>
                 </div>
-                <div class="instagram-card">
+                <div class="follow-item">
                     <h3>@laboratoireexperimental</h3>
                     <p>Veillée mobile aimante et militante 🧡 OPEN STAGE avec scéno IA personnalisée✨</p>
-                    <a href="https://www.instagram.com/laboratoireexperimental/" target="_blank" rel="noopener noreferrer" class="social-button">View Profile</a>
+                    <a href="https://www.instagram.com/laboratoireexperimental/" target="_blank" rel="noopener noreferrer" class="text-link">Instagram ↗</a>
                 </div>
             </div>
-        </main>
-        <footer style="text-align: center; padding: 2rem 0; border-top: 1px solid rgba(255,255,255,0.1);">
-            <div class="institutional-logos" style="display: flex; justify-content: center; gap: 2rem; align-items: center;">
-                <img src="images/logos/sshrc-crsh-logo-vector.png" alt="SSHRC Logo" class="institution-logo" style="height: 50px; filter: contrast(1.2) brightness(1.1) drop-shadow(0 0 3px rgba(255,255,255,0.5));">
-                <img src="images/logos/concordia.png" alt="Concordia University Logo" class="institution-logo" style="height: 80px; filter: contrast(1.2) brightness(1.1) drop-shadow(0 0 3px rgba(255,255,255,0.5));">
-                <img src="images/logos/milieux.png" alt="Milieux Institute Logo" class="institution-logo" style="height: 80px; filter: contrast(1.2) brightness(1.1) drop-shadow(0 0 3px rgba(255,255,255,0.5));">
+        </section>
+    </main>
+
+    <footer class="site-footer-bottom">
+        <div class="footer-contact">
+            <h3>Contact Me</h3>
+            <a href="pages/connect.html" class="arrow-link">Inquiries & Collaborations ↗</a>
+            <!-- Or use mailto: <a href="mailto:your.email@example.com?subject=Inquiry" class="arrow-link">your.email@example.com ↗</a> -->
+        </div>
+        <div class="footer-credits">
+            <p>Design inspired by Editorial Template. Development by [Your Name/Handle].</p>
+            <p>&copy; <span id="current-year"></span> François Lespinasse. All Rights Reserved.</p>
+            <!-- Add social links if desired -->
+            <div class="footer-social">
+                 <a href="https://scholar.google.com/citations?user=VjJntXAAAAAJ&hl=en&oi=ao" target="_blank" rel="noopener noreferrer">Scholar ↗</a>
+                 <a href="https://www.researchgate.net/profile/Francois-Lespinasse" target="_blank" rel="noopener noreferrer">ResearchGate ↗</a>
+                 <a href="https://www.instagram.com/sangfrois/" target="_blank" rel="noopener noreferrer">Instagram ↗</a>
+                 <!-- Add more as needed -->
             </div>
-        </footer>
-    </div>
-    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-    <script src="js/main.js"></script>
+        </div>
+        <!-- Simple script to update year -->
+        <script>document.getElementById('current-year').textContent = new Date().getFullYear();</script>
+    </footer>
 </body>
 </html>
