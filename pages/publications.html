@@ -9,98 +9,98 @@
     <link rel="icon" type="image/svg+xml" href="../images/favicon/favicon.svg">
     <link rel="apple-touch-icon" href="../images/favicon/web-app-manifest-512x512.png">
     <link rel="stylesheet" href="../css/style.css">
-    <!-- Inline styles removed -->
 </head>
 <body>
-    <div id="particles-js"></div>
-    <div class="content">
-        <nav>
+    <header class="site-header">
+        <div class="header-brand">
+            <a href="../index.html" class="header-title-main">François Lespinasse</a>
+            <span class="header-title-sub">Contemplative Research-Creation</span>
+        </div>
+        <nav class="header-nav">
             <ul>
-                <li><a href="../index.html">Home</a></li>
-                <li><a href="cv.html">CV</a></li>
-                <li><a href="portfolio.html">Portfolio</a></li>
-                <li><a href="publications.html">Publications</a></li>
+                <li><a href="portfolio.html">Works</a></li>
+                <li><a href="publications.html">Publications</a></li> <!-- Add class="active-nav" if needed -->
                 <li><a href="insights.html">Insights</a></li>
-                <li><a href="connect.html">Connect</a></li>
+                <li><a href="cv.html">CV</a></li>
+                <li><a href="connect.html">Contact</a></li>
             </ul>
         </nav>
-        <main>
-            <h2 class="section-title">Publications</h2>
+    </header>
 
-            <!-- Google Scholar Link (using connect.html structure) -->
-            <div class="social-links-container" style="text-align: center; margin-bottom: 3rem;"> <!-- Match connect.html container -->
-                 <p style="color: #ccc; margin-bottom: 1rem;">For a comprehensive and up-to-date list:</p> <!-- Simple prompt -->
-                 <a href="https://scholar.google.com/citations?user=YOUR_SCHOLAR_ID" target="_blank" rel="noopener noreferrer" class="social-button"> <!-- Use social-button class -->
-                    Google Scholar
-                </a>
-                <a href="https://www.researchgate.net/profile/Francois-Lespinasse" target="_blank" rel="noopener noreferrer" class="social-button"> <!-- Use social-button class -->
-                    ResearchGate
-                </a>
-                <p style="font-size: 0.85rem; color: #aaa; margin-top: 0.8rem; font-style: italic;">
-                    ResearchGate Interest Score higher than 99% of members who first published in 2020.
-                </p>
-            </div>
+    <main>
+        <section class="content-section publications-section">
+            <div class="section-column-full">
+                <h2>Publications</h2>
 
-            <div class="publications-container"> <!-- Added container -->
-                <ul> <!-- Removed publication-list class -->
+                <div class="publication-external-links">
+                     <p>For a comprehensive and up-to-date list:</p>
+                     <a href="https://scholar.google.com/citations?user=VjJntXAAAAAJ&hl=en&oi=ao" target="_blank" rel="noopener noreferrer" class="text-link">Google Scholar ↗</a>
+                     <a href="https://www.researchgate.net/profile/Francois-Lespinasse" target="_blank" rel="noopener noreferrer" class="text-link">ResearchGate ↗</a>
+                     <p class="researchgate-note">
+                         ResearchGate Interest Score higher than 99% of members who first published in 2020.
+                     </p>
+                </div>
 
-                    <li class="publication-entry"> <!-- Use correct class -->
-                        <h3 class="pub-title"><a href="https://arxiv.org/abs/2405.13012" target="_blank" rel="noopener noreferrer">Divergent creativity in humans and large language models</a></h3>
-                        <p class="pub-authors"> <!-- Use correct tag and class -->
-                            <a href="https://antoinebellemare.com/" target="_blank" rel="noopener noreferrer">Antoine Bellemare-Pepin</a>, <a href="https://orcid.org/0000-0002-6897-2119" target="_blank" rel="noopener noreferrer">François Lespinasse</a>, <a href="https://mila.quebec/en/directory/philipp-tholke" target="_blank" rel="noopener noreferrer" class="hover-card" data-description="View profile on Mila Quebec">Philipp Thölke</a>, <a href="https://www.researchgate.net/profile/Yann-Harel" target="_blank" rel="noopener noreferrer" class="hover-card" data-description="View Yann Harel's ResearchGate profile">Yann Harel</a>, <a href="https://research.google/people/105899/" target="_blank" rel="noopener noreferrer" class="hover-card" data-description="View Kory Mathewson's Google Research profile">Kory Mathewson</a>, <a href="https://www.jayolson.org/" target="_blank" rel="noopener noreferrer" class="hover-card" data-description="View Jay A Olson's personal website">Jay A Olson</a>, <a href="https://yoshuabengio.org/profile/" target="_blank" rel="noopener noreferrer" class="hover-card" data-description="View Yoshua Bengio's profile">Yoshua Bengio</a>, <a href="https://www.umontreal.ca/recherche/portraits-de-chercheurs/karim-jerbi" target="_blank" rel="noopener noreferrer" class="hover-card" data-description="View Karim Jerbi's profile">Karim Jerbi</a> <!-- Removed author-highlight span -->
+                <div class="publication-list">
+                    <div class="publication-item">
+                        <h3><a href="https://arxiv.org/abs/2405.13012" target="_blank" rel="noopener noreferrer" class="pub-title-link">Divergent creativity in humans and large language models</a></h3>
+                        <p class="pub-authors">
+                            <a href="https://antoinebellemare.com/" target="_blank" rel="noopener noreferrer" class="text-link">Antoine Bellemare-Pepin</a>, <a href="https://orcid.org/0000-0002-6897-2119" target="_blank" rel="noopener noreferrer" class="text-link">François Lespinasse</a>, <a href="https://mila.quebec/en/directory/philipp-tholke" target="_blank" rel="noopener noreferrer" class="text-link">Philipp Thölke</a>, <a href="https://www.researchgate.net/profile/Yann-Harel" target="_blank" rel="noopener noreferrer" class="text-link">Yann Harel</a>, <a href="https://research.google/people/105899/" target="_blank" rel="noopener noreferrer" class="text-link">Kory Mathewson</a>, <a href="https://www.jayolson.org/" target="_blank" rel="noopener noreferrer" class="text-link">Jay A Olson</a>, <a href="https://yoshuabengio.org/profile/" target="_blank" rel="noopener noreferrer" class="text-link">Yoshua Bengio</a>, <a href="https://www.umontreal.ca/recherche/portraits-de-chercheurs/karim-jerbi" target="_blank" rel="noopener noreferrer" class="text-link">Karim Jerbi</a>
                         </p>
-                        <p class="pub-source"> <!-- Use correct tag and class -->
+                        <p class="pub-source">
                             arXiv preprint arXiv:2405.13012 (2024)
                         </p>
-                        <div class="pub-links"> <!-- Use correct class -->
-                            <a href="https://arxiv.org/abs/2405.13012" target="_blank" rel="noopener noreferrer">arXiv Link</a>
+                        <div class="pub-item-links">
+                            <a href="https://arxiv.org/abs/2405.13012" target="_blank" rel="noopener noreferrer" class="text-link">arXiv Link ↗</a>
                         </div>
-                        <!-- Removed publication-metrics div -->
-                    </li>
+                    </div>
 
-                    <li class="publication-entry"> <!-- Use correct class -->
-                        <h3 class="pub-title"><a href="https://computationalcreativity.net/iccc24/papers/ICCC24_paper_130.pdf" target="_blank" rel="noopener noreferrer">Bio-Mechanical Poet: An Immersive Audiovisual Playground for Brain Signals and Generative AI</a></h3>
-                        <p class="pub-authors"> <!-- Use correct tag and class -->
-                            <a href="https://mila.quebec/en/directory/philipp-tholke" target="_blank" rel="noopener noreferrer" class="hover-card" data-description="View profile on Mila Quebec">Philipp Thölke</a>, <a href="https://antoinebellemare.com/" target="_blank" rel="noopener noreferrer">Antoine Bellemare-Pepin</a>, <a href="https://www.researchgate.net/profile/Yann-Harel" target="_blank" rel="noopener noreferrer" class="hover-card" data-description="View Yann Harel's ResearchGate profile">Yann Harel</a>, <a href="https://orcid.org/0000-0002-6897-2119" target="_blank" rel="noopener noreferrer">François Lespinasse</a>, <a href="https://www.umontreal.ca/recherche/portraits-de-chercheurs/karim-jerbi" target="_blank" rel="noopener noreferrer" class="hover-card" data-description="View Karim Jerbi's profile">Karim Jerbi</a> <!-- Removed author-highlight span -->
+                    <div class="publication-item">
+                        <h3><a href="https://computationalcreativity.net/iccc24/papers/ICCC24_paper_130.pdf" target="_blank" rel="noopener noreferrer" class="pub-title-link">Bio-Mechanical Poet: An Immersive Audiovisual Playground for Brain Signals and Generative AI</a></h3>
+                        <p class="pub-authors">
+                            <a href="https://mila.quebec/en/directory/philipp-tholke" target="_blank" rel="noopener noreferrer" class="text-link">Philipp Thölke</a>, <a href="https://antoinebellemare.com/" target="_blank" rel="noopener noreferrer" class="text-link">Antoine Bellemare-Pepin</a>, <a href="https://www.researchgate.net/profile/Yann-Harel" target="_blank" rel="noopener noreferrer" class="text-link">Yann Harel</a>, <a href="https://orcid.org/0000-0002-6897-2119" target="_blank" rel="noopener noreferrer" class="text-link">François Lespinasse</a>, <a href="https://www.umontreal.ca/recherche/portraits-de-chercheurs/karim-jerbi" target="_blank" rel="noopener noreferrer" class="text-link">Karim Jerbi</a>
                         </p>
-                        <p class="pub-source"> <!-- Use correct tag and class -->
+                        <p class="pub-source">
                             Proceedings of the 15th International Conference on Computational Creativity (2024)
                         </p>
-                        <div class="pub-links"> <!-- Use correct class -->
-                            <a href="https://computationalcreativity.net/iccc24/papers/ICCC24_paper_130.pdf" target="_blank" rel="noopener noreferrer">PDF Link</a>
+                        <div class="pub-item-links">
+                            <a href="https://computationalcreativity.net/iccc24/papers/ICCC24_paper_130.pdf" target="_blank" rel="noopener noreferrer" class="text-link">PDF Link ↗</a>
                         </div>
-                        <!-- Removed publication-metrics div -->
-                    </li>
+                    </div>
 
-                    <li class="publication-entry"> <!-- Use correct class -->
-                        <h3 class="pub-title"><a href="https://doi.org/10.3758/s13428-020-01516-y" target="_blank" rel="noopener noreferrer">NeuroKit2: A Python toolbox for neurophysiological signal processing</a></h3>
-                        <p class="pub-authors"> <!-- Use correct tag and class -->
-                            <a href="https://dominiquemakowski.github.io/" target="_blank" rel="noopener noreferrer">Dom Makowski</a>, Tam Pham, Zen J Lau, Jan C Brammer, <a href="https://orcid.org/0000-0002-6897-2119" target="_blank" rel="noopener noreferrer">François Lespinasse</a>, Hung Pham, Christopher Schölzel, SH Annabel Chen <!-- Removed author-highlight span -->
+                    <div class="publication-item">
+                        <h3><a href="https://doi.org/10.3758/s13428-020-01516-y" target="_blank" rel="noopener noreferrer" class="pub-title-link">NeuroKit2: A Python toolbox for neurophysiological signal processing</a></h3>
+                        <p class="pub-authors">
+                            <a href="https://dominiquemakowski.github.io/" target="_blank" rel="noopener noreferrer" class="text-link">Dom Makowski</a>, Tam Pham, Zen J Lau, Jan C Brammer, <a href="https://orcid.org/0000-0002-6897-2119" target="_blank" rel="noopener noreferrer" class="text-link">François Lespinasse</a>, Hung Pham, Christopher Schölzel, SH Annabel Chen
                         </p>
-                        <p class="pub-source"> <!-- Use correct tag and class -->
-                            <i>Behavior research methods</i> (2021) <!-- Added <i> for source title per CSS -->
+                        <p class="pub-source">
+                            <i>Behavior research methods</i> (2021)
                         </p>
-                        <div class="pub-links"> <!-- Use correct class -->
-                            <a href="https://doi.org/10.3758/s13428-020-01516-y" target="_blank" rel="noopener noreferrer">DOI Link</a>
+                        <div class="pub-item-links">
+                            <a href="https://doi.org/10.3758/s13428-020-01516-y" target="_blank" rel="noopener noreferrer" class="text-link">DOI Link ↗</a>
                         </div>
-                        <!-- Removed publication-metrics div -->
-                    </li>
-
-                </ul>
-            </div> <!-- Close publications-container -->
-        </main>
-        <footer style="text-align: center; padding: 2rem 0; border-top: 1px solid rgba(255,255,255,0.1);">
-            <div class="institutional-logos" style="display: flex; justify-content: center; gap: 2rem; align-items: center;">
-                <img src="../images/logos/sshrc-crsh-logo-vector.png" alt="SSHRC Logo" class="institution-logo" style="height: 50px; filter: contrast(1.2) brightness(1.1) drop-shadow(0 0 3px rgba(255,255,255,0.5));">
-                <img src="../images/logos/concordia.png" alt="Concordia University Logo" class="institution-logo" style="height: 80px; filter: contrast(1.2) brightness(1.1) drop-shadow(0 0 3px rgba(255,255,255,0.5));">
-                <img src="../images/logos/milieux.png" alt="Milieux Institute Logo" class="institution-logo" style="height: 80px; filter: contrast(1.2) brightness(1.1) drop-shadow(0 0 3px rgba(255,255,255,0.5));">
+                    </div>
+                    <!-- Add more publication-item divs here -->
+                </div>
             </div>
-        </footer>
-    </div>
-    <!-- Altmetric script removed -->
-    <!-- Add particles.js library and initialization script -->
-    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-    <script src="../js/main.js"></script>
+        </section>
+    </main>
 
-    </body>
+    <footer class="site-footer-bottom">
+        <div class="footer-contact">
+            <h3>Contact Me</h3>
+            <a href="connect.html" class="arrow-link">Inquiries & Collaborations ↗</a>
+        </div>
+        <div class="footer-credits">
+            <p>Design inspired by Editorial Template. Development by François Lespinasse.</p>
+            <p>&copy; <span id="current-year"></span> François Lespinasse. All Rights Reserved.</p>
+            <div class="footer-social">
+                 <a href="https://scholar.google.com/citations?user=VjJntXAAAAAJ&hl=en&oi=ao" target="_blank" rel="noopener noreferrer">Scholar ↗</a>
+                 <a href="https://www.researchgate.net/profile/Francois-Lespinasse" target="_blank" rel="noopener noreferrer">ResearchGate ↗</a>
+                 <a href="https://www.instagram.com/sangfrois/" target="_blank" rel="noopener noreferrer">Instagram ↗</a>
+            </div>
+        </div>
+        <script>document.getElementById('current-year').textContent = new Date().getFullYear();</script>
+    </footer>
+</body>
 </html>
