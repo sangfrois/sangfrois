@@ -30,10 +30,10 @@
 }
 
 body {
-    font-family: 'Supreme', sans-serif; /* Now this should load the correct font file */
+    font-family: 'Supreme', sans-serif;
     background: #0a0a0a;
-    color: #e0e0ff;
-    line-height: 1.6;
+    color: #e0e0ff; /* Default text color */
+    line-height: 1.7; /* Slightly increased line-height for readability */
     overflow-x: hidden;
     position: relative;
 }
@@ -46,12 +46,13 @@ body::before {
     transform: translate(-50%, -50%);
     width: 500px;
     height: 500px;
-    background-image: url('../images/logo.png');
+    background-image: url('../images/logo.png'); /* Ensure this path is correct */
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
-    opacity: 0.15;
+    opacity: 0.1; /* Reduced opacity */
     z-index: 0;
+    pointer-events: none; /* Ensure it doesn't interfere with clicks */
 }
 
 /* Particles container */
@@ -61,231 +62,267 @@ body::before {
     height: 100%;
     top: 0;
     left: 0;
-    z-index: 1; /* Ensure it's behind the content */
-    background-color: transparent; /* Make background transparent to show body::before image */
+    z-index: 1;
+    background-color: transparent;
 }
 
 /* Main content container */
 .content {
-    position: relative; /* Ensure positioning context for z-index */
     position: relative;
-    z-index: 2;
+    z-index: 2; /* Above particles and background logo */
     max-width: 1200px;
     margin: 0 auto;
-    padding: 2rem;
+    padding: 2rem 1.5rem; /* Adjusted padding */
 }
 
 /* Navigation */
 nav {
-    padding: 1rem 0;
-    margin-bottom: 3rem;
+    padding: 1.5rem 0; /* Increased padding */
+    margin-bottom: 4rem; /* Increased margin */
 }
 
 nav ul {
     list-style: none;
     display: flex;
     justify-content: center;
-    gap: 2rem;
+    gap: 2.5rem; /* Increased gap */
 }
 
 nav a {
     font-family: 'Supreme-Medium', sans-serif;
-    color: #fff;
+    color: #e0e0ff; /* Slightly less bright than pure white */
     text-decoration: none;
     font-size: 1.1rem;
-    transition: letter-spacing 0.3s ease;
+    transition: color 0.3s ease, letter-spacing 0.3s ease, text-decoration-color 0.3s ease; /* Added transitions */
     letter-spacing: normal;
+    padding-bottom: 0.3rem; /* Space for potential underline */
+    border-bottom: 2px solid transparent; /* Placeholder for active underline */
 }
 
 nav a:hover {
-    letter-spacing: 0.2em;
+    color: #ffffff; /* Brighter white on hover */
+    letter-spacing: 0.1em; /* Reduced hover letter-spacing */
+    border-bottom-color: rgba(247, 200, 163, 0.5); /* Subtle underline on hover */
 }
 
-nav a:hover {
-    color: #f7c8a3;
+/* Active navigation link style */
+nav a.active-nav {
+    color: #f7c8a3; /* Accent color for active link */
+    font-weight: bold; /* Make active link bolder */
+    border-bottom-color: #f7c8a3; /* Solid underline for active link */
 }
 
 /* Main content styles */
 main {
-    min-height: 70vh;
+    min-height: 65vh; /* Adjusted min-height */
 }
 
 .intro {
     text-align: center;
-    padding: 4rem 0;
+    padding: 4rem 0 5rem; /* Added bottom padding */
 }
 
 .intro h1 {
-    font-size: 2.5rem;
-    margin-bottom: 1rem;
+    font-size: 2.8rem; /* Slightly larger */
+    margin-bottom: 1.5rem; /* Increased margin */
     font-weight: bold;
     letter-spacing: 2px;
     color: #f7c8a3;
-    transition: letter-spacing 0.3s ease;
+    transition: letter-spacing 0.4s ease; /* Smoother transition */
     cursor: pointer;
 }
 
 .intro h1:hover {
-    letter-spacing: 8px;
+    letter-spacing: 6px; /* Reduced hover letter-spacing */
 }
 
 .intro p.tagline {
     font-family: 'Supreme-Thin', sans-serif;
-    font-size: 1.2rem;
-    color: #e0e0e0;
-    letter-spacing: 0.05em;
-    line-height: 1.6;
-    margin-top: 1rem;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+    font-size: 1.25rem; /* Slightly larger */
+    color: #d0d0f0; /* Slightly adjusted color */
+    letter-spacing: 0.08em; /* Increased letter spacing */
+    line-height: 1.8; /* Increased line height */
+    margin-top: 1.5rem;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3); /* Slightly enhanced shadow */
+    max-width: 800px; /* Limit width */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Section Title */
+.section-title {
+    text-align: center;
+    margin: 4rem 0 2.5rem; /* Increased top margin */
+    color: #f7c8a3;
+    font-weight: bold;
+    font-size: 1.8rem; /* Increased size */
+    letter-spacing: 1.5px; /* Increased spacing */
+    text-transform: uppercase; /* Uppercase for distinction */
 }
 
 /* Grid layouts */
 .installations-grid,
-.social-grid {
+.social-grid,
+.insights-grid,
+.instagram-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
+    gap: 2.5rem; /* Increased gap */
     padding: 2rem 0;
 }
 
-/* Project cards */
-.project-card {
-    background: rgba(255, 255, 255, 0.05);
-    border-radius: 8px;
-    padding: 1.5rem;
-    transition: transform 0.3s ease, background 0.3s ease;
+/* Project cards (applied to project, insight, publication, instagram cards where appropriate) */
+.project-card,
+.insight-card,
+.publication-entry, /* Added publication entry here */
+.instagram-card {
+    background: rgba(255, 255, 255, 0.04); /* Slightly adjusted background */
+    border-radius: 10px; /* Increased rounding */
+    padding: 2rem; /* Increased padding */
+    transition: transform 0.3s ease, background 0.3s ease, box-shadow 0.3s ease; /* Added box-shadow transition */
+    border: 1px solid rgba(255, 255, 255, 0.1); /* Subtle border */
+    display: flex; /* Use flexbox for better internal alignment */
+    flex-direction: column; /* Stack content vertically */
 }
 
-.project-card:hover {
-    transform: translateY(-5px);
-    background: rgba(255, 255, 255, 0.08);
+.project-card:hover,
+.insight-card:hover,
+.publication-entry:hover,
+.instagram-card:hover {
+    transform: translateY(-6px); /* Increased lift */
+    background: rgba(255, 255, 255, 0.07); /* Slightly lighter hover background */
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); /* Added shadow on hover */
 }
 
-.project-card h3 {
+/* Card headings */
+.project-card h3,
+.insight-card h3,
+.instagram-card h3 {
     color: #f7c8a3;
     margin-bottom: 1rem;
     font-weight: bold;
+    font-size: 1.3rem; /* Increased size */
 }
 
-.project-card p {
+/* Card paragraph text */
+.project-card p,
+.insight-card .insight-content p, /* Target paragraph within insight content */
+.instagram-card p {
     color: #ccc;
-    font-size: 0.95rem;
-    margin-bottom: 1rem;
+    font-size: 1rem; /* Standardized size */
+    margin-bottom: 1.5rem; /* Increased spacing */
+    flex-grow: 1; /* Allow text to fill space */
+}
+
+/* Ensure last paragraph in cards has no bottom margin */
+.project-card p:last-child,
+.insight-card .insight-content p:last-child,
+.instagram-card p:last-child {
+     margin-bottom: 0;
+}
+
+/* Card buttons/links */
+.project-card .social-button,
+.instagram-card .social-button {
+    margin-top: auto; /* Push button to bottom */
+    align-self: flex-start; /* Align button to the left */
 }
 
 /* Social links */
 .social-links-container {
     max-width: 800px;
     margin: 0 auto;
+    padding: 2rem 0;
 }
 
 .social-button {
     display: inline-flex;
     align-items: center;
-    padding: 0.8rem 1.5rem;
-    background: rgba(255, 255, 255, 0.05);
-    border-radius: 25px;
-    color: #fff;
+    padding: 0.9rem 1.8rem; /* Increased padding */
+    background: rgba(247, 200, 163, 0.1); /* Use accent color's alpha */
+    border-radius: 30px; /* More rounded */
+    color: #f7c8a3; /* Accent color text */
     text-decoration: none;
     margin: 0.5rem;
     transition: all 0.3s ease;
+    border: 1px solid rgba(247, 200, 163, 0.3); /* Subtle border */
+    font-weight: 500; /* Medium weight */
 }
 
 .social-button:hover {
-    background: rgba(247, 200, 163, 0.1);
-    color: #f7c8a3;
-    transform: translateY(-2px);
+    background: rgba(247, 200, 163, 0.2); /* Darker accent alpha on hover */
+    color: #ffffff; /* White text on hover */
+    transform: translateY(-3px) scale(1.03); /* Lift and slight scale */
+    box-shadow: 0 4px 8px rgba(247, 200, 163, 0.1); /* Subtle glow */
 }
 
-.section-title {
-    text-align: center;
-    margin: 2rem 0;
-    color: #f7c8a3;
-    font-weight: bold;
-    letter-spacing: 1px;
-}
-
-/* Project description and About section */
+/* About section */
 .about-section {
     display: flex;
     flex-direction: column;
     align-items: center;
     max-width: 1000px;
-    margin: 2rem auto;
+    margin: 3rem auto; /* Adjusted margin */
     padding: 0 1rem;
 }
 
 .bio-container {
-    margin-bottom: 2rem;
+    margin-bottom: 3rem; /* Increased margin */
 }
 
 .bio-headshot {
     width: 300px;
     height: 300px;
     object-fit: cover;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 12px; /* More rounded */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Enhanced shadow */
 }
 
 .project-description {
     text-align: justify;
     color: #e0e0e0;
-    font-size: 1.1rem;
-    line-height: 1.8;
+    font-size: 1.15rem; /* Slightly larger */
+    line-height: 1.9; /* Increased line height */
     max-width: 800px;
     margin-left: auto;
     margin-right: auto;
     padding: 0 1rem;
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
-    font-weight: 300;
+    font-weight: 300; /* Light weight for description */
 }
 
 .project-description p {
-    margin-bottom: 2.5rem;
+    margin-bottom: 2rem; /* Increased paragraph spacing */
 }
 
 .project-description p:last-child {
     margin-bottom: 0;
 }
 
-@media (max-width: 768px) {
-    .bio-headshot {
-        width: 250px;
-        height: 250px;
-    }
-}
-
 /* Publication Page Styles */
-/* Removed .scholar-link-container, .scholar-prompt, .scholar-button styles */
-
 .publications-container {
-    max-width: 800px;
-    margin: 2rem auto; /* Center the list */
-    padding: 0 1rem; /* Add some horizontal padding */
+    max-width: 850px; /* Slightly wider */
+    margin: 2rem auto 4rem; /* Added bottom margin */
+    padding: 0 1rem;
 }
 
-/* Remove bullet points from the publication list */
-.publications-container > ul { /* Use child combinator for specificity */
+.publications-container > ul {
     list-style: none;
-    padding-left: 0; /* Remove default padding */
+    padding-left: 0;
 }
 
+/* Inherits base card styles, specific overrides below */
 .publication-entry {
-    background: rgba(255, 255, 255, 0.03);
-    border-radius: 8px;
-    padding: 1.5rem;
-    margin-bottom: 1.5rem;
-    border-left: 3px solid #f7c8a3; /* Accent border */
-    transition: background 0.3s ease;
+    margin-bottom: 2rem; /* Increased spacing */
+    border-left: 4px solid #f7c8a3; /* Thicker accent border */
+    /* Removed background override, uses base card style */
 }
 
-.publication-entry:hover {
-     background: rgba(255, 255, 255, 0.06);
-}
+/* Removed hover background override, uses base card style */
 
 .publication-entry p {
-    margin-bottom: 0.6rem;
-    line-height: 1.7;
+    margin-bottom: 0.7rem; /* Adjusted spacing */
+    line-height: 1.8; /* Increased line height */
     color: #e0e0e0;
 }
 
@@ -294,59 +331,62 @@ main {
 }
 
 .pub-authors {
-    font-weight: 500; /* Medium weight for authors */
+    font-weight: 500;
     color: #f0f0f0;
+    font-size: 1.05rem; /* Slightly larger */
 }
 
-/* Style links within author list (e.g., highlighted names) */
 .pub-authors a {
-    color: inherit; /* Inherit color from parent (.pub-authors) - Removes blue */
-    text-decoration: none; /* Remove default underline */
+    color: inherit;
+    text-decoration: none;
     transition: color 0.3s ease, text-decoration 0.3s ease;
+    border-bottom: 1px dotted rgba(255, 255, 255, 0.5); /* Dotted underline for author links */
 }
 
 .pub-authors a:hover {
-    color: #ffffff; /* White color on hover */
-    text-decoration: underline; /* Underline on hover */
+    color: #ffffff;
+    text-decoration: none; /* Remove underline on hover */
+    border-bottom: 1px dotted #f7c8a3; /* Change underline color on hover */
 }
 
 .pub-title {
-    font-size: 1.1rem;
+    font-size: 1.2rem; /* Increased size */
     font-weight: bold;
-    color: #ffffff; /* Brighter title */
+    color: #ffffff;
+    margin-bottom: 0.8rem; /* Added space below title */
 }
 
-/* Style links within publication titles */
 .pub-title a {
-    color: inherit; /* Inherit the color from .pub-title (white) */
-    text-decoration: none; /* Remove default underline */
+    color: inherit;
+    text-decoration: none;
     transition: color 0.3s ease;
 }
 
 .pub-title a:hover {
-    color: #f7c8a3; /* Change to accent color on hover */
-    text-decoration: underline; /* Add underline on hover for clarity */
+    color: #f7c8a3;
+    text-decoration: underline;
 }
 
 .pub-source {
-    font-size: 0.95rem;
+    font-size: 1rem; /* Standardized size */
     color: #bbb;
 }
 
-.pub-source i { /* Style for italicized journal/conference titles */
+.pub-source i {
     font-style: italic;
 }
 
 .pub-links {
-    margin-top: 0.8rem; /* Add some space above links */
+    margin-top: 1rem; /* Increased space */
 }
 
 .pub-links a {
-    color: #f7c8a3; /* Use theme accent color for links */
+    color: #f7c8a3;
     text-decoration: none;
-    margin-right: 1rem;
+    margin-right: 1.2rem; /* Increased spacing */
     transition: color 0.3s ease, text-decoration 0.3s ease;
-    font-size: 0.9rem; /* Slightly smaller links */
+    font-size: 0.95rem; /* Slightly larger */
+    border-bottom: 1px solid transparent; /* Placeholder */
 }
 
 .pub-links a:last-child {
@@ -355,211 +395,314 @@ main {
 
 .pub-links a:hover {
     color: #ffffff;
-    text-decoration: underline;
+    text-decoration: none; /* Remove default underline */
+    border-bottom: 1px solid #ffffff; /* Add underline on hover */
 }
 
 /* CV Page Specific Styles */
 .cv-content {
-    max-width: 900px; /* Adjust width as needed */
-    margin: 2rem auto; /* Center the content */
-    padding: 2rem;
-    background: rgba(255, 255, 255, 0.03); /* Subtle background */
-    border-radius: 8px;
-    color: #e0e0e0; /* Ensure text color contrasts */
+    max-width: 900px;
+    margin: 2rem auto 4rem; /* Added bottom margin */
+    padding: 2.5rem; /* Increased padding */
+    background: rgba(255, 255, 255, 0.04); /* Consistent background */
+    border-radius: 10px; /* Consistent rounding */
+    color: #e0e0e0;
+    border: 1px solid rgba(255, 255, 255, 0.1); /* Subtle border */
 }
 
 .cv-section {
-    margin-bottom: 2.5rem;
-    padding-bottom: 1.5rem;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1); /* Separator line */
+    margin-bottom: 3rem; /* Increased spacing */
+    padding-bottom: 2rem; /* Increased spacing */
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15); /* Slightly more visible separator */
 }
 
 .cv-section:last-child {
-    border-bottom: none; /* No line after the last section */
+    border-bottom: none;
     margin-bottom: 0;
+    padding-bottom: 0; /* Remove padding for last section */
 }
 
 .cv-section h2 {
-    color: #f7c8a3; /* Use theme accent color */
-    font-size: 1.6rem;
-    margin-bottom: 1.5rem;
-    padding-bottom: 0.5rem;
-    border-bottom: 1px solid rgba(247, 200, 163, 0.3); /* Accent under H2 */
-    display: inline-block; /* Keep border tight to text */
+    color: #f7c8a3;
+    font-size: 1.7rem; /* Increased size */
+    margin-bottom: 2rem; /* Increased spacing */
+    padding-bottom: 0.8rem; /* Increased spacing */
+    border-bottom: 2px solid rgba(247, 200, 163, 0.4); /* Thicker accent under H2 */
+    display: inline-block;
+    text-transform: uppercase; /* Consistent with section titles */
+    letter-spacing: 1px;
 }
 
 .cv-entry {
-    margin-bottom: 1.5rem;
+    margin-bottom: 1.8rem; /* Increased spacing */
 }
 
 .cv-entry h3 {
-    font-size: 1.2rem;
-    color: #ffffff; /* Slightly brighter for subheadings */
-    margin-bottom: 0.3rem;
-    font-weight: 500; /* Medium weight */
+    font-size: 1.25rem; /* Slightly larger */
+    color: #ffffff;
+    margin-bottom: 0.5rem; /* Increased spacing */
+    font-weight: 500;
 }
 
 .cv-entry p {
-    margin-bottom: 0.5rem;
-    line-height: 1.7;
+    margin-bottom: 0.6rem; /* Increased spacing */
+    line-height: 1.8; /* Increased line height */
 }
 
 .cv-entry strong {
-    font-weight: 500; /* Medium weight for emphasis */
+    font-weight: 500;
     color: #f0f0f0;
 }
 
 ul.cv-list {
-    list-style: disc; /* Standard bullet points */
-    margin-left: 1.5rem; /* Indentation for lists */
+    list-style: disc;
+    margin-left: 1.8rem; /* Adjusted indentation */
     padding-left: 0.5rem;
 }
 
 ul.cv-list li {
-    margin-bottom: 0.4rem;
-    line-height: 1.7;
+    margin-bottom: 0.6rem; /* Increased spacing */
+    line-height: 1.8; /* Increased line height */
 }
 
 .cv-content a {
-    color: #f7c8a3; /* Link color consistent with theme */
+    color: #f7c8a3;
     text-decoration: underline;
-    transition: color 0.3s ease;
+    text-decoration-color: rgba(247, 200, 163, 0.5); /* Subtler underline */
+    transition: color 0.3s ease, text-decoration-color 0.3s ease;
 }
 
 .cv-content a:hover {
     color: #ffffff;
+    text-decoration-color: #ffffff; /* Stronger underline on hover */
 }
 
 /* Insights styles */
 .insights-grid {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 2rem;
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 2rem 0;
+    /* Inherits base grid styles */
+    max-width: 850px; /* Slightly wider */
+    margin: 0 auto 4rem; /* Added bottom margin */
 }
 
+/* Inherits base card styles */
 .insight-card {
-    background: rgba(255, 255, 255, 0.05);
-    border-radius: 8px;
-    padding: 2rem;
-    transition: transform 0.3s ease;
-}
-
-.insight-card:hover {
-    transform: translateY(-5px);
-}
-
-.insight-card h3 {
-    color: #f7c8a3;
-    margin-bottom: 1rem;
-    font-weight: bold;
+     /* Specific overrides if needed */
 }
 
 .insight-metadata {
-    color: #888;
+    color: #aaa; /* Slightly lighter grey */
     font-size: 0.9rem;
-    margin-bottom: 1rem;
+    margin-bottom: 1.5rem; /* Increased spacing */
 }
 
 .insight-content {
     color: #e0e0ff;
-    line-height: 1.8;
+    line-height: 1.9; /* Increased line height */
+    text-align: justify; /* Justify text */
 }
 
 /* Contact form styles */
 .contact-form-container {
-    max-width: 600px;
-    margin: 3rem auto;
-    padding: 2rem;
-    background: rgba(255, 255, 255, 0.05);
-    border-radius: 8px;
+    max-width: 650px; /* Slightly wider */
+    margin: 3rem auto 4rem; /* Adjusted margins */
+    padding: 2.5rem; /* Increased padding */
+    background: rgba(255, 255, 255, 0.04); /* Consistent background */
+    border-radius: 10px; /* Consistent rounding */
+    border: 1px solid rgba(255, 255, 255, 0.1); /* Subtle border */
 }
 
 .contact-form-container h3 {
     color: #f7c8a3;
-    margin-bottom: 2rem;
+    margin-bottom: 2.5rem; /* Increased spacing */
     text-align: center;
+    font-size: 1.6rem; /* Larger heading */
 }
 
 .form-group {
-    margin-bottom: 1.5rem;
+    margin-bottom: 1.8rem; /* Increased spacing */
 }
 
 .form-group label {
     display: block;
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.7rem; /* Increased spacing */
     color: #e0e0ff;
+    font-weight: 500; /* Medium weight labels */
 }
 
 .form-group input,
 .form-group textarea {
     width: 100%;
-    padding: 0.8rem;
-    background: rgba(255, 255, 255, 0.1);
+    padding: 1rem; /* Increased padding */
+    background: rgba(255, 255, 255, 0.08); /* Slightly lighter input background */
     border: 1px solid rgba(255, 255, 255, 0.2);
-    border-radius: 4px;
+    border-radius: 6px; /* Slightly more rounded */
     color: #fff;
     font-family: 'Supreme', sans-serif;
+    font-size: 1rem;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease; /* Added box-shadow transition */
 }
 
 .form-group input:focus,
 .form-group textarea:focus {
     outline: none;
     border-color: #f7c8a3;
+    box-shadow: 0 0 0 3px rgba(247, 200, 163, 0.2); /* Subtle focus ring */
 }
+
+/* Style the submit button like other social buttons */
+.contact-form-container button[type="submit"] {
+    display: block; /* Make it block level */
+    width: auto; /* Allow width to adjust */
+    margin: 1.5rem auto 0; /* Center button */
+    /* Inherit .social-button styles via class in HTML, or replicate here: */
+    /* padding: 0.9rem 1.8rem; ... etc. */
+}
+
 
 /* Instagram section styles */
 .instagram-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
-    padding: 2rem 0;
-    max-width: 800px; /* Adjust as needed */
-    margin: 0 auto; /* Center the grid */
+    /* Inherits base grid styles */
+    max-width: 900px; /* Adjust as needed */
+    margin: 0 auto 4rem; /* Added bottom margin */
+    /* Styles for horizontal scroll on mobile (if needed) */
+    /* overflow-x: auto; display: flex; flex-wrap: nowrap; -webkit-overflow-scrolling: touch; */
 }
 
+/* Inherits base card styles */
 .instagram-card {
-    background: rgba(255, 255, 255, 0.05);
-    border-radius: 8px;
-    padding: 1.5rem;
-    transition: transform 0.3s ease, background 0.3s ease;
-    text-align: center; /* Center content */
-}
-
-.instagram-card:hover {
-    transform: translateY(-5px);
-    background: rgba(255, 255, 255, 0.08);
-}
-
-.instagram-card h3 {
-    color: #f7c8a3;
-    margin-bottom: 1rem;
-    font-weight: bold;
-}
-
-.instagram-card p {
-    color: #ccc;
-    font-size: 0.95rem;
-    margin-bottom: 1.5rem;
+    text-align: center;
 }
 
 .instagram-card .social-button {
-    display: inline-block; /* Ensure button behaves correctly */
-    margin-top: auto;
+    align-self: center; /* Center button horizontally */
 }
+
+/* Footer Styles */
+footer {
+    text-align: center;
+    padding: 3rem 0 2rem; /* Adjusted padding */
+    border-top: 1px solid rgba(255,255,255,0.15); /* Slightly more visible border */
+    margin-top: 4rem; /* Add space above footer */
+}
+
+.institutional-logos {
+    display: flex;
+    justify-content: center;
+    gap: 3rem; /* Increased gap */
+    align-items: center;
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+}
+
+.institution-logo {
+    filter: contrast(1.1) brightness(1.1) drop-shadow(0 0 4px rgba(255,255,255,0.4)); /* Slightly adjusted filter */
+    transition: transform 0.3s ease;
+}
+
+.institution-logo:hover {
+    transform: scale(1.05); /* Slight scale on hover */
+}
+
+/* Specific logo heights - adjust as needed */
+img[alt="SSHRC Logo"] { height: 50px; }
+img[alt="Concordia University Logo"] { height: 75px; } /* Adjusted height */
+img[alt="Milieux Institute Logo"] { height: 75px; } /* Adjusted height */
 
 
 /* Responsive design */
+@media (max-width: 992px) {
+    .content {
+        padding: 2rem 1rem; /* Reduce padding on medium screens */
+    }
+    .intro h1 {
+        font-size: 2.5rem;
+    }
+    .intro p.tagline {
+        font-size: 1.15rem;
+    }
+}
+
 @media (max-width: 768px) {
     nav ul {
         flex-direction: column;
         align-items: center;
-        gap: 1rem;
+        gap: 1.5rem; /* Adjusted gap for column layout */
     }
-
+    nav {
+        margin-bottom: 3rem; /* Reduce margin */
+    }
     .intro h1 {
-        font-size: 2rem;
+        font-size: 2.2rem;
+        letter-spacing: 1px; /* Reduce base letter spacing */
+    }
+    .intro h1:hover {
+        letter-spacing: 4px; /* Reduce hover spacing */
+    }
+    .intro p.tagline {
+        font-size: 1.1rem;
+    }
+    .section-title {
+        font-size: 1.6rem;
+        margin: 3rem 0 2rem;
+    }
+    .bio-headshot {
+        width: 250px;
+        height: 250px;
+    }
+    .cv-content, .contact-form-container {
+        padding: 1.5rem; /* Reduce padding */
+    }
+    /* Make grids single column */
+    .installations-grid,
+    .social-grid,
+    .insights-grid,
+    .instagram-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem; /* Adjust gap */
+    }
+    .institutional-logos {
+        gap: 2rem; /* Reduce gap */
+    }
+    img[alt="Concordia University Logo"], img[alt="Milieux Institute Logo"] {
+        height: 65px; /* Reduce logo size */
+    }
+}
+
+@media (max-width: 480px) {
+    .content {
+        padding: 1.5rem 0.8rem; /* Further reduce padding */
+    }
+    .intro h1 {
+        font-size: 1.9rem;
+    }
+    .intro p.tagline {
+        font-size: 1rem;
+    }
+    .section-title {
+        font-size: 1.4rem;
+    }
+    .bio-headshot {
+        width: 200px;
+        height: 200px;
+    }
+    .project-card, .insight-card, .publication-entry, .instagram-card, .cv-content, .contact-form-container {
+        padding: 1.5rem; /* Adjust padding */
+        border-radius: 8px; /* Reduce rounding slightly */
+    }
+    .social-button {
+        padding: 0.8rem 1.5rem; /* Reduce button padding */
+        font-size: 0.9rem;
+    }
+    .form-group input, .form-group textarea {
+        padding: 0.8rem; /* Reduce input padding */
+    }
+    footer {
+        padding: 2rem 0 1.5rem;
+    }
+    .institutional-logos {
+        gap: 1.5rem; /* Further reduce gap */
+    }
+     img[alt="SSHRC Logo"] { height: 40px; }
+     img[alt="Concordia University Logo"], img[alt="Milieux Institute Logo"] {
+        height: 55px; /* Further reduce logo size */
     }
 }
