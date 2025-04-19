@@ -271,6 +271,175 @@ main {
     color: #555;
 }
 
+/* CV Page Specific Styles */
+.cv-category {
+    margin-bottom: 3.5rem;
+    padding-bottom: 3rem;
+    border-bottom: 1px solid #e0e0e0;
+}
+.cv-category:last-child {
+    margin-bottom: 0;
+    padding-bottom: 0;
+    border-bottom: none;
+}
+.cv-category-title {
+    font-size: 1.6rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+    color: #333;
+}
+.cv-item {
+    margin-bottom: 2rem;
+}
+.cv-item:last-child {
+    margin-bottom: 0;
+}
+.cv-item h4 {
+    font-size: 1.2rem; /* Title of the entry */
+    font-weight: 500; /* Medium weight */
+    margin-bottom: 0.3rem;
+    line-height: 1.4;
+}
+.cv-institution {
+    font-size: 1rem;
+    color: #666; /* Lighter color for institution/dates */
+    margin-bottom: 0.5rem;
+}
+.cv-item p:not(.cv-institution) { /* Style for description paragraphs */
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #444;
+    margin-bottom: 0.8rem;
+}
+.cv-details { /* Style for bullet points */
+    list-style: disc;
+    margin-left: 1.5rem; /* Indentation */
+    font-size: 1rem;
+    color: #444;
+    line-height: 1.6;
+}
+.cv-details li {
+    margin-bottom: 0.4rem;
+}
+.cv-details a { /* Ensure links within lists use text-link style */
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 3px;
+    color: #1a1a1a;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+.cv-details a:hover {
+    color: #555;
+}
+
+
+/* Insights Page Specific Styles */
+.insight-item {
+    margin-bottom: 3rem;
+    padding-bottom: 3rem;
+    border-bottom: 1px solid #e0e0e0;
+}
+.insight-item:last-child {
+    margin-bottom: 0;
+    padding-bottom: 0;
+    border-bottom: none;
+}
+.insight-date {
+    font-size: 0.9rem;
+    color: #888;
+    margin-bottom: 1rem;
+}
+.insight-text p {
+    font-size: 1.1rem; /* Match standard paragraph */
+    line-height: 1.7;
+    color: #333;
+    margin-bottom: 1.5rem;
+}
+.insight-text p:last-child {
+    margin-bottom: 0;
+}
+
+/* Publications Page Specific Styles */
+.publication-external-links {
+    margin-bottom: 3rem;
+    padding-bottom: 3rem;
+    border-bottom: 1px solid #e0e0e0;
+}
+.publication-external-links p {
+    margin-bottom: 0.8rem;
+    color: #555;
+}
+.publication-external-links a {
+    margin-right: 1.5rem;
+}
+.researchgate-note {
+    font-size: 0.9rem;
+    font-style: italic;
+    color: #777;
+    margin-top: 0.5rem;
+}
+
+.publication-list {
+    /* Container for all publication items */
+}
+
+.publication-item {
+    margin-bottom: 3rem;
+    padding-bottom: 3rem;
+    border-bottom: 1px solid #e0e0e0;
+}
+.publication-item:last-child {
+    margin-bottom: 0;
+    padding-bottom: 0;
+    border-bottom: none;
+}
+.publication-item h3 {
+    font-size: 1.4rem; /* Publication title size */
+    font-weight: 700; /* Bold */
+    margin-bottom: 0.5rem;
+    line-height: 1.3;
+}
+.pub-title-link { /* Style for the main title link */
+    text-decoration: none;
+    color: #1a1a1a;
+    transition: color 0.3s ease;
+}
+.pub-title-link:hover {
+    color: #555;
+}
+.pub-authors {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #444;
+    margin-bottom: 0.5rem;
+}
+.pub-authors a { /* Ensure author links use text-link style */
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 3px;
+    color: #1a1a1a;
+    font-weight: 500; /* Medium weight for authors */
+    transition: color 0.3s ease;
+}
+.pub-authors a:hover {
+    color: #555;
+}
+.pub-source {
+    font-size: 1rem;
+    color: #666; /* Lighter color for source */
+    margin-bottom: 0.8rem;
+}
+.pub-source i { /* Italicize journal names etc. */
+    font-style: italic;
+}
+.pub-item-links {
+    margin-top: 0.5rem;
+}
+.pub-item-links a {
+    margin-right: 1rem; /* Space between PDF/DOI/arXiv links */
+}
+
 
 /* New Footer Styles */
 .site-footer-bottom {
