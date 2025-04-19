@@ -61,11 +61,6 @@ body {
     line-height: 1.6; /* Adjusted line-height */
 }
 
-/* Main content styles */
-main {
-    /* Remove min-height if not needed, or adjust */
-}
-
 /* New Header Styles */
 .site-header {
     display: flex;
@@ -74,10 +69,6 @@ main {
     padding: 2rem 3rem; /* Adjust padding as needed */
     border-bottom: 1px solid #e0e0e0; /* Subtle border */
     margin-bottom: 4rem; /* Space below header */
-}
-
-.header-brand {
-    /* Styles for logo or text title */
 }
 
 .header-logo {
