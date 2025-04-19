@@ -11,69 +11,85 @@
     <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
-    <div id="particles-js"></div>
-    <div class="content">
-        <nav>
+    <header class="site-header">
+        <div class="header-brand">
+            <!-- Using Text Title -->
+            <a href="../index.html" class="header-title-main">François Lespinasse</a>
+            <span class="header-title-sub">Contemplative Research-Creation</span>
+        </div>
+        <nav class="header-nav">
             <ul>
-                <li><a href="../index.html">Home</a></li>
-                <li><a href="cv.html">CV</a></li>
-                <li><a href="portfolio.html">Portfolio</a></li>
+                <li><a href="portfolio.html">Works</a></li> <!-- Add class="active-nav" if needed -->
                 <li><a href="publications.html">Publications</a></li>
                 <li><a href="insights.html">Insights</a></li>
-                <li><a href="connect.html">Connect</a></li>
+                <li><a href="cv.html">CV</a></li>
+                <li><a href="connect.html">Contact</a></li>
             </ul>
         </nav>
-        <main>
-            <h2 class="section-title">Portfolio</h2>
-                <div class="project-card">
+    </header>
+
+    <main>
+        <section class="content-section portfolio-section">
+            <div class="section-column-full">
+                <h2>Works</h2>
+                <div class="portfolio-item"> <!-- Replaces project-card -->
                     <h3>Mechanical Meanderings</h3>
                     <p>
-                        Mechanical Meanderings is an interactive installation that explores embodiement of metaphors and self-perception. 
-                        Participants speak words which are analyzed by AI systems that formats their query into text-to-image prompts. 
-                        These prompts are used in real-time with the camera capturing movements, blending their silhouettes with their metaphors.
-                        The installation is a solo project of mine, currently in development. It was exhbited at MUTEK Montréal 2024 and at MTL Connect 2024.
+                        An interactive installation exploring embodiment of metaphors and self-perception using AI analysis of speech and real-time visual blending. Exhibited at MUTEK Montréal 2024 and MTL Connect 2024.
                     </p>
-                    <a href="https://drive.google.com/drive/folders/1PDGXWPlgo04c2GmGccMHwEpvzSVZ2g90?usp=sharing" class = "social-button">View Photos</a>
+                    <a href="https://drive.google.com/drive/folders/1PDGXWPlgo04c2GmGccMHwEpvzSVZ2g90?usp=sharing" target="_blank" rel="noopener noreferrer" class="text-link">View Photos ↗</a>
                 </div>
-                <div class="project-card">
+                <div class="portfolio-item">
                     <h3>Meteomythosophy</h3>
-                    <p>Meteomythosophy is a transdisciplinary framework for immersive performances, connecting neuro-computational arts, religious studies, and laboratory theater. 
-                        It uses meteorological metaphors to express the fluid and unpredictable aspects of consciousness and sense-making. 
-                        The project was showcased at Embodied Interventions Festival 2024.
-                        It is a collaboration between Paolo Gruni, Thomas Seibel and I.
+                    <p>
+                        A transdisciplinary framework for immersive performances connecting neuro-computational arts, religious studies, and laboratory theater, using meteorological metaphors for consciousness. Showcased at Embodied Interventions Festival 2024. (Collaboration: Paolo Gruni, Thomas Seibel).
                     </p>
-                    <a href="https://drive.google.com/file/d/190fRz0Px14MtXogU2zKSo4u3O-imztwe/view?usp=drive_link" class="social-button">View Video</a>         
+                    <a href="https://drive.google.com/file/d/190fRz0Px14MtXogU2zKSo4u3O-imztwe/view?usp=drive_link" target="_blank" rel="noopener noreferrer" class="text-link">View Video ↗</a>
                 </div>
-                    <div class="project-card">
-                            <h3>Goofi-pipe</h3>
-                            <p>A versatile Python library for real-time data streaming and analysis, designed for applications of neurotechnology and GenAI in arts.
-                                it is a collaboration between Philipp Thölke, Antoine Bellemare-Pépin, Yann Harel and I.
-                            </p>
-                            <a href="https://github.com/PhilippThoelke/goofi-pipe" class="social-button">View Project</a>
-                        </div>
-                
-                <div class="project-card">
+                <div class="portfolio-item">
+                    <h3>Goofi-pipe</h3>
+                    <p>
+                        A versatile Python library for real-time data streaming and analysis, designed for applications of neurotechnology and GenAI in arts. (Collaboration: Philipp Thölke, Antoine Bellemare-Pépin, Yann Harel).
+                    </p>
+                    <a href="https://github.com/PhilippThoelke/goofi-pipe" target="_blank" rel="noopener noreferrer" class="text-link">View Project ↗</a>
+                </div>
+                <div class="portfolio-item">
                     <h3>NeuroKit</h3>
                     <p>A comprehensive Python toolbox for neurophysiological signal processing, offering a wide range of functionalities for analyzing physiological data.</p>
-                    <a href="https://neuropsychology.github.io/NeuroKit/" class="social-button">View Project</a>
+                    <a href="https://neuropsychology.github.io/NeuroKit/" target="_blank" rel="noopener noreferrer" class="text-link">View Project ↗</a>
                 </div>
-                
-                <div class="project-card">
+                <div class="portfolio-item">
                     <h3>Biotuner</h3>
                     <p>A toolbox for Harmonic analysis of biosignals, creating chord progressions and melodies from EEG, ECG, Plants, and Audio in real-time.</p>
-                    <a href="https://antoinebellemare.github.io/biotuner/" class="social-button">View Project</a>
+                    <a href="https://antoinebellemare.github.io/biotuner/" target="_blank" rel="noopener noreferrer" class="text-link">View Project ↗</a>
                 </div>
             </div>
-        </main>
-        <footer style="text-align: center; padding: 2rem 0; border-top: 1px solid rgba(255,255,255,0.1);">
-            <div class="institutional-logos" style="display: flex; justify-content: center; gap: 2rem; align-items: center;">
-                <img src="../images/logos/sshrc-crsh-logo-vector.png" alt="SSHRC Logo" class="institution-logo" style="height: 50px; filter: contrast(1.2) brightness(1.1) drop-shadow(0 0 3px rgba(255,255,255,0.5));">
-                <img src="../images/logos/concordia.png" alt="Concordia University Logo" class="institution-logo" style="height: 80px; filter: contrast(1.2) brightness(1.1) drop-shadow(0 0 3px rgba(255,255,255,0.5));">
-                <img src="../images/logos/milieux.png" alt="Milieux Institute Logo" class="institution-logo" style="height: 80px; filter: contrast(1.2) brightness(1.1) drop-shadow(0 0 3px rgba(255,255,255,0.5));">
+        </section>
+    </main>
+
+    <footer class="site-footer-bottom">
+        <div class="footer-contact">
+            <h3>Contact Me</h3>
+            <a href="connect.html" class="arrow-link">Inquiries & Collaborations ↗</a>
+        </div>
+        <div class="footer-credits">
+            <p>Design inspired by Editorial Template. Development by François Lespinasse.</p>
+            <p>&copy; <span id="current-year"></span> François Lespinasse. All Rights Reserved.</p>
+            <div class="footer-social">
+                 <a href="https://scholar.google.com/citations?user=VjJntXAAAAAJ&hl=en&oi=ao" target="_blank" rel="noopener noreferrer">Scholar ↗</a>
+                 <a href="https://www.researchgate.net/profile/Francois-Lespinasse" target="_blank" rel="noopener noreferrer">ResearchGate ↗</a>
+                 <a href="https://www.instagram.com/sangfrois/" target="_blank" rel="noopener noreferrer">Instagram ↗</a>
             </div>
-        </footer>
-    </div>
-    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-    <script src="../js/main.js"></script>
+            <!-- Optional: Add institutional logos here if desired, styled appropriately -->
+            <!--
+            <div class="footer-logos" style="margin-top: 1.5rem; text-align: right;">
+                <img src="../images/logos/sshrc-crsh-logo-vector.png" alt="SSHRC" style="height: 30px; margin-left: 1rem; opacity: 0.7;">
+                <img src="../images/logos/concordia.png" alt="Concordia" style="height: 40px; margin-left: 1rem; opacity: 0.7;">
+                <img src="../images/logos/milieux.png" alt="Milieux" style="height: 40px; margin-left: 1rem; opacity: 0.7;">
+            </div>
+            -->
+        </div>
+        <script>document.getElementById('current-year').textContent = new Date().getFullYear();</script>
+    </footer>
 </body>
 </html>

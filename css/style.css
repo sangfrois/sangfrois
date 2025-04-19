@@ -354,6 +354,18 @@ main {
     color: #fff;
 }
 
+/* Portfolio Item Styling (similar to focus-item) */
+.portfolio-item {
+    margin-bottom: 3rem;
+    padding-bottom: 3rem;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.portfolio-item:last-child {
+    margin-bottom: 0;
+    padding-bottom: 0;
+    border-bottom: none;
+}
 
 /* CV Page Specific Styles */
 .cv-category {
