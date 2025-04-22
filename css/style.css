@@ -147,7 +147,15 @@ body {
     color: inherit; /* Inherit color from .hero-section */
 }
 
-/* Removed styles for .hero-subheading */
+/* Re-add style for the subheading below the main hero heading */
+.hero-subheading {
+    font-size: 1.5rem; /* Adjust size as needed */
+    font-weight: 400; /* Regular or Light weight */
+    color: rgba(248, 248, 248, 0.85); /* Slightly transparent light color */
+    margin-bottom: 2.5rem; /* Space before the tagline */
+    letter-spacing: 0.05em; /* Optional: slight spacing */
+    text-align: center;
+}
 
 .hero-tagline {
     font-size: 1.2rem;
@@ -685,7 +693,11 @@ body {
     .hero-heading {
         font-size: 12vw; /* Larger size on mobile */
     }
-    /* Removed hero-subheading responsive rule */
+    /* Re-add hero-subheading responsive rule */
+    .hero-subheading {
+        font-size: 1.2rem; /* Adjust subheading size */
+        margin-bottom: 2rem;
+    }
     .hero-tagline {
         font-size: 1.1rem;
     }
@@ -710,7 +722,10 @@ body {
     .hero-heading {
         font-size: 15vw;
     }
-    /* Removed hero-subheading responsive rule */
+    /* Re-add hero-subheading responsive rule */
+    .hero-subheading {
+        font-size: 1rem; /* Adjust subheading size */
+    }
      .header-nav ul {
         gap: 0.8rem 1rem;
     }
