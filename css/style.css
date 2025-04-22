@@ -605,6 +605,17 @@ body {
 /* Inherit arrow-link styles for the contact link */
 .footer-contact .arrow-link {
     font-size: 1.1rem; /* Adjust size if needed */
+    color: #1a1a1a; /* Ensure footer link is dark */
+}
+.footer-contact .arrow-link:hover {
+    color: #555; /* Darker hover for footer link */
+}
+/* Make sure the arrow color also updates */
+.footer-contact .arrow-link::after {
+    color: #1a1a1a; /* Match link color */
+}
+.footer-contact .arrow-link:hover::after {
+    color: #555; /* Match link hover color */
 }
 
 
