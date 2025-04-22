@@ -138,9 +138,19 @@ body {
     font-size: 7vw; /* Responsive font size based on viewport width */
     font-weight: 800; /* Extrabold */
     line-height: 1.0; /* Tight line height */
-    margin-bottom: 2rem;
+    margin-bottom: 0.5rem; /* Reduced margin below main heading */
     letter-spacing: -0.02em; /* Slight tightening */
     color: inherit; /* Inherit color from .hero-section */
+}
+
+/* New style for the subheading below the main hero heading */
+.hero-subheading {
+    font-size: 1.5rem; /* Adjust size as needed */
+    font-weight: 400; /* Regular or Light weight */
+    color: rgba(248, 248, 248, 0.85); /* Slightly transparent light color */
+    margin-bottom: 2.5rem; /* Space before the tagline */
+    letter-spacing: 0.05em; /* Optional: slight spacing */
+    text-align: center;
 }
 
 .hero-tagline {
@@ -200,20 +210,7 @@ body {
      transform: translateX(3px) translateY(-3px); /* Slight movement on hover */
 }
 
-/* Style for links within headings */
-.heading-link {
-    text-decoration: none;
-    color: inherit; /* Inherit color from heading */
-    transition: color 0.3s ease;
-}
-
-.heading-link:hover {
-    color: rgba(248, 248, 248, 0.8); /* Slightly transparent white on hover */
-    /* Optional: Add underline on hover if desired */
-    /* text-decoration: underline;
-    text-decoration-thickness: 2px;
-    text-underline-offset: 5px; */
-}
+/* Removed .heading-link styles as H1 is no longer a link */
 
 
 /* New Content Section Styles */
@@ -692,6 +689,10 @@ body {
     .hero-heading {
         font-size: 12vw; /* Larger size on mobile */
     }
+    .hero-subheading {
+        font-size: 1.2rem; /* Adjust subheading size */
+        margin-bottom: 2rem;
+    }
     .hero-tagline {
         font-size: 1.1rem;
     }
@@ -715,6 +716,9 @@ body {
     }
     .hero-heading {
         font-size: 15vw;
+    }
+    .hero-subheading {
+        font-size: 1rem; /* Adjust subheading size */
     }
      .header-nav ul {
         gap: 0.8rem 1rem;
