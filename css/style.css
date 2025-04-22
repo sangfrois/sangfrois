@@ -154,6 +154,18 @@ body {
     margin-right: auto; /* Center the tagline */
 }
 
+/* Ensure text links within the hero tagline are visible */
+.hero-tagline .text-link {
+    color: inherit; /* Inherit the light color from the hero section */
+    text-decoration-color: rgba(248, 248, 248, 0.7); /* Slightly less prominent underline */
+}
+
+.hero-tagline .text-link:hover {
+    color: #ccc; /* Lighter grey on hover */
+    text-decoration-color: #ccc; /* Match underline color on hover */
+}
+
+
 /* Removed .hero-image styles */
 
 .hero-links {
