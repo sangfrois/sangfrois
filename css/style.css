@@ -122,10 +122,11 @@ body {
     padding: 6rem 3rem; /* Increased padding for background */
     text-align: center; /* Center align text */
     margin-bottom: 6rem; /* Space below hero */
-    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('../images/panorama.jpg'); /* Overlay + Image */
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('../images/cascade.jpg'); /* Overlay + NEW Image */
     background-size: cover;
-    background-position: center;
+    background-position: center top; /* Focus on the top part */
     background-repeat: no-repeat;
+    background-attachment: fixed; /* Add parallax effect */
     color: #f8f8f8; /* Light text color for contrast */
     position: relative; /* Needed for potential pseudo-elements if required later */
 }
