@@ -126,7 +126,7 @@ body {
 
 .hero-main-content {
     display: flex;
-    align-items: flex-start; /* Align items to the top */
+    align-items: center; /* Vertically center items */
     gap: 3rem; /* Space between heading and image */
     margin-bottom: 2rem; /* Space below the heading/image group */
 }
@@ -154,7 +154,7 @@ body {
     max-width: 35%; /* Adjust size as needed */
     height: auto;
     object-fit: contain; /* Ensure image scales nicely */
-    margin-top: 1rem; /* Align visually with the top of the text */
+    /* margin-top: 1rem; Removed */
 }
 
 .hero-links {
