@@ -85,21 +85,15 @@ body {
     margin-bottom: 0.2rem;
 }
 
-/* Updated selector and styles for the subtitle link */
-a.header-title-sub {
+/* New style for roles under the main title */
+.header-title-roles {
     display: block;
     font-size: 0.9rem;
-    color: #666; /* Keep this lighter color */
-    font-weight: 400; /* Keep this regular weight */
-    /* Inherits underline from .text-link */
-    text-underline-offset: 2px; /* Adjust offset for smaller font */
-    /* Inherits transition from .text-link */
+    color: #666; /* Lighter color for roles */
+    font-weight: 400; /* Regular */
 }
 
-/* Specific hover style for the subtitle link */
-a.header-title-sub:hover {
-    color: #1a1a1a; /* Darken on hover for better contrast */
-}
+/* Removed styles for a.header-title-sub */
 
 
 .header-nav ul {
@@ -153,15 +147,7 @@ a.header-title-sub:hover {
     color: inherit; /* Inherit color from .hero-section */
 }
 
-/* New style for the subheading below the main hero heading */
-.hero-subheading {
-    font-size: 1.5rem; /* Adjust size as needed */
-    font-weight: 400; /* Regular or Light weight */
-    color: rgba(248, 248, 248, 0.85); /* Slightly transparent light color */
-    margin-bottom: 2.5rem; /* Space before the tagline */
-    letter-spacing: 0.05em; /* Optional: slight spacing */
-    text-align: center;
-}
+/* Removed styles for .hero-subheading */
 
 .hero-tagline {
     font-size: 1.2rem;
@@ -699,10 +685,7 @@ a.header-title-sub:hover {
     .hero-heading {
         font-size: 12vw; /* Larger size on mobile */
     }
-    .hero-subheading {
-        font-size: 1.2rem; /* Adjust subheading size */
-        margin-bottom: 2rem;
-    }
+    /* Removed hero-subheading responsive rule */
     .hero-tagline {
         font-size: 1.1rem;
     }
@@ -727,9 +710,7 @@ a.header-title-sub:hover {
     .hero-heading {
         font-size: 15vw;
     }
-    .hero-subheading {
-        font-size: 1rem; /* Adjust subheading size */
-    }
+    /* Removed hero-subheading responsive rule */
      .header-nav ul {
         gap: 0.8rem 1rem;
     }
