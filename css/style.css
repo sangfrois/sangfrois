@@ -119,46 +119,45 @@ body {
 
 /* New Hero Section Styles */
 .hero-section {
-    padding: 4rem 3rem; /* Adjust padding */
-    text-align: left;
+    padding: 6rem 3rem; /* Increased padding for background */
+    text-align: center; /* Center align text */
     margin-bottom: 6rem; /* Space below hero */
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('../images/panorama.jpg'); /* Overlay + Image */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #f8f8f8; /* Light text color for contrast */
+    position: relative; /* Needed for potential pseudo-elements if required later */
 }
 
-.hero-main-content {
-    display: flex;
-    align-items: center; /* Vertically center items */
-    gap: 3rem; /* Space between heading and image */
-    margin-bottom: 2rem; /* Space below the heading/image group */
-}
+/* Removed .hero-main-content styles */
 
 .hero-heading {
-    flex-shrink: 0; /* Prevent heading from shrinking */
+    /* flex-shrink: 0; Removed */
     font-size: 7vw; /* Responsive font size based on viewport width */
     font-weight: 800; /* Extrabold */
     line-height: 1.0; /* Tight line height */
     margin-bottom: 2rem;
     letter-spacing: -0.02em; /* Slight tightening */
-    color: #1a1a1a;
+    color: inherit; /* Inherit color from .hero-section */
 }
 
 .hero-tagline {
     font-size: 1.2rem;
     font-weight: 400; /* Regular */
-    color: #555;
+    color: rgba(248, 248, 248, 0.9); /* Slightly transparent light color */
     line-height: 1.6;
     margin-bottom: 2.5rem;
     max-width: 60ch; /* Limit line length */
+    margin-left: auto; /* Center the tagline */
+    margin-right: auto; /* Center the tagline */
 }
 
-.hero-image {
-    max-width: 35%; /* Adjust size as needed */
-    height: auto;
-    object-fit: contain; /* Ensure image scales nicely */
-    /* margin-top: 1rem; Removed */
-}
+/* Removed .hero-image styles */
 
 .hero-links {
     display: flex;
+    justify-content: center; /* Center the links */
     gap: 1.5rem;
 }
 
@@ -166,7 +165,7 @@ body {
 .arrow-link {
     display: inline-block;
     text-decoration: none;
-    color: #1a1a1a;
+    color: #f8f8f8; /* Light color for links in hero */
     font-weight: 500; /* Medium */
     padding: 0.5rem 0; /* Adjust padding */
     position: relative;
@@ -181,7 +180,7 @@ body {
 }
 
 .arrow-link:hover {
-    color: #555; /* Change color on hover */
+    color: #ccc; /* Lighter grey on hover */
 }
 
 .arrow-link:hover::after {
@@ -196,7 +195,7 @@ body {
 }
 
 .heading-link:hover {
-    color: #555; /* Slightly lighter color on hover */
+    color: rgba(248, 248, 248, 0.8); /* Slightly transparent white on hover */
     /* Optional: Add underline on hover if desired */
     /* text-decoration: underline;
     text-decoration-thickness: 2px;
@@ -649,26 +648,14 @@ body {
     }
 }
 
-@media (max-width: 992px) {
-    /* Existing rules... */
-    .hero-main-content {
-        gap: 2rem;
-    }
-    .hero-image {
-        max-width: 40%;
-    }
-}
+/* Remove specific hero image responsive rules */
+/* @media (max-width: 992px) { ... } */
+/* @media (max-width: 768px) { ... } */
+/* @media (max-width: 480px) { ... } */
+
 
 @media (max-width: 768px) {
-    .hero-main-content {
-        flex-direction: column; /* Stack heading and image */
-        align-items: flex-start;
-        gap: 1.5rem;
-    }
-    .hero-image {
-        max-width: 60%; /* Adjust size for stacked layout */
-        margin-top: 0; /* Reset margin */
-    }
+    /* Removed hero-main-content and hero-image rules */
     .site-header {
         flex-direction: column; /* Stack header items */
         align-items: flex-start;
@@ -693,9 +680,7 @@ body {
 }
 
 @media (max-width: 480px) {
-    .hero-image {
-        max-width: 80%; /* Further adjust image size */
-    }
+    /* Removed hero-image rule */
      .site-header, .hero-section, .content-section {
         padding-left: 1rem;
         padding-right: 1rem;
