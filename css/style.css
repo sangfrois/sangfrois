@@ -124,7 +124,15 @@ body {
     margin-bottom: 6rem; /* Space below hero */
 }
 
+.hero-main-content {
+    display: flex;
+    align-items: flex-start; /* Align items to the top */
+    gap: 3rem; /* Space between heading and image */
+    margin-bottom: 2rem; /* Space below the heading/image group */
+}
+
 .hero-heading {
+    flex-shrink: 0; /* Prevent heading from shrinking */
     font-size: 7vw; /* Responsive font size based on viewport width */
     font-weight: 800; /* Extrabold */
     line-height: 1.0; /* Tight line height */
@@ -140,6 +148,13 @@ body {
     line-height: 1.6;
     margin-bottom: 2.5rem;
     max-width: 60ch; /* Limit line length */
+}
+
+.hero-image {
+    max-width: 35%; /* Adjust size as needed */
+    height: auto;
+    object-fit: contain; /* Ensure image scales nicely */
+    margin-top: 1rem; /* Align visually with the top of the text */
 }
 
 .hero-links {
@@ -634,7 +649,26 @@ body {
     }
 }
 
+@media (max-width: 992px) {
+    /* Existing rules... */
+    .hero-main-content {
+        gap: 2rem;
+    }
+    .hero-image {
+        max-width: 40%;
+    }
+}
+
 @media (max-width: 768px) {
+    .hero-main-content {
+        flex-direction: column; /* Stack heading and image */
+        align-items: flex-start;
+        gap: 1.5rem;
+    }
+    .hero-image {
+        max-width: 60%; /* Adjust size for stacked layout */
+        margin-top: 0; /* Reset margin */
+    }
     .site-header {
         flex-direction: column; /* Stack header items */
         align-items: flex-start;
@@ -659,6 +693,9 @@ body {
 }
 
 @media (max-width: 480px) {
+    .hero-image {
+        max-width: 80%; /* Further adjust image size */
+    }
      .site-header, .hero-section, .content-section {
         padding-left: 1rem;
         padding-right: 1rem;
