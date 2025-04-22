@@ -85,12 +85,22 @@ body {
     margin-bottom: 0.2rem;
 }
 
-.header-title-sub {
+/* Updated selector and styles for the subtitle link */
+a.header-title-sub {
     display: block;
     font-size: 0.9rem;
-    color: #666; /* Lighter color for subtitle */
-    font-weight: 400; /* Regular */
+    color: #666; /* Keep this lighter color */
+    font-weight: 400; /* Keep this regular weight */
+    /* Inherits underline from .text-link */
+    text-underline-offset: 2px; /* Adjust offset for smaller font */
+    /* Inherits transition from .text-link */
 }
+
+/* Specific hover style for the subtitle link */
+a.header-title-sub:hover {
+    color: #1a1a1a; /* Darken on hover for better contrast */
+}
+
 
 .header-nav ul {
     list-style: none;
