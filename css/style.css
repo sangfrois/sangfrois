@@ -52,6 +52,17 @@
     font-display: swap;
 }
 
+/* Add Nouveau Nostalgia font */
+@font-face {
+    font-family: 'Nouveau Nostalgia';
+    src: url('../assets/font/nouveau-nostalgia/Nouveau Nostalgia.otf') format('opentype'),
+         url('../assets/font/nouveau-nostalgia/Nouveau Nostalgia.ttf') format('truetype');
+    font-weight: normal; /* Adjust if the font has specific weights */
+    font-style: normal;
+    font-display: swap;
+}
+
+
 /* Add Italic versions if needed */
 
 body {
@@ -150,8 +161,9 @@ body {
 
 .hero-heading {
     /* flex-shrink: 0; Removed */
+    font-family: 'Nouveau Nostalgia', 'Supreme', sans-serif; /* Apply Nouveau Nostalgia font */
     font-size: 7vw; /* Responsive font size based on viewport width */
-    font-weight: 800; /* Extrabold */
+    font-weight: normal; /* Adjust weight if needed for Nouveau font */
     line-height: 1.0; /* Tight line height */
     margin-bottom: 0.5rem; /* Reduced margin below main heading */
     letter-spacing: -0.02em; /* Slight tightening */
