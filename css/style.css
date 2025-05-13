@@ -58,14 +58,14 @@ body {
     font-family: 'Supreme', sans-serif;
     background: #f8f8f8; /* Light background */
     color: #1a1a1a; /* Dark text color */
-    line-height: 1.6; /* Adjusted line-height */
+    line-height: 1.7; /* Increased from 1.6 */
 }
 
 /* New Header Styles */
 .site-header {
     display: flex;
     justify-content: space-between;
-    align-items: flex-start; /* Align items to the top */
+    align-items: center; /* Changed from flex-start */
     padding: 2rem 3rem; /* Adjust padding as needed */
     border-bottom: 1px solid #e0e0e0; /* Subtle border */
     margin-bottom: 4rem; /* Space below header */
@@ -111,26 +111,31 @@ body {
     font-weight: 500; /* Medium */
     padding-bottom: 0.3rem;
     border-bottom: 2px solid transparent;
-    transition: border-color 0.3s ease;
+    transition: border-color 0.3s ease, color 0.3s ease, font-weight 0.3s ease; /* Added color and font-weight */
 }
 
-.header-nav a:hover {
-    border-bottom-color: #1a1a1a; /* Underline on hover */
+.header-nav a:hover:not(.active-nav) { /* Don't change active link style on hover */
+    border-bottom-color: #888; /* Use grey for hover underline */
+    color: #555; /* Slightly grey out non-active links on hover */
 }
 
 /* Add style for active page if needed later */
+.header-nav a.active-nav {
+    font-weight: 700; /* Make active link bold */
+    border-bottom-color: #1a1a1a; /* Keep underline for active */
+}
 
 
 /* New Hero Section Styles */
 .hero-section {
-    padding: 10rem 6rem; /* Increased padding for background */
+    padding: 8rem 4rem; /* Adjusted padding */
     text-align: center; /* Center align text */
-    margin-bottom: 3rem; /* Space below hero */
-    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('../images/texture.png'); /* Overlay + Magician Image */
+    margin-bottom: 5rem; /* Increased space below hero */
+    background-image: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url('../images/texture.png'); /* Slightly darker overlay */
     background-size: cover;
-    background-position: top; /* Center the background image */
+    background-position: center; /* Changed from top */
     background-repeat: no-repeat;
-    background-attachment: fixed; /* Add parallax effect */
+    /* background-attachment: fixed; /* Optional: Remove if causing issues */
     color: #f8f8f8; /* Light text color for contrast */
     position: relative; /* Needed for potential pseudo-elements if required later */
 }
@@ -149,20 +154,20 @@ body {
 
 /* Re-add style for the subheading below the main hero heading */
 .hero-subheading {
-    font-size: 1.5rem; /* Adjust size as needed */
-    font-weight: 400; /* Regular or Light weight */
-    color: rgba(248, 248, 248, 0.85); /* Slightly transparent light color */
-    margin-bottom: 2.5rem; /* Space before the tagline */
+    font-size: 1.6rem; /* Slightly larger */
+    font-weight: 300; /* Lighter weight */
+    color: rgba(248, 248, 248, 0.9); /* Increased opacity slightly */
+    margin-bottom: 3rem; /* Increased space */
     letter-spacing: 0.05em; /* Optional: slight spacing */
     text-align: center;
 }
 
 .hero-tagline {
-    font-size: 1.2rem;
+    font-size: 1.3rem; /* Slightly larger */
     font-weight: 400; /* Regular */
-    color: rgba(248, 248, 248, 0.9); /* Slightly transparent light color */
-    line-height: 1.6;
-    margin-bottom: 2.5rem;
+    color: rgba(248, 248, 248, 0.95); /* Increased opacity */
+    line-height: 1.7; /* Increased line height */
+    margin-bottom: 3rem; /* Increased space */
     max-width: 60ch; /* Limit line length */
     margin-left: auto; /* Center the tagline */
     margin-right: auto; /* Center the tagline */
@@ -196,7 +201,8 @@ body {
     font-weight: 500; /* Medium */
     padding: 0.5rem 0; /* Adjust padding */
     position: relative;
-    transition: color 0.3s ease;
+    transition: color 0.3s ease, opacity 0.3s ease; /* Added opacity transition */
+    opacity: 0.9; /* Slightly transparent */
 }
 
 .arrow-link::after {
@@ -207,7 +213,8 @@ body {
 }
 
 .arrow-link:hover {
-    color: #ccc; /* Lighter grey on hover */
+    color: #fff; /* White on hover */
+    opacity: 1.0; /* Fully opaque on hover */
 }
 
 .arrow-link:hover::after {
@@ -247,24 +254,24 @@ body {
     font-size: 1.1rem;
     font-weight: 700; /* Bold */
     text-transform: uppercase;
-    letter-spacing: 0.1em;
-    color: #888; /* Grey color for section titles */
-    margin-bottom: 2.5rem;
+    letter-spacing: 0.12em; /* Slightly increased spacing */
+    color: #777; /* Slightly darker grey */
+    margin-bottom: 3rem; /* Increased bottom margin */
     grid-column: span 12; /* Make title span full width */
 }
 
 .content-section h3 {
     font-size: 2rem; /* Larger heading for items */
     font-weight: 700; /* Bold */
-    margin-bottom: 1rem;
-    line-height: 1.2;
+    margin-bottom: 0.75rem; /* Reduced margin below h3 */
+    line-height: 1.3; /* Adjusted line-height */
 }
 
 .content-section p {
     font-size: 1.1rem;
-    line-height: 1.7;
+    line-height: 1.75; /* Slightly increased line-height */
     color: #333;
-    margin-bottom: 1.5rem;
+    margin-bottom: 1.25rem; /* Adjusted bottom margin */
     max-width: 65ch; /* Limit paragraph width */
 }
 
@@ -280,13 +287,13 @@ body {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
 }
 
-.focus-item, .follow-item {
-    margin-bottom: 3rem;
-    padding-bottom: 3rem;
+.focus-item, .follow-item, .portfolio-item, .publication-item {
+    margin-bottom: 3.5rem; /* Increased margin */
+    padding-bottom: 3.5rem; /* Increased padding */
     border-bottom: 1px solid #e0e0e0;
 }
 
-.focus-item:last-child, .follow-item:last-child {
+.focus-item:last-child, .follow-item:last-child, .portfolio-item:last-child, .publication-item:last-child {
     margin-bottom: 0;
     padding-bottom: 0;
     border-bottom: none;
@@ -296,15 +303,17 @@ body {
 .text-link {
     display: inline-block;
     text-decoration: underline;
-    text-decoration-thickness: 1px;
-    text-underline-offset: 3px;
+    text-decoration-thickness: 1.5px; /* Slightly thicker underline */
+    text-underline-offset: 4px; /* Increased offset */
     color: #1a1a1a;
     font-weight: 500;
-    transition: color 0.3s ease;
+    transition: color 0.3s ease, text-decoration-color 0.3s ease; /* Added transition */
+    text-decoration-color: #aaa; /* Lighter underline color */
 }
 
 .text-link:hover {
-    color: #555;
+    color: #000; /* Black on hover */
+    text-decoration-color: #000; /* Darker underline on hover */
 }
 
 /* Connect Page Specific Styles */
@@ -391,17 +400,7 @@ body {
 }
 
 /* Portfolio Item Styling (similar to focus-item) */
-.portfolio-item {
-    margin-bottom: 3rem;
-    padding-bottom: 3rem;
-    border-bottom: 1px solid #e0e0e0;
-}
-
-.portfolio-item:last-child {
-    margin-bottom: 0;
-    padding-bottom: 0;
-    border-bottom: none;
-}
+/* .portfolio-item is already covered by the combined selector */
 
 /* CV Page Specific Styles */
 .cv-category {
@@ -512,18 +511,10 @@ body {
     margin-top: 0.5rem;
 }
 
-.publication-item {
-    margin-bottom: 3rem;
-    padding-bottom: 3rem;
-    border-bottom: 1px solid #e0e0e0;
-}
-.publication-item:last-child {
-    margin-bottom: 0;
-    padding-bottom: 0;
-    border-bottom: none;
-}
+/* .publication-item is already covered by the combined selector */
+
 .publication-item h3 {
-    font-size: 1.6rem; /* Publication title size - Updated from 1.4rem */
+    font-size: 1.8rem; /* Adjusted size */
     font-weight: 700; /* Bold */
     margin-bottom: 0.5rem;
     line-height: 1.3;
@@ -537,7 +528,7 @@ body {
     color: #555;
 }
 .pub-authors {
-    font-size: 1rem;
+    font-size: 1.05rem; /* Slightly larger */
     line-height: 1.6;
     color: #444;
     margin-bottom: 0.5rem;
@@ -555,14 +546,14 @@ body {
 }
 .pub-source {
     font-size: 1rem;
-    color: #666; /* Lighter color for source */
-    margin-bottom: 0.8rem;
+    color: #555; /* Slightly darker */
+    margin-bottom: 1rem; /* Increased margin */
 }
 .pub-source i { /* Italicize journal names etc. */
     font-style: italic;
 }
 .pub-item-links {
-    margin-top: 0.5rem;
+    margin-top: 1rem; /* Increased margin */
 }
 .pub-item-links a {
     margin-right: 1rem; /* Space between PDF/DOI/arXiv links */
@@ -571,14 +562,15 @@ body {
 
 /* New Footer Styles */
 .site-footer-bottom {
-    padding: 4rem 3rem 2rem; /* Adjust padding */
+    padding: 4rem 3rem 3rem; /* Adjusted padding */
     background-color: #e8e8e8; /* Slightly different background for footer */
     border-top: 1px solid #d0d0d0;
     display: grid;
     grid-template-columns: repeat(12, 1fr);
-    gap: 2rem;
-    font-size: 0.9rem;
+    gap: 1rem 2rem; /* Adjusted gap */
+    font-size: 0.95rem; /* Slightly larger base font */
     color: #444;
+    line-height: 1.6; /* Added line-height */
 }
 
 .footer-contact {
@@ -588,6 +580,10 @@ body {
 .footer-credits {
     grid-column: span 6; /* Adjust span as needed */
     text-align: right; /* Align text to the right */
+    display: flex; /* Use flexbox for vertical layout */
+    flex-direction: column;
+    align-items: flex-end; /* Align items to the right */
+    justify-content: space-between; /* Distribute space */
 }
 
 .site-footer-bottom h3 {
@@ -603,14 +599,15 @@ body {
 }
 
 .footer-social {
-    margin-top: 1.5rem;
+    margin-top: 1rem; /* Adjusted margin */
 }
 
 .footer-social a {
     text-decoration: none;
     color: #444;
-    margin-left: 1rem; /* Space between social links */
+    margin-left: 1.2rem; /* Adjusted space */
     transition: color 0.3s ease;
+    font-weight: 500; /* Medium weight */
 }
 
 .footer-social a:hover {
@@ -621,6 +618,7 @@ body {
 .footer-contact .arrow-link {
     font-size: 1.1rem; /* Adjust size if needed */
     color: #1a1a1a; /* Ensure footer link is dark */
+    opacity: 1; /* Ensure it's not transparent like hero links */
 }
 .footer-contact .arrow-link:hover {
     color: #555; /* Darker hover for footer link */
@@ -631,6 +629,30 @@ body {
 }
 .footer-contact .arrow-link:hover::after {
     color: #555; /* Match link hover color */
+}
+
+.footer-logos {
+    margin-top: 1.5rem;
+    display: flex; /* Use flexbox */
+    gap: 1.5rem; /* Space between logos */
+    align-items: center; /* Vertically align logos */
+    justify-content: flex-end; /* Align logos to the right */
+}
+
+.footer-logos img {
+    opacity: 0.7;
+    height: 35px; /* Consistent base height */
+    width: auto; /* Maintain aspect ratio */
+    transition: opacity 0.3s ease;
+}
+/* Adjust specific logo heights if needed */
+.footer-logos img[alt="Concordia"],
+.footer-logos img[alt="Milieux"] {
+    height: 40px; /* Slightly taller logos */
+}
+
+.footer-logos img:hover {
+    opacity: 1.0; /* Full opacity on hover */
 }
 
 
@@ -647,8 +669,8 @@ body {
         margin-bottom: 3rem;
     }
     .hero-section {
-        padding: 3rem 2rem;
-        margin-bottom: 4rem;
+        padding: 3rem 2rem; /* Adjusted from 6rem 4rem for smaller screens */
+        margin-bottom: 4rem; /* Adjusted from 5rem */
     }
     .site-footer-bottom {
         padding: 3rem 2rem 1.5rem;
@@ -667,10 +689,14 @@ body {
     }
     .footer-credits {
         margin-top: 2rem;
+        align-items: flex-start; /* Align left on smaller screens */
+    }
+    .footer-logos {
+       justify-content: flex-start; /* Align logos left */
     }
     .footer-social a {
         margin-left: 0;
-        margin-right: 1rem; /* Adjust spacing */
+        margin-right: 1.2rem; /* Adjust spacing */
     }
 }
 
@@ -708,6 +734,9 @@ body {
     .content-section p {
         font-size: 1rem;
     }
+    .hero-section { /* Further adjust hero padding for mobile */
+        padding: 4rem 1.5rem;
+    }
 }
 
 @media (max-width: 480px) {
@@ -732,5 +761,8 @@ body {
     }
      .header-nav a {
         font-size: 0.9rem;
+    }
+    .hero-section { /* Further adjust hero padding for very small mobile */
+        padding: 3rem 1rem;
     }
 }
