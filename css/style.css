@@ -67,49 +67,61 @@
 
 body {
     font-family: 'Supreme', sans-serif;
-    /* Subtle gradient for a hint of texture */
-    background: linear-gradient(to bottom, #f8f8f8, #f4f4f2);
-    color: #1a1a1a; /* Dark text color */
-    line-height: 1.7; /* Increased from 1.6 */
+    /* Subtle diagonal line texture */
+    background-color: #e8e8e4; /* Base color */
+    background-image: repeating-linear-gradient(
+        45deg,
+        rgba(0, 0, 0, 0.03),
+        rgba(0, 0, 0, 0.03) 1px,
+        transparent 1px,
+        transparent 10px /* Adjust spacing */
+    );
+    color: #2a2a2a; /* Slightly softer dark text color */
+    line-height: 1.7;
 }
 
 :root {
-    --accent-color: #8B5E3C; /* Muted Brown/Tan - Sober but warm color */
+    --accent-color: #8B5E3C; /* Muted Brown/Tan */
+    --secondary-color: #2F4F4F; /* Dark Slate Gray */
+    --section-bg: #f7f7f0; /* Light Beige/Off-white for sections */
+    --border-color: #d0d0c8; /* Softer border color */
 }
 
 /* New Header Styles */
 .site-header {
     display: flex;
     justify-content: space-between;
-    align-items: center; /* Changed from flex-start */
-    padding: 2rem 3rem; /* Adjust padding as needed */
-    border-bottom: 1px solid #cccccc; /* Softer border color */
-    margin-bottom: 2rem; /* Reduced space below header */
+    align-items: center;
+    padding: 1.5rem 3rem; /* Slightly reduced padding */
+    border-bottom: 1px solid var(--border-color);
+    margin-bottom: 2rem;
+    background-color: rgba(248, 248, 248, 0.85); /* Semi-transparent light background */
+    backdrop-filter: blur(5px); /* Frosted glass effect */
+    position: sticky; /* Make header sticky */
+    top: 0;
+    z-index: 100; /* Ensure header is above other content */
 }
 
 .header-logo {
-    height: 40px; /* Adjust size */
+    height: 40px;
     width: auto;
 }
 
 .header-title-main {
     display: block;
     font-size: 1.2rem;
-    font-weight: 700; /* Bold */
-    color: inherit;
+    font-weight: 700;
+    color: #1a1a1a; /* Keep title dark */
     text-decoration: none;
     margin-bottom: 0.2rem;
 }
 
-/* New style for roles under the main title */
 .header-title-roles {
     display: block;
     font-size: 0.9rem;
-    color: #666; /* Lighter color for roles */
-    font-weight: 400; /* Regular */
+    color: #555; /* Slightly darker role color */
+    font-weight: 400;
 }
-
-/* Removed styles for a.header-title-sub */
 
 
 .header-nav ul {
@@ -117,114 +129,107 @@ body {
     padding: 0;
     margin: 0;
     display: flex;
-    gap: 2rem; /* Space between nav items */
+    gap: 2rem;
 }
 
 .header-nav a {
     text-decoration: none;
-    color: #1a1a1a;
+    color: #333; /* Darker nav link color */
     font-size: 1rem;
-    font-weight: 500; /* Medium */
+    font-weight: 500;
     padding-bottom: 0.3rem;
     border-bottom: 2px solid transparent;
-    transition: border-color 0.3s ease, color 0.3s ease, font-weight 0.3s ease; /* Added color and font-weight */
+    transition: border-color 0.3s ease, color 0.3s ease, font-weight 0.3s ease;
 }
 
-.header-nav a:hover:not(.active-nav) { /* Don't change active link style on hover */
-    border-bottom-color: var(--accent-color); /* Use accent color on hover */
-    color: var(--accent-color); /* Use accent color on hover */
+.header-nav a:hover:not(.active-nav) {
+    border-bottom-color: var(--accent-color);
+    color: var(--accent-color);
 }
 
-/* Add style for active page if needed later */
 .header-nav a.active-nav {
-    font-weight: 700; /* Make active link bold */
-    border-bottom-color: var(--accent-color); /* Use accent color */
-    color: var(--accent-color); /* Use accent color */
+    font-weight: 700;
+    border-bottom-color: var(--accent-color);
+    color: var(--accent-color);
 }
 
 
 /* New Hero Section Styles */
 .hero-section {
-    padding: 8rem 4rem; /* Adjusted padding */
-    text-align: center; /* Center align text */
-    margin-bottom: 6rem; /* Increased space below hero */
-    background-image: linear-gradient(rgba(0, 0, 0, 0.50), rgba(0, 0, 0, 0.50)), url('../images/texture.png'); /* Slightly darker overlay for contrast */
+    padding: 9rem 4rem 7rem; /* Adjusted padding */
+    text-align: center;
+    margin-bottom: 0; /* Remove margin, sections will handle spacing */
+    background-image: linear-gradient(rgba(0, 0, 0, 0.60), rgba(0, 0, 0, 0.60)), url('../images/texture.png'); /* Darker overlay */
     background-size: cover;
-    background-position: center; /* Changed from top */
+    background-position: center;
     background-repeat: no-repeat;
-    background-attachment: fixed; /* Re-enabled for parallax effect */
-    color: #f8f8f8; /* Light text color for contrast */
-    position: relative; /* Needed for potential pseudo-elements if required later */
-    border-top: none; /* Ensure hero doesn't have a top border */
+    background-attachment: fixed;
+    color: #f8f8f8;
+    position: relative;
+    border-top: none;
 }
 
-/* Removed .hero-main-content styles */
 
 .hero-heading {
-    /* flex-shrink: 0; Removed */
-    font-family: 'Nouveau Nostalgia', 'Supreme', sans-serif; /* Apply Nouveau Nostalgia font */
-    font-size: 7vw; /* Responsive font size based on viewport width */
-    font-weight: normal; /* Adjust weight if needed for Nouveau font */
-    line-height: 1.1; /* Adjusted line height for Nouveau font */
-    margin-bottom: 1rem; /* Adjusted margin below main heading */
-    letter-spacing: -0.01em; /* Adjusted spacing */
-    color: inherit; /* Inherit color from .hero-section */
+    font-family: 'Nouveau Nostalgia', 'Supreme', sans-serif;
+    font-size: 7.5vw; /* Slightly larger */
+    font-weight: normal;
+    line-height: 1.1;
+    margin-bottom: 1.5rem; /* Increased margin */
+    letter-spacing: -0.01em;
+    color: inherit;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.2); /* Subtle text shadow */
 }
 
-/* Re-add style for the subheading below the main hero heading */
 .hero-subheading {
-    font-family: 'Supreme', sans-serif; /* Ensure subheading uses standard font */
-    font-size: 1.6rem; /* Slightly larger */
-    font-weight: 300; /* Lighter weight */
-    color: rgba(248, 248, 248, 0.9); /* Increased opacity slightly */
-    margin-bottom: 3rem; /* Increased space */
-    letter-spacing: 0.05em; /* Optional: slight spacing */
+    font-family: 'Supreme', sans-serif;
+    font-size: 1.5rem; /* Slightly smaller */
+    font-weight: 400; /* Regular weight */
+    color: rgba(248, 248, 248, 0.85); /* Slightly less opaque */
+    margin-bottom: 3rem;
+    letter-spacing: 0.05em;
     text-align: center;
 }
 
 .hero-tagline {
-    font-size: 1.3rem; /* Slightly larger */
-    font-weight: 400; /* Regular */
-    color: rgba(248, 248, 248, 0.95); /* Increased opacity */
-    line-height: 1.7; /* Increased line height */
-    margin-bottom: 3rem; /* Increased space */
-    max-width: 60ch; /* Limit line length */
-    margin-left: auto; /* Center the tagline */
-    margin-right: auto; /* Center the tagline */
+    font-size: 1.2rem; /* Slightly smaller */
+    font-weight: 400;
+    color: rgba(248, 248, 248, 0.90);
+    line-height: 1.7;
+    margin-bottom: 3.5rem; /* Increased space */
+    max-width: 60ch;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-/* Ensure text links within the hero tagline are visible */
 .hero-tagline .text-link {
-    color: inherit; /* Inherit the light color from the hero section */
-    text-decoration-color: rgba(248, 248, 248, 0.7); /* Slightly less prominent underline */
-    font-weight: 500; /* Medium weight for emphasis */
+    color: inherit;
+    text-decoration-color: rgba(248, 248, 248, 0.6); /* Softer underline */
+    font-weight: 500;
     transition: color 0.3s ease, text-decoration-color 0.3s ease;
 }
 
 .hero-tagline .text-link:hover {
-    color: #ffffff; /* Brighter white on hover */
-    text-decoration-color: #ffffff; /* Match underline color on hover */
+    color: #ffffff;
+    text-decoration-color: #ffffff;
 }
 
-
-/* Removed .hero-image styles */
 
 .hero-links {
     display: flex;
-    justify-content: center; /* Center the links */
+    justify-content: center;
     gap: 1.5rem;
 }
 
-/* Style for links with arrows */
 .arrow-link {
     display: inline-block;
     text-decoration: none;
-    color: #f8f8f8; /* Light color for links in hero */
-    font-weight: 500; /* Medium */
-    padding: 0.5rem 0; /* Adjust padding */
+    color: #f8f8f8;
+    font-weight: 500;
+    padding: 0.5rem 0;
     position: relative;
-    transition: color 0.3s ease, opacity 0.3s ease; /* Added opacity transition */
-    opacity: 0.9; /* Slightly transparent */
+    transition: color 0.3s ease, opacity 0.3s ease;
+    opacity: 0.9;
 }
 
 .arrow-link::after {
@@ -235,77 +240,75 @@ body {
 }
 
 .arrow-link:hover {
-    color: #fff; /* White on hover */
-    opacity: 1.0; /* Fully opaque on hover */
+    color: #fff;
+    opacity: 1.0;
 }
 
 .arrow-link:hover::after {
-     transform: translateX(4px) translateY(-4px); /* Slight movement on hover */
+     transform: translateX(4px) translateY(-4px);
 }
-
-/* Removed .heading-link styles as H1 is no longer a link */
 
 
 /* New Content Section Styles */
 .content-section {
-    padding: 5rem 3rem; /* Increased vertical padding */
-    margin-bottom: 0; /* Remove bottom margin */
-    max-width: 1200px; /* Max width for content */
+    padding: 5rem 3rem;
+    margin-bottom: 3rem; /* Add space between sections */
     margin-left: auto;
     margin-right: auto;
-    display: grid; /* Use grid for layout */
-    grid-template-columns: repeat(12, 1fr); /* 12-column grid */
-    gap: 2rem; /* Gap between columns */
-    align-items: start; /* Align items to the top */
-    border-top: 1px solid #cccccc; /* Softer border color */
+    max-width: 1200px;
+    background-color: var(--section-bg); /* Use light beige background */
+    border: 1px solid var(--border-color); /* Add border */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.07); /* Soft shadow */
+    border-radius: 8px; /* Rounded corners */
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 2rem;
+    align-items: start;
+    position: relative; /* Needed for potential pseudo-elements */
 }
 
-main > .content-section:first-of-type {
-    border-top: none; /* No top border for the very first section */
-}
-
-/* Removed alternating background color rule */
-/* main > .content-section:nth-of-type(even) {
-    background-color: #ffffff;
-} */
+/* Remove top border/margin adjustments as sections are now distinct blocks */
+/* main > .content-section:first-of-type { ... } */
 
 .section-column-text {
-    grid-column: span 6; /* Text takes up 6 columns */
+    grid-column: span 6;
 }
 
 .section-column-image {
-    grid-column: span 6; /* Image takes up 6 columns */
-    text-align: center; /* Center image if needed */
+    grid-column: span 6;
+    text-align: center;
 }
 
 .section-column-full {
-    grid-column: span 12; /* Full width column */
+    grid-column: span 12;
 }
 
 .content-section h2 {
-    font-size: 1.1rem;
-    font-weight: 700; /* Bold */
-    text-transform: uppercase;
-    letter-spacing: 0.12em; /* Slightly increased spacing */
-    color: #777; /* Slightly darker grey */
-    margin-bottom: 3rem; /* Increased bottom margin */
-    grid-column: span 12; /* Make title span full width */
+    font-size: 1.3rem; /* Larger section titles */
+    font-weight: 600; /* Semi-bold */
+    text-transform: none; /* Remove uppercase */
+    letter-spacing: 0.02em; /* Normal spacing */
+    color: var(--secondary-color); /* Use dark slate gray */
+    margin-bottom: 2.5rem; /* Adjusted margin */
+    grid-column: span 12;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid var(--border-color); /* Underline title */
 }
 
 .content-section h3 {
-    font-size: 2rem; /* Larger heading for items */
-    font-weight: 700; /* Bold */
-    margin-bottom: 0.75rem; /* Reduced margin below h3 */
-    line-height: 1.3; /* Adjusted line-height */
-    color: #333; /* Slightly darker heading color */
+    font-size: 1.8rem; /* Slightly smaller item titles */
+    font-weight: 700;
+    margin-bottom: 0.75rem;
+    line-height: 1.3;
+    color: #333;
 }
 
 .content-section p {
-    font-size: 1.1rem;
-    line-height: 1.75; /* Slightly increased line-height */
-    color: #333; /* Standard paragraph color */
-    margin-bottom: 1.25rem; /* Adjusted bottom margin */
-    max-width: 65ch; /* Limit paragraph width */
+    font-size: 1.05rem; /* Slightly smaller paragraph text */
+    line-height: 1.75;
+    color: #444; /* Slightly lighter paragraph text */
+    margin-bottom: 1.25rem;
+    max-width: 65ch;
 }
 
 .content-section p:last-child {
@@ -315,15 +318,15 @@ main > .content-section:first-of-type {
 .bio-image {
     max-width: 100%;
     height: auto;
-    display: block; /* Remove extra space below image */
-    border-radius: 8px; /* Slightly reduced radius */
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); /* Adjusted shadow */
+    display: block;
+    border-radius: 8px; /* Match section radius */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
 
 .focus-item, .follow-item, .portfolio-item, .publication-item {
-    margin-bottom: 3.5rem; /* Increased margin */
-    padding-bottom: 3.5rem; /* Increased padding */
-    border-bottom: 1px solid #cccccc; /* Softer border color */
+    margin-bottom: 3rem; /* Adjusted margin */
+    padding-bottom: 3rem; /* Adjusted padding */
+    border-bottom: 1px solid var(--border-color); /* Use variable */
 }
 
 .focus-item:last-child, .follow-item:last-child, .portfolio-item:last-child, .publication-item:last-child {
@@ -336,41 +339,41 @@ main > .content-section:first-of-type {
 .text-link {
     display: inline-block;
     text-decoration: underline;
-    text-decoration-thickness: 1.5px; /* Slightly thicker underline */
-    text-underline-offset: 4px; /* Increased offset */
+    text-decoration-thickness: 1.5px;
+    text-underline-offset: 4px;
     color: #1a1a1a;
     font-weight: 500;
-    transition: color 0.3s ease, text-decoration-color 0.3s ease; /* Added transition */
-    text-decoration-color: #aaaaaa; /* Lighter underline color */
+    transition: color 0.3s ease, text-decoration-color 0.3s ease;
+    text-decoration-color: #b0b0a8; /* Adjusted underline color */
 }
 
 .text-link:hover {
-    color: var(--accent-color); /* Use accent color on hover */
-    text-decoration-color: var(--accent-color); /* Match underline color */
+    color: var(--accent-color);
+    text-decoration-color: var(--accent-color);
 }
 
 /* Connect Page Specific Styles */
 .connect-links {
     margin-bottom: 4rem;
     padding-bottom: 3rem;
-    border-bottom: 1px solid #cccccc; /* Softer border */
+    border-bottom: 1px solid var(--border-color);
 }
 
 .connect-links h3 {
-    font-size: 1.6rem; /* Slightly smaller than item titles */
+    font-size: 1.6rem;
     font-weight: 700;
     margin-bottom: 1.5rem;
     color: #333;
 }
 
 .connect-links a {
-    margin-right: 1.5rem; /* Spacing between links */
-    margin-bottom: 0.5rem; /* Spacing if they wrap */
+    margin-right: 1.5rem;
+    margin-bottom: 0.5rem;
     display: inline-block;
 }
 
 .contact-form-wrapper {
-    max-width: 700px; /* Limit form width */
+    max-width: 700px;
 }
 
 .contact-form-wrapper h3 {
@@ -397,30 +400,30 @@ main > .content-section:first-of-type {
 .contact-form textarea {
     width: 100%;
     padding: 0.8rem 1rem;
-    border: 1px solid #cccccc; /* Softer border */
-    background-color: #fff; /* White background for fields */
+    border: 1px solid var(--border-color);
+    background-color: #fff; /* Keep form fields white */
     font-family: inherit;
     font-size: 1rem;
     line-height: 1.5;
-    transition: border-color 0.3s ease;
-    border-radius: 4px; /* Subtle rounding */
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 4px;
 }
 
 .contact-form input[type="text"]:focus,
 .contact-form input[type="email"]:focus,
 .contact-form textarea:focus {
     outline: none;
-    border-color: var(--accent-color); /* Use accent color for focus */
-    box-shadow: 0 0 0 2px rgba(139, 94, 60, 0.2); /* Subtle focus ring */
+    border-color: var(--accent-color);
+    box-shadow: 0 0 0 3px rgba(139, 94, 60, 0.15); /* Adjusted focus ring */
 }
 
 .contact-form textarea {
-    resize: vertical; /* Allow vertical resize */
+    resize: vertical;
 }
 
 .form-submit-button {
     display: inline-block;
-    background-color: var(--accent-color); /* Use accent color */
+    background-color: var(--accent-color);
     color: #f8f8f8;
     border: none;
     padding: 0.8rem 1.8rem;
@@ -429,23 +432,20 @@ main > .content-section:first-of-type {
     text-decoration: none;
     cursor: pointer;
     transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
-    border-radius: 4px; /* Subtle rounding */
+    border-radius: 4px;
 }
 
 .form-submit-button:hover {
-    background-color: #7a5130; /* Darker shade of accent */
+    background-color: #7a5130;
     color: #fff;
-    transform: translateY(-2px); /* Slight lift on hover */
+    transform: translateY(-2px);
 }
-
-/* Portfolio Item Styling (similar to focus-item) */
-/* .portfolio-item is already covered by the combined selector */
 
 /* CV Page Specific Styles */
 .cv-category {
     margin-bottom: 3.5rem;
     padding-bottom: 3rem;
-    border-bottom: 1px solid #cccccc; /* Softer border */
+    border-bottom: 1px solid var(--border-color);
 }
 .cv-category:last-child {
     margin-bottom: 0;
@@ -465,26 +465,26 @@ main > .content-section:first-of-type {
     margin-bottom: 0;
 }
 .cv-item h4 {
-    font-size: 1.2rem; /* Title of the entry */
-    font-weight: 500; /* Medium weight */
+    font-size: 1.2rem;
+    font-weight: 500;
     margin-bottom: 0.3rem;
     line-height: 1.4;
-    color: #222; /* Slightly darker */
+    color: #222;
 }
 .cv-institution {
     font-size: 1rem;
-    color: #666; /* Lighter color for institution/dates */
+    color: #666;
     margin-bottom: 0.5rem;
 }
-.cv-item p:not(.cv-institution) { /* Style for description paragraphs */
+.cv-item p:not(.cv-institution) {
     font-size: 1rem;
     line-height: 1.6;
     color: #444;
     margin-bottom: 0.8rem;
 }
-.cv-details { /* Style for bullet points */
+.cv-details {
     list-style: disc;
-    margin-left: 1.5rem; /* Indentation */
+    margin-left: 1.5rem;
     font-size: 1rem;
     color: #444;
     line-height: 1.6;
@@ -492,17 +492,17 @@ main > .content-section:first-of-type {
 .cv-details li {
     margin-bottom: 0.4rem;
 }
-.cv-details a { /* Ensure links within lists use text-link style */
+.cv-details a {
     text-decoration: underline;
     text-decoration-thickness: 1px;
     text-underline-offset: 3px;
     color: #1a1a1a;
     font-weight: 500;
     transition: color 0.3s ease;
-    text-decoration-color: #bbbbbb; /* Lighter underline */
+    text-decoration-color: #b0b0a8;
 }
 .cv-details a:hover {
-    color: var(--accent-color); /* Use accent color */
+    color: var(--accent-color);
     text-decoration-color: var(--accent-color);
 }
 
@@ -511,7 +511,7 @@ main > .content-section:first-of-type {
 .insight-item {
     margin-bottom: 3rem;
     padding-bottom: 3rem;
-    border-bottom: 1px solid #cccccc; /* Softer border */
+    border-bottom: 1px solid var(--border-color);
 }
 .insight-item:last-child {
     margin-bottom: 0;
@@ -524,7 +524,7 @@ main > .content-section:first-of-type {
     margin-bottom: 1rem;
 }
 .insight-text p {
-    font-size: 1.1rem; /* Match standard paragraph */
+    font-size: 1.1rem;
     line-height: 1.7;
     color: #333;
     margin-bottom: 1.5rem;
@@ -537,7 +537,7 @@ main > .content-section:first-of-type {
 .publication-external-links {
     margin-bottom: 3rem;
     padding-bottom: 3rem;
-    border-bottom: 1px solid #cccccc; /* Softer border */
+    border-bottom: 1px solid var(--border-color);
 }
 .publication-external-links p {
     margin-bottom: 0.8rem;
@@ -553,230 +553,220 @@ main > .content-section:first-of-type {
     margin-top: 0.5rem;
 }
 
-/* .publication-item is already covered by the combined selector */
-
 .publication-item h3 {
-    font-size: 1.8rem; /* Adjusted size */
-    font-weight: 700; /* Bold */
+    font-size: 1.8rem;
+    font-weight: 700;
     margin-bottom: 0.5rem;
     line-height: 1.3;
-    color: #222; /* Slightly darker */
+    color: #222;
 }
-.pub-title-link { /* Style for the main title link */
+.pub-title-link {
     text-decoration: none;
     color: #1a1a1a;
     transition: color 0.3s ease;
 }
 .pub-title-link:hover {
-    color: var(--accent-color); /* Use accent color */
+    color: var(--accent-color);
 }
 .pub-authors {
-    font-size: 1.05rem; /* Slightly larger */
+    font-size: 1.05rem;
     line-height: 1.6;
     color: #444;
     margin-bottom: 0.5rem;
 }
-.pub-authors a { /* Ensure author links use text-link style */
+.pub-authors a {
     text-decoration: underline;
     text-decoration-thickness: 1px;
     text-underline-offset: 3px;
     color: #1a1a1a;
-    font-weight: 500; /* Medium weight for authors */
+    font-weight: 500;
     transition: color 0.3s ease;
-    text-decoration-color: #bbbbbb; /* Lighter underline */
+    text-decoration-color: #b0b0a8;
 }
 .pub-authors a:hover {
-    color: var(--accent-color); /* Use accent color */
+    color: var(--accent-color);
     text-decoration-color: var(--accent-color);
 }
 .pub-source {
     font-size: 1rem;
-    color: #555; /* Slightly darker */
-    margin-bottom: 1rem; /* Increased margin */
+    color: #555;
+    margin-bottom: 1rem;
 }
-.pub-source i { /* Italicize journal names etc. */
+.pub-source i {
     font-style: italic;
 }
 .pub-item-links {
-    margin-top: 1rem; /* Increased margin */
+    margin-top: 1rem;
 }
 .pub-item-links a {
-    margin-right: 1rem; /* Space between PDF/DOI/arXiv links */
+    margin-right: 1rem;
 }
 
 
 /* New Footer Styles */
 .site-footer-bottom {
-    padding: 4rem 3rem 3rem; /* Adjusted padding */
-    background-color: #d8d8d8; /* Slightly darker grey background */
-    border-top: 1px solid #c0c0c0; /* Slightly darker border */
+    padding: 4rem 3rem 3rem;
+    background-color: #d8d8d0; /* Footer background matching body texture base */
+    border-top: 1px solid #c8c8c0; /* Slightly darker border */
     display: grid;
     grid-template-columns: repeat(12, 1fr);
-    gap: 1rem 2rem; /* Adjusted gap */
-    font-size: 0.95rem; /* Slightly larger base font */
-    color: #333; /* Darker base text color for contrast */
-    line-height: 1.6; /* Added line-height */
-    margin-top: 0; /* Ensure no extra margin */
+    gap: 1rem 2rem;
+    font-size: 0.95rem;
+    color: #333;
+    line-height: 1.6;
+    margin-top: 3rem; /* Add margin above footer */
 }
 
 .footer-contact {
-    grid-column: span 6; /* Adjust span as needed */
+    grid-column: span 6;
 }
 
 .footer-credits {
-    grid-column: span 6; /* Adjust span as needed */
-    text-align: right; /* Align text to the right */
-    display: flex; /* Use flexbox for vertical layout */
+    grid-column: span 6;
+    text-align: right;
+    display: flex;
     flex-direction: column;
-    align-items: flex-end; /* Align items to the right */
-    justify-content: space-between; /* Distribute space */
+    align-items: flex-end;
+    justify-content: space-between;
 }
 
 .site-footer-bottom h3 {
     font-size: 1.5rem;
     font-weight: 700;
     margin-bottom: 1rem;
-    color: #111; /* Darker heading for contrast */
+    color: #111;
 }
 
 .site-footer-bottom p {
     margin-bottom: 0.5rem;
     line-height: 1.5;
-    color: #444; /* Slightly adjusted text color */
+    color: #444;
 }
 
 .footer-social {
-    margin-top: 1rem; /* Adjusted margin */
+    margin-top: 1rem;
 }
 
 .footer-social a {
     text-decoration: none;
-    color: #333; /* Match base text color */
-    margin-left: 1.2rem; /* Adjusted space */
+    color: #333;
+    margin-left: 1.2rem;
     transition: color 0.3s ease;
-    font-weight: 500; /* Medium weight */
+    font-weight: 500;
 }
 
 .footer-social a:hover {
-    color: var(--accent-color); /* Use accent color */
+    color: var(--accent-color);
 }
 
-/* Inherit arrow-link styles for the contact link */
 .footer-contact .arrow-link {
-    font-size: 1.1rem; /* Adjust size if needed */
-    color: #111; /* Darker link for contrast */
-    opacity: 1; /* Ensure it's not transparent like hero links */
-    transition: color 0.3s ease; /* Add transition */
-    font-weight: 500; /* Match other links */
+    font-size: 1.1rem;
+    color: #111;
+    opacity: 1;
+    transition: color 0.3s ease;
+    font-weight: 500;
 }
 .footer-contact .arrow-link:hover {
-    color: var(--accent-color); /* Use accent color on hover */
+    color: var(--accent-color);
 }
-/* Make sure the arrow color also updates */
 .footer-contact .arrow-link::after {
-    color: #111; /* Match link color */
-    transition: color 0.3s ease, transform 0.3s ease; /* Add transition */
+    color: #111;
+    transition: color 0.3s ease, transform 0.3s ease;
 }
 .footer-contact .arrow-link:hover::after {
-    color: var(--accent-color); /* Match link hover color */
-    transform: translateX(4px) translateY(-4px); /* Keep transform effect consistent */
+    color: var(--accent-color);
+    transform: translateX(4px) translateY(-4px);
 }
 
 .footer-logos {
     margin-top: 1.5rem;
-    display: flex; /* Use flexbox */
-    gap: 1.5rem; /* Space between logos */
-    align-items: center; /* Vertically align logos */
-    justify-content: flex-end; /* Align logos to the right */
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+    justify-content: flex-end;
 }
 
 .footer-logos img {
-    opacity: 0.65; /* Slightly less opaque */
-    height: 35px; /* Consistent base height */
-    width: auto; /* Maintain aspect ratio */
+    opacity: 0.65;
+    height: 35px;
+    width: auto;
     transition: opacity 0.3s ease;
 }
-/* Adjust specific logo heights if needed */
 .footer-logos img[alt="Concordia"],
 .footer-logos img[alt="Milieux"] {
-    height: 40px; /* Slightly taller logos */
+    height: 40px;
 }
 
 .footer-logos img:hover {
-    opacity: 1.0; /* Full opacity on hover */
+    opacity: 1.0;
 }
 
 
 /* Responsive design */
 @media (max-width: 992px) {
     .hero-heading {
-        font-size: 9vw; /* Adjust size for tablets */
+        font-size: 9vw;
         line-height: 1.1;
     }
     .content-section {
-        padding: 4rem 2rem; /* Adjusted padding */
+        padding: 4rem 2rem;
+        margin-left: 1rem; /* Add horizontal margin for sections */
+        margin-right: 1rem;
+        max-width: calc(100% - 2rem); /* Adjust max-width */
     }
     .site-header {
         padding: 1.5rem 2rem;
-        margin-bottom: 3rem; /* Adjusted responsive margin */
+        margin-bottom: 0; /* Remove margin as sections handle spacing */
     }
     .hero-section {
-        padding: 6rem 2rem; /* Adjusted padding */
-        margin-bottom: 4rem; /* Adjusted from 5rem */
+        padding: 6rem 2rem;
     }
     .site-footer-bottom {
         padding: 3rem 2rem 1.5rem;
     }
     .section-column-text,
     .section-column-image {
-        grid-column: span 12; /* Stack columns */
+        grid-column: span 12;
     }
     .section-column-image {
-        margin-top: 2rem; /* Add space when stacked */
+        margin-top: 2rem;
     }
     .footer-contact,
     .footer-credits {
-        grid-column: span 12; /* Stack footer columns */
-        text-align: left; /* Reset text alignment */
+        grid-column: span 12;
+        text-align: left;
     }
     .footer-credits {
         margin-top: 2rem;
-        align-items: flex-start; /* Align left on smaller screens */
+        align-items: flex-start;
     }
     .footer-logos {
-       justify-content: flex-start; /* Align logos left */
+       justify-content: flex-start;
     }
     .footer-social a {
         margin-left: 0;
-        margin-right: 1.2rem; /* Adjust spacing */
+        margin-right: 1.2rem;
     }
 }
 
-/* Remove specific hero image responsive rules */
-/* @media (max-width: 992px) { ... } */
-/* @media (max-width: 768px) { ... } */
-/* @media (max-width: 480px) { ... } */
-
 
 @media (max-width: 768px) {
-    /* Removed hero-main-content and hero-image rules */
     .site-header {
-        flex-direction: column; /* Stack header items */
+        flex-direction: column;
         align-items: flex-start;
         gap: 1.5rem;
-        margin-bottom: 2rem; /* Adjusted responsive margin */
+        padding: 1rem 1.5rem; /* Adjust padding */
     }
     .header-nav ul {
-        flex-wrap: wrap; /* Allow nav items to wrap */
-        gap: 1rem 1.5rem; /* Adjust gap */
+        flex-wrap: wrap;
+        gap: 1rem 1.5rem;
     }
     .hero-heading {
-        font-size: 12vw; /* Larger size on mobile */
+        font-size: 12vw;
         line-height: 1.1;
     }
-    /* Re-add hero-subheading responsive rule */
     .hero-subheading {
-        font-size: 1.2rem; /* Adjust subheading size */
+        font-size: 1.2rem;
         margin-bottom: 2rem;
     }
     .hero-tagline {
@@ -788,17 +778,23 @@ main > .content-section:first-of-type {
     .content-section p {
         font-size: 1rem;
     }
-    .hero-section { /* Further adjust hero padding for mobile */
-        padding: 5rem 1.5rem; /* Adjusted padding */
+    .hero-section {
+        padding: 5rem 1.5rem;
     }
     .content-section {
-        padding: 3rem 1.5rem; /* Adjusted padding */
+        padding: 3rem 1.5rem;
+        margin-left: 0.5rem; /* Adjust horizontal margin */
+        margin-right: 0.5rem;
+        max-width: calc(100% - 1rem);
+        margin-bottom: 2rem; /* Adjust spacing */
+    }
+    .site-footer-bottom {
+        margin-top: 2rem; /* Adjust spacing */
     }
 }
 
 @media (max-width: 480px) {
-    /* Removed hero-image rule */
-     .site-header, .hero-section, .content-section {
+     .site-header, .hero-section {
         padding-left: 1rem;
         padding-right: 1rem;
     }
@@ -807,12 +803,11 @@ main > .content-section:first-of-type {
         padding-right: 1rem;
     }
     .hero-heading {
-        font-size: 15vw; /* Adjusted size */
+        font-size: 15vw;
         line-height: 1.1;
     }
-    /* Re-add hero-subheading responsive rule */
     .hero-subheading {
-        font-size: 1rem; /* Adjust subheading size */
+        font-size: 1rem;
     }
      .header-nav ul {
         gap: 0.8rem 1rem;
@@ -820,13 +815,18 @@ main > .content-section:first-of-type {
      .header-nav a {
         font-size: 0.9rem;
     }
-    .hero-section { /* Further adjust hero padding for very small mobile */
-        padding: 4rem 1rem; /* Adjusted padding */
-    }
-    .site-header {
-        margin-bottom: 1.5rem; /* Adjusted responsive margin */
+    .hero-section {
+        padding: 4rem 1rem;
     }
     .content-section {
-        padding: 2.5rem 1rem; /* Adjusted padding */
+        padding: 2.5rem 1rem;
+        margin-left: 0.5rem;
+        margin-right: 0.5rem;
+        max-width: calc(100% - 1rem);
+        margin-bottom: 1.5rem; /* Adjust spacing */
+        border-radius: 4px; /* Reduce radius */
+    }
+     .site-footer-bottom {
+        margin-top: 1.5rem; /* Adjust spacing */
     }
 }
