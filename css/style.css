@@ -61,6 +61,10 @@ body {
     line-height: 1.7; /* Increased from 1.6 */
 }
 
+:root {
+    --accent-color: #005f73; /* Deep Teal/Blue */
+}
+
 /* New Header Styles */
 .site-header {
     display: flex;
@@ -115,14 +119,15 @@ body {
 }
 
 .header-nav a:hover:not(.active-nav) { /* Don't change active link style on hover */
-    border-bottom-color: #888; /* Use grey for hover underline */
-    color: #555; /* Slightly grey out non-active links on hover */
+    border-bottom-color: var(--accent-color); /* Use accent color on hover */
+    color: var(--accent-color); /* Use accent color on hover */
 }
 
 /* Add style for active page if needed later */
 .header-nav a.active-nav {
     font-weight: 700; /* Make active link bold */
-    border-bottom-color: #1a1a1a; /* Keep underline for active */
+    border-bottom-color: var(--accent-color); /* Use accent color */
+    color: var(--accent-color); /* Use accent color */
 }
 
 
@@ -138,6 +143,7 @@ body {
     /* background-attachment: fixed; /* Optional: Remove if causing issues */
     color: #f8f8f8; /* Light text color for contrast */
     position: relative; /* Needed for potential pseudo-elements if required later */
+    border-top: none; /* Ensure hero doesn't have a top border */
 }
 
 /* Removed .hero-main-content styles */
@@ -218,7 +224,7 @@ body {
 }
 
 .arrow-link:hover::after {
-     transform: translateX(3px) translateY(-3px); /* Slight movement on hover */
+     transform: translateX(4px) translateY(-4px); /* Slight movement on hover */
 }
 
 /* Removed .heading-link styles as H1 is no longer a link */
@@ -227,7 +233,7 @@ body {
 /* New Content Section Styles */
 .content-section {
     padding: 4rem 3rem; /* Vertical and horizontal padding */
-    margin-bottom: 4rem;
+    margin-bottom: 0; /* Remove bottom margin */
     max-width: 1200px; /* Max width for content */
     margin-left: auto;
     margin-right: auto;
@@ -235,6 +241,15 @@ body {
     grid-template-columns: repeat(12, 1fr); /* 12-column grid */
     gap: 2rem; /* Gap between columns */
     align-items: start; /* Align items to the top */
+    border-top: 1px solid #e0e0e0; /* Add border-top for separation */
+}
+
+main > .content-section:first-of-type {
+    border-top: none; /* No top border for the very first section */
+}
+
+main > .content-section:nth-of-type(even) {
+    background-color: #ffffff; /* Use pure white for alternating sections */
 }
 
 .section-column-text {
@@ -312,8 +327,8 @@ body {
 }
 
 .text-link:hover {
-    color: #000; /* Black on hover */
-    text-decoration-color: #000; /* Darker underline on hover */
+    color: var(--accent-color); /* Use accent color on hover */
+    text-decoration-color: var(--accent-color); /* Match underline color */
 }
 
 /* Connect Page Specific Styles */
@@ -461,7 +476,7 @@ body {
     transition: color 0.3s ease;
 }
 .cv-details a:hover {
-    color: #555;
+    color: var(--accent-color); /* Use accent color */
 }
 
 
@@ -525,7 +540,7 @@ body {
     transition: color 0.3s ease;
 }
 .pub-title-link:hover {
-    color: #555;
+    color: var(--accent-color); /* Use accent color */
 }
 .pub-authors {
     font-size: 1.05rem; /* Slightly larger */
@@ -542,7 +557,7 @@ body {
     transition: color 0.3s ease;
 }
 .pub-authors a:hover {
-    color: #555;
+    color: var(--accent-color); /* Use accent color */
 }
 .pub-source {
     font-size: 1rem;
@@ -563,14 +578,15 @@ body {
 /* New Footer Styles */
 .site-footer-bottom {
     padding: 4rem 3rem 3rem; /* Adjusted padding */
-    background-color: #e8e8e8; /* Slightly different background for footer */
-    border-top: 1px solid #d0d0d0;
+    background-color: #e0e0e0; /* Darker grey background */
+    border-top: 1px solid #c8c8c8; /* Slightly darker border */
     display: grid;
     grid-template-columns: repeat(12, 1fr);
     gap: 1rem 2rem; /* Adjusted gap */
     font-size: 0.95rem; /* Slightly larger base font */
-    color: #444;
+    color: #333; /* Darker base text color for contrast */
     line-height: 1.6; /* Added line-height */
+    margin-top: 0; /* Ensure no extra margin */
 }
 
 .footer-contact {
@@ -590,7 +606,7 @@ body {
     font-size: 1.5rem;
     font-weight: 700;
     margin-bottom: 1rem;
-    color: #1a1a1a;
+    color: #000; /* Black heading for contrast */
 }
 
 .site-footer-bottom p {
@@ -604,31 +620,34 @@ body {
 
 .footer-social a {
     text-decoration: none;
-    color: #444;
+    color: #333; /* Match base text color */
     margin-left: 1.2rem; /* Adjusted space */
     transition: color 0.3s ease;
     font-weight: 500; /* Medium weight */
 }
 
 .footer-social a:hover {
-    color: #1a1a1a;
+    color: var(--accent-color); /* Use accent color */
 }
 
 /* Inherit arrow-link styles for the contact link */
 .footer-contact .arrow-link {
     font-size: 1.1rem; /* Adjust size if needed */
-    color: #1a1a1a; /* Ensure footer link is dark */
+    color: #000; /* Black link for contrast */
     opacity: 1; /* Ensure it's not transparent like hero links */
+    transition: color 0.3s ease; /* Add transition */
 }
 .footer-contact .arrow-link:hover {
-    color: #555; /* Darker hover for footer link */
+    color: var(--accent-color); /* Use accent color on hover */
 }
 /* Make sure the arrow color also updates */
 .footer-contact .arrow-link::after {
-    color: #1a1a1a; /* Match link color */
+    color: #000; /* Match link color */
+    transition: color 0.3s ease, transform 0.3s ease; /* Add transition */
 }
 .footer-contact .arrow-link:hover::after {
-    color: #555; /* Match link hover color */
+    color: var(--accent-color); /* Match link hover color */
+    transform: translateX(4px) translateY(-4px); /* Keep transform effect consistent */
 }
 
 .footer-logos {
