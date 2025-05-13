@@ -157,66 +157,65 @@ body {
 }
 
 
-/* New Hero Section Styles - Now a contained block */
+/* Hero Section Styles - Restored Full Width Parallax */
 .hero-section {
-    padding: 7rem 3rem; /* Adjusted padding */
-    /* margin-top removed, handled by header margin-bottom */
-    margin-bottom: 3rem; /* Match content section spacing */
-    margin-left: auto;
-    margin-right: auto;
-    max-width: 1200px; /* Match content section width */
-    background-color: var(--section-bg); /* Use section background */
-    border: 1px solid var(--border-color); /* Use section border */
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.07); /* Use section shadow */
-    border-radius: 8px; /* Use section radius */
+    padding: 9rem 4rem 7rem; /* Adjusted padding */
+    margin-bottom: 3rem; /* Space before first content section */
     text-align: center;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.60), rgba(0, 0, 0, 0.60)), url('../images/texture.png'); /* Darker overlay */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed; /* Parallax effect */
+    color: #f8f8f8; /* Light text color for contrast */
     position: relative;
-    /* Removed background image, overlay, fixed attachment, light text color */
+    /* Removed contained block styles: max-width, margins, section-bg, border, shadow, radius */
+    /* Removed margin-top */
 }
 
 
 .hero-heading {
     font-family: 'Nouveau Nostalgia', 'Supreme', sans-serif;
-    font-size: 6.5vw; /* Adjusted size for light background */
+    font-size: 7.5vw; /* Slightly larger */
     font-weight: normal;
     line-height: 1.1;
-    margin-bottom: 1.5rem;
+    margin-bottom: 1.5rem; /* Increased margin */
     letter-spacing: -0.01em;
-    color: #1a1a1a; /* Dark color for heading */
-    /* Removed text-shadow */
+    color: inherit; /* Inherit light color */
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.2); /* Subtle text shadow */
 }
 
 .hero-subheading {
     font-family: 'Supreme', sans-serif;
-    font-size: 1.5rem;
-    font-weight: 400;
-    color: #555; /* Darker color for subheading */
+    font-size: 1.5rem; /* Slightly smaller */
+    font-weight: 400; /* Regular weight */
+    color: rgba(248, 248, 248, 0.85); /* Slightly less opaque light color */
     margin-bottom: 3rem;
     letter-spacing: 0.05em;
     text-align: center;
 }
 
 .hero-tagline {
-    font-size: 1.2rem;
+    font-size: 1.2rem; /* Slightly smaller */
     font-weight: 400;
-    color: #444; /* Darker color for tagline */
+    color: rgba(248, 248, 248, 0.90); /* Light color */
     line-height: 1.7;
-    margin-bottom: 3.5rem;
+    margin-bottom: 3.5rem; /* Increased space */
     max-width: 60ch;
     margin-left: auto;
     margin-right: auto;
 }
 
 .hero-tagline .text-link {
-    color: #1a1a1a; /* Use standard link color */
-    text-decoration-color: #b0b0a8; /* Match other text links */
+    color: inherit; /* Inherit light color */
+    text-decoration-color: rgba(248, 248, 248, 0.6); /* Softer light underline */
     font-weight: 500;
     transition: color 0.3s ease, text-decoration-color 0.3s ease;
 }
 
 .hero-tagline .text-link:hover {
-    color: var(--accent-color); /* Use accent color on hover */
-    text-decoration-color: var(--accent-color); /* Match underline color */
+    color: #ffffff; /* Brighter white */
+    text-decoration-color: #ffffff; /* Match underline color */
 }
 
 
@@ -226,33 +225,34 @@ body {
     gap: 1.5rem;
 }
 
-/* Updated arrow link style for light background */
+/* Arrow link style for dark background */
 .arrow-link {
     display: inline-block;
     text-decoration: none;
-    color: var(--accent-color); /* Use accent color for action links */
+    color: #f8f8f8; /* Light color */
     font-weight: 500;
     padding: 0.5rem 0;
     position: relative;
-    transition: color 0.3s ease;
-    /* Removed opacity */
+    transition: color 0.3s ease, opacity 0.3s ease;
+    opacity: 0.9; /* Slight transparency */
 }
 
 .arrow-link::after {
     content: '↗';
     display: inline-block;
     margin-left: 0.4em;
-    transition: transform 0.3s ease, color 0.3s ease; /* Added color transition */
-    color: var(--accent-color); /* Match link color */
+    transition: transform 0.3s ease, color 0.3s ease;
+    color: #f8f8f8; /* Match link color */
 }
 
 .arrow-link:hover {
-    color: #7a5130; /* Darker accent on hover */
+    color: #fff; /* White on hover */
+    opacity: 1.0;
 }
 
 .arrow-link:hover::after {
      transform: translateX(4px) translateY(-4px);
-     color: #7a5130; /* Match link hover color */
+     color: #fff; /* Match link hover color */
 }
 
 
@@ -717,8 +717,7 @@ body {
         line-height: 1.1;
     }
     .site-header, /* Apply responsive margins to header */
-    .hero-section, /* Apply responsive margins to hero */
-    .content-section {
+    .content-section { /* Hero section is full width, not included here */
         padding: 4rem 2rem; /* Base padding */
         margin-left: 1rem; /* Add horizontal margin for sections */
         margin-right: 1rem;
@@ -730,9 +729,9 @@ body {
         margin-top: 2rem; /* Header top margin */
     }
     .hero-section {
-         padding-top: 6rem; /* Adjust hero padding */
-         padding-bottom: 6rem;
-         margin-top: 0; /* Hero directly follows header */
+         padding: 6rem 2rem; /* Adjust hero padding */
+         margin-bottom: 2rem; /* Space below hero */
+         /* margin-top: 0; Hero directly follows header */
     }
     /* site-header margin-bottom removed */
     /* hero-section padding adjusted above */
@@ -794,8 +793,7 @@ body {
         font-size: 1rem;
     }
     .site-header, /* Apply responsive margins to header */
-    .hero-section, /* Apply responsive margins to hero */
-    .content-section {
+    .content-section { /* Hero section is full width, not included here */
         padding: 3rem 1.5rem; /* Base padding */
         margin-left: 0.5rem; /* Adjust horizontal margin */
         margin-right: 0.5rem;
@@ -807,9 +805,9 @@ body {
         margin-top: 1.5rem; /* Header top margin */
     }
      .hero-section {
-         padding-top: 5rem; /* Adjust hero padding */
-         padding-bottom: 5rem;
-         margin-top: 0; /* Hero directly follows header */
+         padding: 5rem 1.5rem; /* Adjust hero padding */
+         margin-bottom: 2rem; /* Space below hero */
+         /* margin-top: 0; Hero directly follows header */
     }
     .site-footer-bottom {
         margin-top: 2rem; /* Adjust spacing */
@@ -839,8 +837,7 @@ body {
         font-size: 0.9rem;
     }
     .site-header, /* Apply responsive margins to header */
-    .hero-section, /* Apply responsive margins to hero */
-    .content-section {
+    .content-section { /* Hero section is full width, not included here */
         padding: 2.5rem 1rem; /* Base padding */
         margin-left: 0.5rem;
         margin-right: 0.5rem;
@@ -853,9 +850,9 @@ body {
         margin-top: 1rem; /* Header top margin */
     }
     .hero-section {
-         padding-top: 4rem; /* Adjust hero padding */
-         padding-bottom: 4rem;
-         margin-top: 0; /* Hero directly follows header */
+         padding: 4rem 1rem; /* Adjust hero padding */
+         margin-bottom: 1.5rem; /* Space below hero */
+         /* margin-top: 0; Hero directly follows header */
     }
      .site-footer-bottom {
         margin-top: 1.5rem; /* Adjust spacing */
