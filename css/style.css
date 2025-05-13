@@ -67,13 +67,14 @@
 
 body {
     font-family: 'Supreme', sans-serif;
-    background: #f8f8f8; /* Light background */
+    /* Subtle gradient for a hint of texture */
+    background: linear-gradient(to bottom, #f8f8f8, #f4f4f2);
     color: #1a1a1a; /* Dark text color */
     line-height: 1.7; /* Increased from 1.6 */
 }
 
 :root {
-    --accent-color: #005f73; /* Deep Teal/Blue */
+    --accent-color: #8B5E3C; /* Muted Brown/Tan - Sober but warm color */
 }
 
 /* New Header Styles */
@@ -82,7 +83,7 @@ body {
     justify-content: space-between;
     align-items: center; /* Changed from flex-start */
     padding: 2rem 3rem; /* Adjust padding as needed */
-    border-bottom: 1px solid #e0e0e0; /* Subtle border */
+    border-bottom: 1px solid #cccccc; /* Softer border color */
     margin-bottom: 2rem; /* Reduced space below header */
 }
 
@@ -146,8 +147,8 @@ body {
 .hero-section {
     padding: 8rem 4rem; /* Adjusted padding */
     text-align: center; /* Center align text */
-    margin-bottom: 5rem; /* Increased space below hero */
-    background-image: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url('../images/texture.png'); /* Slightly darker overlay */
+    margin-bottom: 6rem; /* Increased space below hero */
+    background-image: linear-gradient(rgba(0, 0, 0, 0.50), rgba(0, 0, 0, 0.50)), url('../images/texture.png'); /* Slightly darker overlay for contrast */
     background-size: cover;
     background-position: center; /* Changed from top */
     background-repeat: no-repeat;
@@ -164,14 +165,15 @@ body {
     font-family: 'Nouveau Nostalgia', 'Supreme', sans-serif; /* Apply Nouveau Nostalgia font */
     font-size: 7vw; /* Responsive font size based on viewport width */
     font-weight: normal; /* Adjust weight if needed for Nouveau font */
-    line-height: 1.0; /* Tight line height */
-    margin-bottom: 0.5rem; /* Reduced margin below main heading */
-    letter-spacing: -0.02em; /* Slight tightening */
+    line-height: 1.1; /* Adjusted line height for Nouveau font */
+    margin-bottom: 1rem; /* Adjusted margin below main heading */
+    letter-spacing: -0.01em; /* Adjusted spacing */
     color: inherit; /* Inherit color from .hero-section */
 }
 
 /* Re-add style for the subheading below the main hero heading */
 .hero-subheading {
+    font-family: 'Supreme', sans-serif; /* Ensure subheading uses standard font */
     font-size: 1.6rem; /* Slightly larger */
     font-weight: 300; /* Lighter weight */
     color: rgba(248, 248, 248, 0.9); /* Increased opacity slightly */
@@ -195,11 +197,13 @@ body {
 .hero-tagline .text-link {
     color: inherit; /* Inherit the light color from the hero section */
     text-decoration-color: rgba(248, 248, 248, 0.7); /* Slightly less prominent underline */
+    font-weight: 500; /* Medium weight for emphasis */
+    transition: color 0.3s ease, text-decoration-color 0.3s ease;
 }
 
 .hero-tagline .text-link:hover {
-    color: #ccc; /* Lighter grey on hover */
-    text-decoration-color: #ccc; /* Match underline color on hover */
+    color: #ffffff; /* Brighter white on hover */
+    text-decoration-color: #ffffff; /* Match underline color on hover */
 }
 
 
@@ -244,7 +248,7 @@ body {
 
 /* New Content Section Styles */
 .content-section {
-    padding: 4rem 3rem; /* Vertical and horizontal padding */
+    padding: 5rem 3rem; /* Increased vertical padding */
     margin-bottom: 0; /* Remove bottom margin */
     max-width: 1200px; /* Max width for content */
     margin-left: auto;
@@ -253,7 +257,7 @@ body {
     grid-template-columns: repeat(12, 1fr); /* 12-column grid */
     gap: 2rem; /* Gap between columns */
     align-items: start; /* Align items to the top */
-    border-top: 1px solid #e0e0e0; /* Add border-top for separation */
+    border-top: 1px solid #cccccc; /* Softer border color */
 }
 
 main > .content-section:first-of-type {
@@ -293,12 +297,13 @@ main > .content-section:first-of-type {
     font-weight: 700; /* Bold */
     margin-bottom: 0.75rem; /* Reduced margin below h3 */
     line-height: 1.3; /* Adjusted line-height */
+    color: #333; /* Slightly darker heading color */
 }
 
 .content-section p {
     font-size: 1.1rem;
     line-height: 1.75; /* Slightly increased line-height */
-    color: #333;
+    color: #333; /* Standard paragraph color */
     margin-bottom: 1.25rem; /* Adjusted bottom margin */
     max-width: 65ch; /* Limit paragraph width */
 }
@@ -311,14 +316,14 @@ main > .content-section:first-of-type {
     max-width: 100%;
     height: auto;
     display: block; /* Remove extra space below image */
-    border-radius: 15px; /* Rounded corners */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    border-radius: 8px; /* Slightly reduced radius */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); /* Adjusted shadow */
 }
 
 .focus-item, .follow-item, .portfolio-item, .publication-item {
     margin-bottom: 3.5rem; /* Increased margin */
     padding-bottom: 3.5rem; /* Increased padding */
-    border-bottom: 1px solid #e0e0e0;
+    border-bottom: 1px solid #cccccc; /* Softer border color */
 }
 
 .focus-item:last-child, .follow-item:last-child, .portfolio-item:last-child, .publication-item:last-child {
@@ -336,7 +341,7 @@ main > .content-section:first-of-type {
     color: #1a1a1a;
     font-weight: 500;
     transition: color 0.3s ease, text-decoration-color 0.3s ease; /* Added transition */
-    text-decoration-color: #aaa; /* Lighter underline color */
+    text-decoration-color: #aaaaaa; /* Lighter underline color */
 }
 
 .text-link:hover {
@@ -348,13 +353,14 @@ main > .content-section:first-of-type {
 .connect-links {
     margin-bottom: 4rem;
     padding-bottom: 3rem;
-    border-bottom: 1px solid #e0e0e0;
+    border-bottom: 1px solid #cccccc; /* Softer border */
 }
 
 .connect-links h3 {
     font-size: 1.6rem; /* Slightly smaller than item titles */
     font-weight: 700;
     margin-bottom: 1.5rem;
+    color: #333;
 }
 
 .connect-links a {
@@ -371,6 +377,7 @@ main > .content-section:first-of-type {
     font-size: 1.6rem;
     font-weight: 700;
     margin-bottom: 2rem;
+    color: #333;
 }
 
 .contact-form .form-group {
@@ -390,19 +397,21 @@ main > .content-section:first-of-type {
 .contact-form textarea {
     width: 100%;
     padding: 0.8rem 1rem;
-    border: 1px solid #ccc;
+    border: 1px solid #cccccc; /* Softer border */
     background-color: #fff; /* White background for fields */
     font-family: inherit;
     font-size: 1rem;
     line-height: 1.5;
     transition: border-color 0.3s ease;
+    border-radius: 4px; /* Subtle rounding */
 }
 
 .contact-form input[type="text"]:focus,
 .contact-form input[type="email"]:focus,
 .contact-form textarea:focus {
     outline: none;
-    border-color: #1a1a1a; /* Darker border on focus */
+    border-color: var(--accent-color); /* Use accent color for focus */
+    box-shadow: 0 0 0 2px rgba(139, 94, 60, 0.2); /* Subtle focus ring */
 }
 
 .contact-form textarea {
@@ -411,7 +420,7 @@ main > .content-section:first-of-type {
 
 .form-submit-button {
     display: inline-block;
-    background-color: #1a1a1a;
+    background-color: var(--accent-color); /* Use accent color */
     color: #f8f8f8;
     border: none;
     padding: 0.8rem 1.8rem;
@@ -419,12 +428,14 @@ main > .content-section:first-of-type {
     font-weight: 500;
     text-decoration: none;
     cursor: pointer;
-    transition: background-color 0.3s ease, color 0.3s ease;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
+    border-radius: 4px; /* Subtle rounding */
 }
 
 .form-submit-button:hover {
-    background-color: #555;
+    background-color: #7a5130; /* Darker shade of accent */
     color: #fff;
+    transform: translateY(-2px); /* Slight lift on hover */
 }
 
 /* Portfolio Item Styling (similar to focus-item) */
@@ -434,7 +445,7 @@ main > .content-section:first-of-type {
 .cv-category {
     margin-bottom: 3.5rem;
     padding-bottom: 3rem;
-    border-bottom: 1px solid #e0e0e0;
+    border-bottom: 1px solid #cccccc; /* Softer border */
 }
 .cv-category:last-child {
     margin-bottom: 0;
@@ -458,6 +469,7 @@ main > .content-section:first-of-type {
     font-weight: 500; /* Medium weight */
     margin-bottom: 0.3rem;
     line-height: 1.4;
+    color: #222; /* Slightly darker */
 }
 .cv-institution {
     font-size: 1rem;
@@ -487,9 +499,11 @@ main > .content-section:first-of-type {
     color: #1a1a1a;
     font-weight: 500;
     transition: color 0.3s ease;
+    text-decoration-color: #bbbbbb; /* Lighter underline */
 }
 .cv-details a:hover {
     color: var(--accent-color); /* Use accent color */
+    text-decoration-color: var(--accent-color);
 }
 
 
@@ -497,7 +511,7 @@ main > .content-section:first-of-type {
 .insight-item {
     margin-bottom: 3rem;
     padding-bottom: 3rem;
-    border-bottom: 1px solid #e0e0e0;
+    border-bottom: 1px solid #cccccc; /* Softer border */
 }
 .insight-item:last-child {
     margin-bottom: 0;
@@ -523,7 +537,7 @@ main > .content-section:first-of-type {
 .publication-external-links {
     margin-bottom: 3rem;
     padding-bottom: 3rem;
-    border-bottom: 1px solid #e0e0e0;
+    border-bottom: 1px solid #cccccc; /* Softer border */
 }
 .publication-external-links p {
     margin-bottom: 0.8rem;
@@ -546,6 +560,7 @@ main > .content-section:first-of-type {
     font-weight: 700; /* Bold */
     margin-bottom: 0.5rem;
     line-height: 1.3;
+    color: #222; /* Slightly darker */
 }
 .pub-title-link { /* Style for the main title link */
     text-decoration: none;
@@ -568,9 +583,11 @@ main > .content-section:first-of-type {
     color: #1a1a1a;
     font-weight: 500; /* Medium weight for authors */
     transition: color 0.3s ease;
+    text-decoration-color: #bbbbbb; /* Lighter underline */
 }
 .pub-authors a:hover {
     color: var(--accent-color); /* Use accent color */
+    text-decoration-color: var(--accent-color);
 }
 .pub-source {
     font-size: 1rem;
@@ -591,8 +608,8 @@ main > .content-section:first-of-type {
 /* New Footer Styles */
 .site-footer-bottom {
     padding: 4rem 3rem 3rem; /* Adjusted padding */
-    background-color: #e0e0e0; /* Darker grey background */
-    border-top: 1px solid #c8c8c8; /* Slightly darker border */
+    background-color: #d8d8d8; /* Slightly darker grey background */
+    border-top: 1px solid #c0c0c0; /* Slightly darker border */
     display: grid;
     grid-template-columns: repeat(12, 1fr);
     gap: 1rem 2rem; /* Adjusted gap */
@@ -619,12 +636,13 @@ main > .content-section:first-of-type {
     font-size: 1.5rem;
     font-weight: 700;
     margin-bottom: 1rem;
-    color: #000; /* Black heading for contrast */
+    color: #111; /* Darker heading for contrast */
 }
 
 .site-footer-bottom p {
     margin-bottom: 0.5rem;
     line-height: 1.5;
+    color: #444; /* Slightly adjusted text color */
 }
 
 .footer-social {
@@ -646,16 +664,17 @@ main > .content-section:first-of-type {
 /* Inherit arrow-link styles for the contact link */
 .footer-contact .arrow-link {
     font-size: 1.1rem; /* Adjust size if needed */
-    color: #000; /* Black link for contrast */
+    color: #111; /* Darker link for contrast */
     opacity: 1; /* Ensure it's not transparent like hero links */
     transition: color 0.3s ease; /* Add transition */
+    font-weight: 500; /* Match other links */
 }
 .footer-contact .arrow-link:hover {
     color: var(--accent-color); /* Use accent color on hover */
 }
 /* Make sure the arrow color also updates */
 .footer-contact .arrow-link::after {
-    color: #000; /* Match link color */
+    color: #111; /* Match link color */
     transition: color 0.3s ease, transform 0.3s ease; /* Add transition */
 }
 .footer-contact .arrow-link:hover::after {
@@ -672,7 +691,7 @@ main > .content-section:first-of-type {
 }
 
 .footer-logos img {
-    opacity: 0.7;
+    opacity: 0.65; /* Slightly less opaque */
     height: 35px; /* Consistent base height */
     width: auto; /* Maintain aspect ratio */
     transition: opacity 0.3s ease;
@@ -692,16 +711,17 @@ main > .content-section:first-of-type {
 @media (max-width: 992px) {
     .hero-heading {
         font-size: 9vw; /* Adjust size for tablets */
+        line-height: 1.1;
     }
     .content-section {
-        padding: 3rem 2rem;
+        padding: 4rem 2rem; /* Adjusted padding */
     }
     .site-header {
         padding: 1.5rem 2rem;
         margin-bottom: 3rem; /* Adjusted responsive margin */
     }
     .hero-section {
-        padding: 3rem 2rem; /* Adjusted from 6rem 4rem for smaller screens */
+        padding: 6rem 2rem; /* Adjusted padding */
         margin-bottom: 4rem; /* Adjusted from 5rem */
     }
     .site-footer-bottom {
@@ -752,6 +772,7 @@ main > .content-section:first-of-type {
     }
     .hero-heading {
         font-size: 12vw; /* Larger size on mobile */
+        line-height: 1.1;
     }
     /* Re-add hero-subheading responsive rule */
     .hero-subheading {
@@ -768,7 +789,10 @@ main > .content-section:first-of-type {
         font-size: 1rem;
     }
     .hero-section { /* Further adjust hero padding for mobile */
-        padding: 4rem 1.5rem;
+        padding: 5rem 1.5rem; /* Adjusted padding */
+    }
+    .content-section {
+        padding: 3rem 1.5rem; /* Adjusted padding */
     }
 }
 
@@ -783,7 +807,8 @@ main > .content-section:first-of-type {
         padding-right: 1rem;
     }
     .hero-heading {
-        font-size: 15vw;
+        font-size: 15vw; /* Adjusted size */
+        line-height: 1.1;
     }
     /* Re-add hero-subheading responsive rule */
     .hero-subheading {
@@ -796,9 +821,12 @@ main > .content-section:first-of-type {
         font-size: 0.9rem;
     }
     .hero-section { /* Further adjust hero padding for very small mobile */
-        padding: 3rem 1rem;
+        padding: 4rem 1rem; /* Adjusted padding */
     }
     .site-header {
         margin-bottom: 1.5rem; /* Adjusted responsive margin */
+    }
+    .content-section {
+        padding: 2.5rem 1rem; /* Adjusted padding */
     }
 }
