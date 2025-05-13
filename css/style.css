@@ -72,7 +72,7 @@ body {
     align-items: center; /* Changed from flex-start */
     padding: 2rem 3rem; /* Adjust padding as needed */
     border-bottom: 1px solid #e0e0e0; /* Subtle border */
-    margin-bottom: 4rem; /* Space below header */
+    margin-bottom: 2rem; /* Reduced space below header */
 }
 
 .header-logo {
@@ -685,7 +685,7 @@ main > .content-section:nth-of-type(even) {
     }
     .site-header {
         padding: 1.5rem 2rem;
-        margin-bottom: 3rem;
+        margin-bottom: 3rem; /* Adjusted responsive margin */
     }
     .hero-section {
         padding: 3rem 2rem; /* Adjusted from 6rem 4rem for smaller screens */
@@ -731,6 +731,7 @@ main > .content-section:nth-of-type(even) {
         flex-direction: column; /* Stack header items */
         align-items: flex-start;
         gap: 1.5rem;
+        margin-bottom: 2rem; /* Adjusted responsive margin */
     }
     .header-nav ul {
         flex-wrap: wrap; /* Allow nav items to wrap */
@@ -783,5 +784,8 @@ main > .content-section:nth-of-type(even) {
     }
     .hero-section { /* Further adjust hero padding for very small mobile */
         padding: 3rem 1rem;
+    }
+    .site-header {
+        margin-bottom: 1.5rem; /* Adjusted responsive margin */
     }
 }
