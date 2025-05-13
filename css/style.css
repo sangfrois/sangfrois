@@ -87,19 +87,22 @@ body {
     --border-color: #d0d0c8; /* Softer border color */
 }
 
-/* New Header Styles */
+/* Header Styles - Now a contained block */
 .site-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1.5rem 3rem; /* Slightly reduced padding */
-    border-bottom: 1px solid var(--border-color);
-    margin-bottom: 2rem;
-    background-color: rgba(248, 248, 248, 0.85); /* Semi-transparent light background */
-    backdrop-filter: blur(5px); /* Frosted glass effect */
-    position: sticky; /* Make header sticky */
-    top: 0;
-    z-index: 100; /* Ensure header is above other content */
+    padding: 1.5rem 3rem;
+    margin-top: 3rem; /* Space from top */
+    margin-bottom: 3rem; /* Space below header */
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1200px; /* Match content section width */
+    background-color: var(--section-bg); /* Use section background */
+    border: 1px solid var(--border-color); /* Use section border */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.07); /* Use section shadow */
+    border-radius: 8px; /* Use section radius */
+    /* Removed sticky, top, z-index, backdrop-filter, border-bottom */
 }
 
 .header-logo {
@@ -154,64 +157,66 @@ body {
 }
 
 
-/* New Hero Section Styles */
+/* New Hero Section Styles - Now a contained block */
 .hero-section {
-    padding: 9rem 4rem 7rem; /* Adjusted padding */
+    padding: 7rem 3rem; /* Adjusted padding */
+    /* margin-top removed, handled by header margin-bottom */
+    margin-bottom: 3rem; /* Match content section spacing */
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1200px; /* Match content section width */
+    background-color: var(--section-bg); /* Use section background */
+    border: 1px solid var(--border-color); /* Use section border */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.07); /* Use section shadow */
+    border-radius: 8px; /* Use section radius */
     text-align: center;
-    margin-bottom: 0; /* Remove margin, sections will handle spacing */
-    background-image: linear-gradient(rgba(0, 0, 0, 0.60), rgba(0, 0, 0, 0.60)), url('../images/texture.png'); /* Darker overlay */
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    color: #f8f8f8;
     position: relative;
-    border-top: none;
+    /* Removed background image, overlay, fixed attachment, light text color */
 }
 
 
 .hero-heading {
     font-family: 'Nouveau Nostalgia', 'Supreme', sans-serif;
-    font-size: 7.5vw; /* Slightly larger */
+    font-size: 6.5vw; /* Adjusted size for light background */
     font-weight: normal;
     line-height: 1.1;
-    margin-bottom: 1.5rem; /* Increased margin */
+    margin-bottom: 1.5rem;
     letter-spacing: -0.01em;
-    color: inherit;
-    text-shadow: 1px 1px 3px rgba(0,0,0,0.2); /* Subtle text shadow */
+    color: #1a1a1a; /* Dark color for heading */
+    /* Removed text-shadow */
 }
 
 .hero-subheading {
     font-family: 'Supreme', sans-serif;
-    font-size: 1.5rem; /* Slightly smaller */
-    font-weight: 400; /* Regular weight */
-    color: rgba(248, 248, 248, 0.85); /* Slightly less opaque */
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: #555; /* Darker color for subheading */
     margin-bottom: 3rem;
     letter-spacing: 0.05em;
     text-align: center;
 }
 
 .hero-tagline {
-    font-size: 1.2rem; /* Slightly smaller */
+    font-size: 1.2rem;
     font-weight: 400;
-    color: rgba(248, 248, 248, 0.90);
+    color: #444; /* Darker color for tagline */
     line-height: 1.7;
-    margin-bottom: 3.5rem; /* Increased space */
+    margin-bottom: 3.5rem;
     max-width: 60ch;
     margin-left: auto;
     margin-right: auto;
 }
 
 .hero-tagline .text-link {
-    color: inherit;
-    text-decoration-color: rgba(248, 248, 248, 0.6); /* Softer underline */
+    color: #1a1a1a; /* Use standard link color */
+    text-decoration-color: #b0b0a8; /* Match other text links */
     font-weight: 500;
     transition: color 0.3s ease, text-decoration-color 0.3s ease;
 }
 
 .hero-tagline .text-link:hover {
-    color: #ffffff;
-    text-decoration-color: #ffffff;
+    color: var(--accent-color); /* Use accent color on hover */
+    text-decoration-color: var(--accent-color); /* Match underline color */
 }
 
 
@@ -221,31 +226,33 @@ body {
     gap: 1.5rem;
 }
 
+/* Updated arrow link style for light background */
 .arrow-link {
     display: inline-block;
     text-decoration: none;
-    color: #f8f8f8;
+    color: var(--accent-color); /* Use accent color for action links */
     font-weight: 500;
     padding: 0.5rem 0;
     position: relative;
-    transition: color 0.3s ease, opacity 0.3s ease;
-    opacity: 0.9;
+    transition: color 0.3s ease;
+    /* Removed opacity */
 }
 
 .arrow-link::after {
     content: '↗';
     display: inline-block;
     margin-left: 0.4em;
-    transition: transform 0.3s ease;
+    transition: transform 0.3s ease, color 0.3s ease; /* Added color transition */
+    color: var(--accent-color); /* Match link color */
 }
 
 .arrow-link:hover {
-    color: #fff;
-    opacity: 1.0;
+    color: #7a5130; /* Darker accent on hover */
 }
 
 .arrow-link:hover::after {
      transform: translateX(4px) translateY(-4px);
+     color: #7a5130; /* Match link hover color */
 }
 
 
@@ -659,22 +666,23 @@ body {
     color: var(--accent-color);
 }
 
+/* Footer arrow link uses accent color now */
 .footer-contact .arrow-link {
     font-size: 1.1rem;
-    color: #111;
+    color: var(--accent-color); /* Use accent color */
     opacity: 1;
     transition: color 0.3s ease;
     font-weight: 500;
 }
 .footer-contact .arrow-link:hover {
-    color: var(--accent-color);
+    color: #7a5130; /* Darker accent */
 }
 .footer-contact .arrow-link::after {
-    color: #111;
+    color: var(--accent-color); /* Use accent color */
     transition: color 0.3s ease, transform 0.3s ease;
 }
 .footer-contact .arrow-link:hover::after {
-    color: var(--accent-color);
+    color: #7a5130; /* Darker accent */
     transform: translateX(4px) translateY(-4px);
 }
 
@@ -708,19 +716,26 @@ body {
         font-size: 9vw;
         line-height: 1.1;
     }
+    .site-header, /* Apply responsive margins to header */
+    .hero-section, /* Apply responsive margins to hero */
     .content-section {
-        padding: 4rem 2rem;
+        padding: 4rem 2rem; /* Base padding */
         margin-left: 1rem; /* Add horizontal margin for sections */
         margin-right: 1rem;
         max-width: calc(100% - 2rem); /* Adjust max-width */
+        margin-bottom: 2rem; /* Consistent bottom margin */
     }
     .site-header {
-        padding: 1.5rem 2rem;
-        margin-bottom: 0; /* Remove margin as sections handle spacing */
+        padding: 1.5rem 2rem; /* Header specific padding */
+        margin-top: 2rem; /* Header top margin */
     }
     .hero-section {
-        padding: 6rem 2rem;
+         padding-top: 6rem; /* Adjust hero padding */
+         padding-bottom: 6rem;
+         margin-top: 0; /* Hero directly follows header */
     }
+    /* site-header margin-bottom removed */
+    /* hero-section padding adjusted above */
     .site-footer-bottom {
         padding: 3rem 2rem 1.5rem;
     }
@@ -778,15 +793,23 @@ body {
     .content-section p {
         font-size: 1rem;
     }
-    .hero-section {
-        padding: 5rem 1.5rem;
-    }
+    .site-header, /* Apply responsive margins to header */
+    .hero-section, /* Apply responsive margins to hero */
     .content-section {
-        padding: 3rem 1.5rem;
+        padding: 3rem 1.5rem; /* Base padding */
         margin-left: 0.5rem; /* Adjust horizontal margin */
         margin-right: 0.5rem;
         max-width: calc(100% - 1rem);
         margin-bottom: 2rem; /* Adjust spacing */
+    }
+    .site-header {
+        padding: 1.5rem 1.5rem; /* Header specific padding */
+        margin-top: 1.5rem; /* Header top margin */
+    }
+     .hero-section {
+         padding-top: 5rem; /* Adjust hero padding */
+         padding-bottom: 5rem;
+         margin-top: 0; /* Hero directly follows header */
     }
     .site-footer-bottom {
         margin-top: 2rem; /* Adjust spacing */
@@ -794,7 +817,7 @@ body {
 }
 
 @media (max-width: 480px) {
-     .site-header, .hero-section {
+     .site-header { /* Keep header padding */
         padding-left: 1rem;
         padding-right: 1rem;
     }
@@ -815,16 +838,24 @@ body {
      .header-nav a {
         font-size: 0.9rem;
     }
-    .hero-section {
-        padding: 4rem 1rem;
-    }
+    .site-header, /* Apply responsive margins to header */
+    .hero-section, /* Apply responsive margins to hero */
     .content-section {
-        padding: 2.5rem 1rem;
+        padding: 2.5rem 1rem; /* Base padding */
         margin-left: 0.5rem;
         margin-right: 0.5rem;
         max-width: calc(100% - 1rem);
         margin-bottom: 1.5rem; /* Adjust spacing */
         border-radius: 4px; /* Reduce radius */
+    }
+    .site-header {
+        padding: 1rem 1rem; /* Header specific padding */
+        margin-top: 1rem; /* Header top margin */
+    }
+    .hero-section {
+         padding-top: 4rem; /* Adjust hero padding */
+         padding-bottom: 4rem;
+         margin-top: 0; /* Hero directly follows header */
     }
      .site-footer-bottom {
         margin-top: 1.5rem; /* Adjust spacing */
