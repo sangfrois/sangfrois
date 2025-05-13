@@ -260,9 +260,10 @@ main > .content-section:first-of-type {
     border-top: none; /* No top border for the very first section */
 }
 
-main > .content-section:nth-of-type(even) {
-    background-color: #ffffff; /* Use pure white for alternating sections */
-}
+/* Removed alternating background color rule */
+/* main > .content-section:nth-of-type(even) {
+    background-color: #ffffff;
+} */
 
 .section-column-text {
     grid-column: span 6; /* Text takes up 6 columns */
