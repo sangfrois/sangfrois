@@ -140,7 +140,7 @@ body {
     background-size: cover;
     background-position: center; /* Changed from top */
     background-repeat: no-repeat;
-    /* background-attachment: fixed; /* Optional: Remove if causing issues */
+    background-attachment: fixed; /* Re-enabled for parallax effect */
     color: #f8f8f8; /* Light text color for contrast */
     position: relative; /* Needed for potential pseudo-elements if required later */
     border-top: none; /* Ensure hero doesn't have a top border */
