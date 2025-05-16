@@ -68,23 +68,23 @@
 body {
     font-family: 'Supreme', sans-serif;
     /* Subtle diagonal line texture */
-    background-color: #aaaaaa; /* Base color - Made darker */
+    background-color: #1e1e1e; /* Base color - Very Dark Gray */
     background-image: repeating-linear-gradient(
         45deg,
-        rgba(0, 0, 0, 0.03),
-        rgba(0, 0, 0, 0.03) 1px,
+        rgba(255, 255, 255, 0.015), /* Lighter lines for dark bg */
+        rgba(255, 255, 255, 0.015) 1px,
         transparent 1px,
         transparent 10px /* Adjust spacing */
     );
-    color: #2a2a2a; /* Slightly softer dark text color */
+    color: #cccccc; /* Main light text color */
     line-height: 1.7;
 }
 
 :root {
     --accent-color: #8B5E3C; /* Muted Brown/Tan */
-    --secondary-color: #2F4F4F; /* Dark Slate Gray */
-    --section-bg: #cccccc; /* Light Beige/Off-white for sections - Made darker gray */
-    --border-color: #999999; /* Softer border color - Made darker gray */
+    --secondary-color: #dcdcdc; /* Light color for headings/secondary text (was Dark Slate Gray) */
+    --section-bg: #2b2b2b; /* Dark Gray for sections */
+    --border-color: #444444; /* Medium Dark Gray for borders */
 }
 
 /* Header Styles - Now a contained block */
@@ -114,7 +114,7 @@ body {
     display: block;
     font-size: 1.2rem;
     font-weight: 700;
-    color: #1a1a1a; /* Keep title dark */
+    color: #efefef; /* Bright light color for main title */
     text-decoration: none;
     margin-bottom: 0.2rem;
 }
@@ -122,7 +122,7 @@ body {
 .header-title-roles {
     display: block;
     font-size: 0.9rem;
-    color: #555; /* Slightly darker role color */
+    color: #a0a0a0; /* Lighter gray for roles */
     font-weight: 400;
 }
 
@@ -137,7 +137,7 @@ body {
 
 .header-nav a {
     text-decoration: none;
-    color: #333; /* Darker nav link color */
+    color: #cccccc; /* Light nav link color */
     font-size: 1rem;
     font-weight: 500;
     padding-bottom: 0.3rem;
@@ -307,13 +307,13 @@ body {
     font-weight: 700;
     margin-bottom: 0.75rem;
     line-height: 1.3;
-    color: #333;
+    color: #e0e0e0; /* Light color for subheadings */
 }
 
 .content-section p {
     font-size: 1.05rem; /* Slightly smaller paragraph text */
     line-height: 1.75;
-    color: #444; /* Slightly lighter paragraph text */
+    color: #b0b0b0; /* Lighter gray for paragraph text */
     margin-bottom: 1.25rem;
     max-width: 65ch;
 }
@@ -348,10 +348,10 @@ body {
     text-decoration: underline;
     text-decoration-thickness: 1.5px;
     text-underline-offset: 4px;
-    color: #1a1a1a;
+    color: #dcdcdc; /* Light color for text links */
     font-weight: 500;
     transition: color 0.3s ease, text-decoration-color 0.3s ease;
-    text-decoration-color: #b0b0a8; /* Adjusted underline color */
+    text-decoration-color: #777777; /* Subtly darker underline for light text */
 }
 
 .text-link:hover {
@@ -370,7 +370,7 @@ body {
     font-size: 1.6rem;
     font-weight: 700;
     margin-bottom: 1.5rem;
-    color: #333;
+    color: #e0e0e0; /* Light color */
 }
 
 .connect-links a {
@@ -387,7 +387,7 @@ body {
     font-size: 1.6rem;
     font-weight: 700;
     margin-bottom: 2rem;
-    color: #333;
+    color: #e0e0e0; /* Light color */
 }
 
 .contact-form .form-group {
@@ -399,7 +399,7 @@ body {
     font-size: 0.9rem;
     font-weight: 500;
     margin-bottom: 0.5rem;
-    color: #555;
+    color: #a0a0a0; /* Lighter gray for labels */
 }
 
 .contact-form input[type="text"],
@@ -463,7 +463,7 @@ body {
     font-size: 1.6rem;
     font-weight: 700;
     margin-bottom: 2rem;
-    color: #333;
+    color: #e0e0e0; /* Light color */
 }
 .cv-item {
     margin-bottom: 2rem;
@@ -476,24 +476,24 @@ body {
     font-weight: 500;
     margin-bottom: 0.3rem;
     line-height: 1.4;
-    color: #222;
+    color: #dcdcdc; /* Light color */
 }
 .cv-institution {
     font-size: 1rem;
-    color: #666;
+    color: #999999; /* Lighter gray */
     margin-bottom: 0.5rem;
 }
 .cv-item p:not(.cv-institution) {
     font-size: 1rem;
     line-height: 1.6;
-    color: #444;
+    color: #b0b0b0; /* Lighter gray for paragraph text */
     margin-bottom: 0.8rem;
 }
 .cv-details {
     list-style: disc;
     margin-left: 1.5rem;
     font-size: 1rem;
-    color: #444;
+    color: #b0b0b0; /* Lighter gray for list items */
     line-height: 1.6;
 }
 .cv-details li {
@@ -503,10 +503,10 @@ body {
     text-decoration: underline;
     text-decoration-thickness: 1px;
     text-underline-offset: 3px;
-    color: #1a1a1a;
+    color: #dcdcdc; /* Light color for links */
     font-weight: 500;
     transition: color 0.3s ease;
-    text-decoration-color: #b0b0a8;
+    text-decoration-color: #777777; /* Subtly darker underline */
 }
 .cv-details a:hover {
     color: var(--accent-color);
@@ -527,13 +527,13 @@ body {
 }
 .insight-date {
     font-size: 0.9rem;
-    color: #555; /* Adjusted for better contrast on new section background */
+    color: #a0a0a0; /* Lighter gray */
     margin-bottom: 1rem;
 }
 .insight-text p {
     font-size: 1.1rem;
     line-height: 1.7;
-    color: #333;
+    color: #cccccc; /* Main light text color */
     margin-bottom: 1.5rem;
 }
 .insight-text p:last-child {
@@ -548,7 +548,7 @@ body {
 }
 .publication-external-links p {
     margin-bottom: 0.8rem;
-    color: #555;
+    color: #a0a0a0; /* Lighter gray */
 }
 .publication-external-links a {
     margin-right: 1.5rem;
@@ -560,16 +560,16 @@ body {
     margin-top: 0.5rem;
 }
 
-.publication-item h3 {
+.publication-item h3 { /* This is the title of the publication, often a link */
     font-size: 1.8rem;
     font-weight: 700;
     margin-bottom: 0.5rem;
     line-height: 1.3;
-    color: #222;
+    color: #e0e0e0; /* Default color if not a link, consistent with other h3s */
 }
-.pub-title-link {
+.pub-title-link { /* This styles the <a> tag within the h3 */
     text-decoration: none;
-    color: #1a1a1a;
+    color: #efefef; /* Brighter light color for publication titles */
     transition: color 0.3s ease;
 }
 .pub-title-link:hover {
@@ -578,17 +578,17 @@ body {
 .pub-authors {
     font-size: 1.05rem;
     line-height: 1.6;
-    color: #444;
+    color: #b0b0b0; /* Lighter gray */
     margin-bottom: 0.5rem;
 }
 .pub-authors a {
     text-decoration: underline;
     text-decoration-thickness: 1px;
     text-underline-offset: 3px;
-    color: #1a1a1a;
+    color: #dcdcdc; /* Light color for links */
     font-weight: 500;
     transition: color 0.3s ease;
-    text-decoration-color: #b0b0a8;
+    text-decoration-color: #777777; /* Subtly darker underline */
 }
 .pub-authors a:hover {
     color: var(--accent-color);
@@ -596,7 +596,7 @@ body {
 }
 .pub-source {
     font-size: 1rem;
-    color: #555;
+    color: #a0a0a0; /* Lighter gray */
     margin-bottom: 1rem;
 }
 .pub-source i {
@@ -613,13 +613,13 @@ body {
 /* New Footer Styles */
 .site-footer-bottom {
     padding: 4rem 3rem 3rem;
-    background-color: #bbbbbb; /* Footer background - Made darker gray */
-    border-top: 1px solid var(--border-color); /* Slightly darker border, uses new --border-color */
+    background-color: #222222; /* Dark footer background */
+    border-top: 1px solid var(--border-color); /* Uses new --border-color */
     display: grid;
     grid-template-columns: repeat(12, 1fr);
     gap: 1rem 2rem;
     font-size: 0.95rem;
-    color: #333;
+    color: #cccccc; /* Light text color for footer */
     line-height: 1.6;
     margin-top: 3rem; /* Add margin above footer */
 }
@@ -641,13 +641,13 @@ body {
     font-size: 1.5rem;
     font-weight: 700;
     margin-bottom: 1rem;
-    color: #111;
+    color: #efefef; /* Bright light color for footer headings */
 }
 
 .site-footer-bottom p {
     margin-bottom: 0.5rem;
     line-height: 1.5;
-    color: #444;
+    color: #b0b0b0; /* Lighter gray for footer paragraph text */
 }
 
 .footer-social {
@@ -656,7 +656,7 @@ body {
 
 .footer-social a {
     text-decoration: none;
-    color: #333;
+    color: #cccccc; /* Light color for social links */
     margin-left: 1.2rem;
     transition: color 0.3s ease;
     font-weight: 500;
@@ -695,7 +695,7 @@ body {
 }
 
 .footer-logos img {
-    opacity: 0.65;
+    opacity: 0.8; /* Increased opacity for better visibility on dark background */
     height: 35px;
     width: auto;
     transition: opacity 0.3s ease;
