@@ -68,7 +68,7 @@
 body {
     font-family: 'Supreme', sans-serif;
     /* Subtle diagonal line texture */
-    background-color: #e8e8e4; /* Base color */
+    background-color: #aaaaaa; /* Base color - Made darker */
     background-image: repeating-linear-gradient(
         45deg,
         rgba(0, 0, 0, 0.03),
@@ -83,8 +83,8 @@ body {
 :root {
     --accent-color: #8B5E3C; /* Muted Brown/Tan */
     --secondary-color: #2F4F4F; /* Dark Slate Gray */
-    --section-bg: #f7f7f0; /* Light Beige/Off-white for sections */
-    --border-color: #d0d0c8; /* Softer border color */
+    --section-bg: #cccccc; /* Light Beige/Off-white for sections - Made darker gray */
+    --border-color: #999999; /* Softer border color - Made darker gray */
 }
 
 /* Header Styles - Now a contained block */
@@ -527,7 +527,7 @@ body {
 }
 .insight-date {
     font-size: 0.9rem;
-    color: #888;
+    color: #555; /* Adjusted for better contrast on new section background */
     margin-bottom: 1rem;
 }
 .insight-text p {
@@ -613,8 +613,8 @@ body {
 /* New Footer Styles */
 .site-footer-bottom {
     padding: 4rem 3rem 3rem;
-    background-color: #d8d8d0; /* Footer background matching body texture base */
-    border-top: 1px solid #c8c8c0; /* Slightly darker border */
+    background-color: #bbbbbb; /* Footer background - Made darker gray */
+    border-top: 1px solid var(--border-color); /* Slightly darker border, uses new --border-color */
     display: grid;
     grid-template-columns: repeat(12, 1fr);
     gap: 1rem 2rem;
