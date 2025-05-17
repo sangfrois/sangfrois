@@ -69,13 +69,6 @@ body {
     font-family: 'Supreme', sans-serif;
     /* Subtle diagonal line texture */
     background-color: #1e1e1e; /* Base color - Very Dark Gray */
-    background-image: repeating-linear-gradient(
-        45deg,
-        rgba(255, 255, 255, 0.015), /* Lighter lines for dark bg */
-        rgba(255, 255, 255, 0.015) 1px,
-        transparent 1px,
-        transparent 10px /* Adjust spacing */
-    );
     color: #cccccc; /* Main light text color */
     line-height: 1.7;
 }
