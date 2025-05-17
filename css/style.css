@@ -68,9 +68,15 @@
 body {
     font-family: 'Supreme', sans-serif;
     background-color: #1e1e1e; /* Base color - Very Dark Gray */
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.03'/%3E%3C/svg%3E");
+    /* background-image removed, p5.js canvas will be the background */
     color: #cccccc; /* Main light text color */
     line-height: 1.7;
+}
+
+/* Styling for the p5.js canvas is handled inline in the script for position and z-index */
+/* We can add a general rule if needed, but the script sets it up */
+canvas {
+    display: block; /* p5.js default, good to ensure */
 }
 
 :root {
