@@ -341,6 +341,70 @@ canvas {
     border-bottom: none;
 }
 
+/* Portfolio Item Specifics */
+.portfolio-item {
+    /* Ensure position relative if you plan to use absolute positioning for anything inside, though not needed for this setup */
+    position: relative;
+}
+
+.portfolio-item-title {
+    cursor: pointer; /* Indicates the title is clickable */
+    transition: color 0.3s ease;
+}
+
+.portfolio-item-title:hover {
+    color: var(--accent-color); /* Or any hover color you prefer */
+}
+
+.portfolio-item-details {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease-out, margin-top 0.5s ease-out; /* Smooth transition for expand/collapse */
+    margin-top: 0;
+}
+
+.portfolio-item.expanded .portfolio-item-details {
+    max-height: 1000px; /* A large enough value to accommodate content */
+    margin-top: 1.5rem; /* Add some space above the details when expanded */
+    transition: max-height 0.5s ease-in, margin-top 0.5s ease-in;
+}
+
+.portfolio-image {
+    max-width: 100%; /* Make image responsive */
+    height: auto;
+    border-radius: 6px; /* Optional: rounded corners for the image */
+    margin-bottom: 1rem; /* Space below the image if there's text after it */
+    display: block; /* Prevents extra space below if it's inline */
+}
+
+.portfolio-toggle-link {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 0.5rem 1rem;
+    background-color: transparent;
+    color: var(--secondary-color); /* Or var(--accent-color) if you prefer */
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+.portfolio-toggle-link:hover {
+    background-color: var(--accent-color);
+    color: #fff;
+    border-color: var(--accent-color);
+}
+
+
+/* Style for simple text links within sections */
+.text-link {
+    display: inline-block;
+    border-bottom: none;
+}
+
 /* Style for simple text links within sections */
 .text-link {
     display: inline-block;

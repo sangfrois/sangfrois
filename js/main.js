@@ -100,6 +100,36 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 
+    // --- Portfolio Item Expansion ---
+    const portfolioItems = document.querySelectorAll('.portfolio-item');
+
+    portfolioItems.forEach(item => {
+        const title = item.querySelector('.portfolio-item-title');
+        const toggleLink = item.querySelector('.portfolio-toggle-link');
+        const details = item.querySelector('.portfolio-item-details');
+
+        // Function to toggle expansion
+        const toggleExpansion = () => {
+            const isExpanded = item.classList.contains('expanded');
+            item.classList.toggle('expanded');
+            if (toggleLink) { // Check if toggleLink exists
+                toggleLink.textContent = isExpanded ? 'View More ▾' : 'View Less ▴';
+            }
+        };
+
+        // Event listener for the title
+        if (title && details) { // Only add listener if title and details exist
+            title.addEventListener('click', toggleExpansion);
+        }
+
+        // Event listener for the "View More/Less" link
+        if (toggleLink && details) { // Only add listener if link and details exist
+            toggleLink.addEventListener('click', (e) => {
+                e.preventDefault(); // Prevent default link behavior
+                toggleExpansion();
+            });
+        }
+    });
 
     // --- Smooth Scroll Behavior (Optional, if using anchor links) ---
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
