@@ -382,6 +382,30 @@ canvas {
     box-shadow: 0 5px 15px rgba(0,0,0,0.1); /* Add a subtle shadow for depth */
 }
 
+.image-credit {
+    font-size: 0.85rem;
+    font-style: italic;
+    color: #a0a0a0; /* Lighter gray, less prominent */
+    text-align: center;
+    margin-top: 0.5rem; /* Space below the image */
+    margin-bottom: 1.5rem; /* Space before the story link */
+}
+
+.story-link-container {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #b0b0b0; /* Match general paragraph text in sections */
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    text-align: center; /* Center the introductory text */
+}
+
+.story-link-container .text-link {
+    display: inline-block; /* Ensure it behaves well with text-align center */
+    margin-top: 0.5rem; /* Add some space above the link if text wraps */
+    font-weight: 600; /* Make it slightly bolder */
+}
+
 .portfolio-toggle-link {
     display: inline-block;
     margin-top: 1rem;
