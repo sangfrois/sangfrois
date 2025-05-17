@@ -370,11 +370,16 @@ canvas {
 }
 
 .portfolio-image {
-    max-width: 100%; /* Make image responsive */
+    max-width: 600px; /* Limit max width for a more compact look */
+    width: 100%; /* Allow it to be smaller if container is smaller, e.g. on mobile */
     height: auto;
-    border-radius: 6px; /* Optional: rounded corners for the image */
-    margin-bottom: 1rem; /* Space below the image if there's text after it */
-    display: block; /* Prevents extra space below if it's inline */
+    display: block; /* Needed for margin auto to work for centering */
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 8px; /* Slightly more pronounced radius */
+    margin-top: 1rem; /* Add some space above the image */
+    margin-bottom: 1.5rem; /* Adjust space below the image */
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1); /* Add a subtle shadow for depth */
 }
 
 .portfolio-toggle-link {
