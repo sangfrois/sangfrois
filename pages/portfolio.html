@@ -30,9 +30,29 @@
 
     <main>
         <section class="content-section portfolio-section">
+            <div class="portfolio-filters">
+                <div class="filter-group">
+                    <h4>Filter by Technology:</h4>
+                    <div id="tech-filters-container">
+                        <!-- Technology filter buttons will be injected here by JavaScript -->
+                        <button class="filter-btn active" data-filter-group="technology" data-filter="all">All</button>
+                    </div>
+                </div>
+                <div class="filter-group">
+                    <h4>Filter by Project Type:</h4>
+                    <div id="type-filters-container">
+                        <!-- Project type filter buttons will be injected here by JavaScript -->
+                        <button class="filter-btn active" data-filter-group="projectType" data-filter="all">All</button>
+                    </div>
+                </div>
+            </div>
             <div class="section-column-full">
                 <h2>Works</h2>
-                <div class="portfolio-item"> <!-- Replaces project-card -->
+                <div id="portfolio-list">
+                    <!-- Projects will be dynamically inserted here by JavaScript -->
+                </div>
+                <!--
+                <div class="portfolio-item"> 
                     <h3 class="portfolio-item-title">Mechanical Meanderings</h3>
                     <p>
                         An interactive installation exploring embodiment of metaphors and self-perception using AI analysis of speech and real-time visual blending. Exhibited at MUTEK Forum, Montréal 2024, MTL Connect 2024 and UKAI Shipwreck 2025.
@@ -50,6 +70,8 @@
                     </div>
                     <a href="#" class="portfolio-toggle-link">View More ▾</a>
                 </div>
+                -->
+                <!--
                 <div class="portfolio-item">
                     <h3>Meteomythosophy</h3>
                     <p>
@@ -57,6 +79,8 @@
                     </p>
                     <a href="https://drive.google.com/file/d/190fRz0Px14MtXogU2zKSo4u3O-imztwe/view?usp=drive_link" target="_blank" rel="noopener noreferrer" class="text-link">View Video ↗</a>
                 </div>
+                -->
+                <!--
                 <div class="portfolio-item">
                     <h3>Goofi-pipe</h3>
                     <p>
@@ -64,16 +88,21 @@
                     </p>
                     <a href="https://github.com/PhilippThoelke/goofi-pipe" target="_blank" rel="noopener noreferrer" class="text-link">View Project ↗</a>
                 </div>
+                -->
+                <!--
                 <div class="portfolio-item">
                     <h3>NeuroKit</h3>
                     <p>A comprehensive Python toolbox for neurophysiological signal processing, offering a wide range of functionalities for analyzing physiological data.</p>
                     <a href="https://neuropsychology.github.io/NeuroKit/" target="_blank" rel="noopener noreferrer" class="text-link">View Project ↗</a>
                 </div>
+                -->
+                <!--
                 <div class="portfolio-item">
                     <h3>Biotuner</h3>
                     <p>A toolbox for Harmonic analysis of biosignals, creating chord progressions and melodies from EEG, ECG, Plants, and Audio in real-time.</p>
                     <a href="https://antoinebellemare.github.io/biotuner/" target="_blank" rel="noopener noreferrer" class="text-link">View Project ↗</a>
                 </div>
+                -->
             </div>
         </section>
     </main>
@@ -103,6 +132,7 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.4/p5.min.js"></script>
     <script src="../js/particle-background.js"></script>
-    <script src="../js/main.js"></script> <!-- Add this line -->
+    <script src="../js/main.js"></script>
+    <script src="../js/portfolio-filters.js"></script>
 </body>
 </html>

@@ -21,35 +21,60 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     // --- Portfolio Item Expansion ---
-    const portfolioItems = document.querySelectorAll('.portfolio-item');
+    window.attachPortfolioToggleListeners = function() {
+        const portfolioItems = document.querySelectorAll('.portfolio-item');
 
-    portfolioItems.forEach(item => {
-        const title = item.querySelector('.portfolio-item-title');
-        const toggleLink = item.querySelector('.portfolio-toggle-link');
-        const details = item.querySelector('.portfolio-item-details');
+        portfolioItems.forEach(item => {
+            // Check if listeners are already attached to prevent duplicates if called multiple times on same static items
+            // A simple way is to add a marker, or ensure the logic is idempotent.
+            // For this specific case, re-querying and attaching is generally fine for limited items,
+            // but for many items, a marker like item.dataset.listenersAttached = 'true' would be better.
+            // Given dynamic rendering, this is less of an issue for portfolio.html as items are new.
+            // Let's proceed without a marker for now to keep it simpler, assuming items are new on re-render.
 
-        // Function to toggle expansion
-        const toggleExpansion = () => {
-            const isExpanded = item.classList.contains('expanded');
-            item.classList.toggle('expanded');
-            if (toggleLink) { // Check if toggleLink exists
-                toggleLink.textContent = isExpanded ? 'View More ▾' : 'View Less ▴';
+            const title = item.querySelector('.portfolio-item-title');
+            const toggleLink = item.querySelector('.portfolio-toggle-link');
+            const details = item.querySelector('.portfolio-item-details');
+
+            // Function to toggle expansion
+            const toggleExpansion = () => {
+                // Ensure details div exists before trying to access its style
+                if (details) {
+                    const isExpanded = item.classList.contains('expanded');
+                    item.classList.toggle('expanded');
+                    if (details) { // Check again, though it should be defined if we got here
+                        details.style.display = isExpanded ? 'none' : 'block'; // Explicitly manage display
+                    }
+                }
+                if (toggleLink) {
+                    toggleLink.textContent = item.classList.contains('expanded') ? 'View Less ▴' : 'View More ▾';
+                }
+            };
+            
+            // Ensure title and details exist before adding click listener to title
+            if (title && details) {
+                // Prevent adding multiple listeners to the same title if function is called again
+                // This is a simple guard, more robust solutions might involve removing old listeners.
+                if (!title.dataset.listenerAttached) {
+                    title.addEventListener('click', toggleExpansion);
+                    title.dataset.listenerAttached = 'true';
+                }
             }
-        };
 
-        // Event listener for the title
-        if (title && details) { // Only add listener if title and details exist
-            title.addEventListener('click', toggleExpansion);
-        }
-
-        // Event listener for the "View More/Less" link
-        if (toggleLink && details) { // Only add listener if link and details exist
-            toggleLink.addEventListener('click', (e) => {
-                e.preventDefault(); // Prevent default link behavior
-                toggleExpansion();
-            });
-        }
-    });
+            // Ensure toggleLink and details exist before adding click listener to toggleLink
+            if (toggleLink && details) {
+                 if (!toggleLink.dataset.listenerAttached) {
+                    toggleLink.addEventListener('click', (e) => {
+                        e.preventDefault();
+                        toggleExpansion();
+                    });
+                    toggleLink.dataset.listenerAttached = 'true';
+                }
+            }
+        });
+    };
+    
+    window.attachPortfolioToggleListeners(); // Initial call for any static items (if any)
 
     // --- Smooth Scroll Behavior (Optional, if using anchor links) ---
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
