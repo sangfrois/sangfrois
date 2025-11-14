@@ -2,7 +2,7 @@
 
  **Transdisciplinary Trailblazer // PhD student @ ConcordiaUni Tio'tia:keh**
 
-I see myself as a [cyber](https://en.wikipedia.org/wiki/Cybernetics)-[maverick](https://www.merriam-webster.com/dictionary/maverick) blurring boundaries and bending the rules of disciplines.
+I blur boundaries and bend the rules of disciplines.
 
 ***Sorry for the mess but... this is a revolution***
 
