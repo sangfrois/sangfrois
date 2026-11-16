@@ -1,0 +1,3 @@
+import fs from 'node:fs';import path from 'node:path';
+for(const filename of ['index.html','cv.html']){const html=fs.readFileSync('public/'+filename,'utf8');for(const m of html.matchAll(/(?:href|src)="([^"#]+)"/g)){const url=m[1];if(/^(https?:|mailto:|data:)/.test(url))continue;const p=path.join('public',url.split('#')[0]);if(!fs.existsSync(p))throw Error(`Missing asset: ${p}`)}}
+for(const f of ['public/Francois-Lespinasse-CV.pdf','public/fonts/GoudyBookletter1911.ttf','public/fonts/FragmentMono-Regular.ttf'])if(fs.statSync(f).size<1000)throw Error('Invalid file: '+f);console.log('Local links and required assets verified.');

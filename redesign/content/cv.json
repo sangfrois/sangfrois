@@ -1,0 +1,674 @@
+{
+  "name": "François Lespinasse",
+  "date": "16 November 2026",
+  "intro": "Researcher and artist working across sensory ethnography, neuroscience and generative AI. I make interactive installations, develop open-source tools, and build spaces for collective experimentation with embodied, analog and computational instruments.",
+  "sections": [
+    {
+      "title": "Education",
+      "entries": [
+        {
+          "title": "PhD, Individualized Social Sciences | Computational Sensory Ethnography",
+          "body": "Concordia University | 2023-present. SSHRC Doctoral Scholarship recipient (2024-2028). Expected graduation: January 2029. Main affiliation: Machine Agencies, Milieux Institute. Member of Réseau Hexagram.",
+          "links": [
+            {
+              "label": "Machine Agencies",
+              "url": "https://machineagencies.milieux.ca/"
+            },
+            {
+              "label": "Réseau Hexagram",
+              "url": "https://hexagram.ca/fr/membres-etudiants/"
+            },
+            {
+              "label": "Milieux Institute",
+              "url": "https://milieux.concordia.ca/"
+            }
+          ]
+        },
+        {
+          "title": "Programme court de 2e cycle en Présence Attentive | Profil relation d’aide",
+          "body": "Université du Québec à Montréal | 2021 – 2024",
+          "links": []
+        },
+        {
+          "title": "M.Sc. Psychologie | recherche en neurosciences computationnelles",
+          "body": "Université de Montréal | 2019 – 2023 Project website: cneuromod.ca",
+          "links": [
+            {
+              "label": "cneuromod.ca",
+              "url": "https://www.cneuromod.ca/"
+            }
+          ]
+        },
+        {
+          "title": "B. Sc. Neuroscience cognitive | Profil: Neuropsychologie",
+          "body": "Université de Montréal | 2016 – 2019",
+          "links": []
+        }
+      ]
+    },
+    {
+      "title": "Publications",
+      "entries": [
+        {
+          "title": "Divergent creativity in humans and large language models",
+          "body": "2026 · Bellemare-Pepin, A.*, Lespinasse, F.*, Thölke, P., Harel, Y., Mathewson, K., Olson, J. A., Bengio, Y., & Jerbi, K. Scientific Reports, 16, 1279. *Equal contribution / co-first authors.",
+          "links": [
+            {
+              "label": "Documentation",
+              "url": "https://doi.org/10.1038/s41598-025-25157-3"
+            }
+          ]
+        },
+        {
+          "title": "The harmonicity of brain dynamics: A neurophenomenological approach to creative biofeedback",
+          "body": "2026 · Bellemare-Pepin, A., Lespinasse, F., & Tsabary, E. Organised Sound, 1–15. doi:10.1017/S1355771826101162.",
+          "links": [
+            {
+              "label": "Publication",
+              "url": "https://doi.org/10.1017/S1355771826101162"
+            }
+          ]
+        },
+        {
+          "title": "Bio-Adaptive Mythologies: Envisioning a Cyber-Ecology of Narrative Design",
+          "body": "2026 · Bellemare-Pepin, A., Estarellas, M., Thölke, P., Lespinasse, F., Gagnon Lortie, G., & Harel, Y. Metacritic Journal for Comparative Studies and Theory, 12(1), 36–61.",
+          "links": [
+            {
+              "label": "Publication",
+              "url": "https://www.ceeol.com/search/article-detail?id=1444546"
+            }
+          ]
+        },
+        {
+          "title": "Bio-Mechanical Poet: An Immersive Audiovisual Playground for Brain Signals and Generative AI",
+          "body": "2024 · Thölke, P., Bellemare-Pepin, A., Harel, Y., Lespinasse, F., & Jerbi, K. Proceedings of the 15th International Conference on Computational Creativity.",
+          "links": [
+            {
+              "label": "Documentation",
+              "url": "https://computationalcreativity.net/iccc24/"
+            }
+          ]
+        },
+        {
+          "title": "NeuroKit2: A Python toolbox for neurophysiological signal processing",
+          "body": "2021 · Makowski, D., Pham, T., Lau, Z. J., Brammer, J. C., Lespinasse, F., Pham, H., Schölzel, C., & Chen, S. H. A. Behavior Research Methods.",
+          "links": [
+            {
+              "label": "Documentation",
+              "url": "https://pubmed.ncbi.nlm.nih.gov/33528817/"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Software",
+      "entries": [
+        {
+          "title": "Goofi-pipe",
+          "body": "Collaborator · Real-time, multimodal data processing and creative biofeedback. With Philipp Thölke, Antoine Bellemare-Pépin and Yann Harel.",
+          "links": [
+            {
+              "label": "Documentation",
+              "url": "https://github.com/PhilippThoelke/goofi-pipe"
+            }
+          ]
+        },
+        {
+          "title": "Physiopy / phys2bids",
+          "body": "Contributor · BIDS formatting of physiological recordings. Software release v2.8.2 (2023), with Daniel Alcalá and collaborators.",
+          "links": [
+            {
+              "label": "Documentation",
+              "url": "https://doi.org/10.5281/zenodo.7733963"
+            }
+          ]
+        },
+        {
+          "title": "Physprep",
+          "body": "Physiological data preparation workflow adapted for MR settings. With Marie-Eve Picard, Mary Miedema, Jen-I Chen, Basile Pinsard, Julie Boyle, Pierre Bellec and Pierre Rainville.",
+          "links": [
+            {
+              "label": "Source code",
+              "url": "https://github.com/courtois-neuromod/physprep"
+            },
+            {
+              "label": "Software DOI",
+              "url": "https://doi.org/10.5281/zenodo.15664327"
+            }
+          ]
+        },
+        {
+          "title": "Biotuner",
+          "body": "Open-source toolbox bringing music theory and signal processing to the harmonic analysis of physiological and natural time series. Feedback and assistance in developing and refining the toolbox.",
+          "links": [
+            {
+              "label": "Biotuner",
+              "url": "https://biotuner.kairos-hive.org/"
+            },
+            {
+              "label": "Toolbox & credits",
+              "url": "https://doi.org/10.1186/s40708-025-00270-1"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Experience",
+      "entries": [
+        {
+          "title": "Co-founding Partner — kairos~hive",
+          "body": "2024-present · Transdisciplinary collective working across art, science and technology through bio-adaptive experiences, design, research-creation and education. S.E.N.C. registered in Québec.",
+          "links": [
+            {
+              "label": "kairos~hive",
+              "url": "https://kairos-hive.org/"
+            }
+          ]
+        },
+        {
+          "title": "Research Assistant & Liaison with Applied AI Institute",
+          "body": "Concordia University – Centre for Sensory Studies | 2023-2025",
+          "links": []
+        },
+        {
+          "title": "Applied AI Institute, Working Group Lead – GenAI Research-Creation Methodologies",
+          "body": "Concordia University | 2024-2025",
+          "links": []
+        },
+        {
+          "title": "Psychosocial intervention through meditation — primary and secondary schools and seniors’ residences",
+          "body": "Méditation en Zone Éducative (MenZoÉ) | 2022-2023",
+          "links": []
+        },
+        {
+          "title": "Teaching Assistant",
+          "body": "Université de Montréal – Department of Psychology | 2020-2021",
+          "links": []
+        },
+        {
+          "title": "Research Assistant — Neuroimaging data collection, processing and analysis",
+          "body": "Centre de recherche de l'Institut Universitaire Gériatrique de Montréal – Courtois-NeuroMod project | 2019-2023",
+          "links": []
+        },
+        {
+          "title": "Events Representative",
+          "body": "Mouvement Desjardins | 2017-2019",
+          "links": []
+        }
+      ]
+    },
+    {
+      "title": "Fellowships & awards",
+      "entries": [
+        {
+          "title": "",
+          "body": "Bourse Doctorale du Conseil de Recherche en Science Humaines (CRSH/SSHRC) | 2024-2028 | 40 000 $ / an",
+          "links": []
+        },
+        {
+          "title": "",
+          "body": "Bourse Fondation R. Howard Webster, Université Concordia | 2023-2024 | 10 000$",
+          "links": []
+        },
+        {
+          "title": "",
+          "body": "Bourse Fondation Louise Dandurand, Université Concordia | 2023-2024 | 15 000 $",
+          "links": []
+        },
+        {
+          "title": "",
+          "body": "Bourse de maîtrise Fondation Courtois, Université de Montréal | 2019-2023 | 20 000 $ / an",
+          "links": []
+        },
+        {
+          "title": "",
+          "body": "Bourses de stage, Fondation Courtois, Université de Montréal | 2018-2019 | 8 500 $",
+          "links": []
+        },
+        {
+          "title": "",
+          "body": "Bourse de persévérance du service aux étudiants, Université de Montréal | Janvier 2017 | 1 500 $",
+          "links": []
+        }
+      ]
+    },
+    {
+      "title": "Residencies",
+      "entries": [
+        {
+          "title": "Milieux Institute x Applied AI Institute GenAI Studio",
+          "body": "May-August 2024 Development and prototyping of Mechanical Meanderings , a multi-AI interactive installation for real-time image generation from live action cameras and spoken queries.",
+          "links": [
+            {
+              "label": "Documentation",
+              "url": "https://kairos-hive.org/projects/mechanical-meanderings"
+            }
+          ]
+        },
+        {
+          "title": "Santa Barbara center for Arts Science and Technology (SBCAST)",
+          "body": "September 2023 Industrial Collaboration with Shiftwave under mutual NDA [ site web SBCAST , site web Shiftwave ]",
+          "links": [
+            {
+              "label": "site web SBCAST",
+              "url": "https://sbcast.org/"
+            },
+            {
+              "label": "site web Shiftwave",
+              "url": "https://shiftwave.co/"
+            }
+          ]
+        },
+        {
+          "title": "Reflective Iterative Scenario Enactment - Lento: an opera on slowing down",
+          "body": "April 2023 [ website , youtube ]",
+          "links": [
+            {
+              "label": "website",
+              "url": "https://riseopera.ca/media.html"
+            },
+            {
+              "label": "youtube",
+              "url": "https://www.youtube.com/watch?v=2hr_aiUSMDE"
+            }
+          ]
+        },
+        {
+          "title": "Reflective Iterative Scenario Enactment – Heart Tethers",
+          "body": "February 2023 [ website , youtube ]",
+          "links": [
+            {
+              "label": "website",
+              "url": "https://riseopera.ca/media.html"
+            },
+            {
+              "label": "youtube",
+              "url": "https://www.youtube.com/watch?v=Qn9XbtiKXZ4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Research-creation",
+      "entries": [
+        {
+          "title": "The Monolith — Creative direction",
+          "body": "2026 · Machine Agencies / Milieux Institute / Réseau Hexagram. Speculative social game on AI and culture, presented at MUTEK Forum, Édifice Wilder, Montréal, 27 August 2026. Production: Aurélie Petit and Bart Simon; technical direction: Kamyar Karimi.",
+          "links": [
+            {
+              "label": "Documentation",
+              "url": "https://milieux.concordia.ca/machine-agencies-unveils-monolith-at-mutek-forum-2026/"
+            },
+            {
+              "label": "Film",
+              "url": "https://player.vimeo.com/video/1225046004?h=64023c132a"
+            }
+          ]
+        },
+        {
+          "title": "Viraf 2.0 — Performance & design",
+          "body": "2026 · Hive Theatre, Montréal Fringe. Performed with Syd Hamidreza Hosseini, directed by Hosseini; sound design by Kamyar Noak Karimi. A theatre and new-media work on memory, loss and technological mediation.",
+          "links": [
+            {
+              "label": "Project & credits",
+              "url": "https://hivetheatre.com/performances/viraf2point0"
+            },
+            {
+              "label": "Video documentation",
+              "url": "https://www.instagram.com/reel/DYcuzlLR_UT/"
+            }
+          ]
+        },
+        {
+          "title": "Uncanny Nova Phenomenon — Machine Consciousness Conference (MC0001)",
+          "body": "May 2026 · Invited to the exhibition organized by the California Institute of Machine Consciousness (CIMC).",
+          "links": [
+            {
+              "label": "Exhibition announcement",
+              "url": "https://x.com/CIMCAI/status/2059801878909821390"
+            }
+          ]
+        },
+        {
+          "title": "Machinic Encounters — Technical direction",
+          "body": "2025 · GenAI Studio / Machine Agencies, Milieux Institute. Technical support with Kamyar Karimi for the residency and exhibition curated by Ceyda Yolgörmez. MUTEK Forum, 21 August 2025.",
+          "links": [
+            {
+              "label": "Documentation",
+              "url": "https://milieux.concordia.ca/machinic-encounters-at-mutek-forum/"
+            }
+          ]
+        },
+        {
+          "title": "Inescapable Contradictions in Creative Encounters Across Ethnography, Art, and Technology",
+          "body": "2025 · Artwork-performance, Uncommon Senses V, Concordia University, 7 May. With Paolo Gruni and Thomas Seibel.",
+          "links": [
+            {
+              "label": "Documentation",
+              "url": "https://www.sensorystudies.org/wordpress/wp-content/uploads/2025/04/Book-of-Abstracts-penultimate-11-04-2025.pdf"
+            }
+          ]
+        },
+        {
+          "title": "UKAI Shipwreck @ Milieux Institute",
+          "body": "Lespinasse, F. (2025). Mechanical meanderings . Interactive experience exploring the powerful act of making home amidst the ruins of potential futures, exploring how we navigate ecological, cultural, and technological devastation. [ Event ]",
+          "links": [
+            {
+              "label": "Event",
+              "url": "https://milieux.concordia.ca/event/shipwreck-ukai-projects-opening-exhibition-at-milieux/"
+            }
+          ]
+        },
+        {
+          "title": "Milieux Institute @ MTL Connect",
+          "body": "Lespinasse, F. (2024). Mechanical meanderings. Showcase to conference curators of MTL Connect. [ photo ]",
+          "links": [
+            {
+              "label": "photo",
+              "url": "https://photos.app.goo.gl/jsF3NhVcqTbX7dZM6"
+            }
+          ]
+        },
+        {
+          "title": "Cyberdelic Safari — Abundant Intelligences × Hexagram",
+          "body": "Bellemare-Pépin, A., Esterella, M., Harel, Y., Lespinasse, F. , Thölke, P. (2024). Cyberdelic safari : an AI-driven visual neurofeedback experiment, exploring more-than-human relationality [ video edit ]",
+          "links": [
+            {
+              "label": "video edit",
+              "url": "https://drive.google.com/file/d/1Qq3YvHgGYX1jGOI_eaKu8gsHPSSQzMJC/view?usp=sharing"
+            }
+          ]
+        },
+        {
+          "title": "Wilding AI LAB @ MUTEK MTL",
+          "body": "Lespinasse, F. (2024). Mechanical Meanderings . Open forum showcase and collective experimentations. [ post ]",
+          "links": [
+            {
+              "label": "post",
+              "url": "https://www.instagram.com/p/C-X7lI0RZpv/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="
+            }
+          ]
+        },
+        {
+          "title": "Meteomythosophy @ Embodied Interventions LePARC - Milieux Institute",
+          "body": "Gruni, P., Lespinasse, F. , Seibel, T. (2024). Meteomythosophy: Being and Knowing in Queer Cyber-Ecosystems [ video edit ]",
+          "links": [
+            {
+              "label": "video edit",
+              "url": "https://drive.google.com/file/d/190fRz0Px14MtXogU2zKSo4u3O-imztwe/view?usp=drive_link"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Events & workshops",
+      "entries": [
+        {
+          "title": "Télécom SudParis — Technology, territory and creativity",
+          "body": "April 2025 · Invited lecture and workshop during IMAGIN week, exploring connections between technology, territory and creativity.",
+          "links": [
+            {
+              "label": "Programme & report",
+              "url": "https://www.innovation-pedagogique.fr/article22906.html"
+            }
+          ]
+        },
+        {
+          "title": "Chatting with Ollama — Build your own AI Bot",
+          "body": "2025 · Workshop facilitator, Machine Agencies / GenAI Studio, Concordia University. Retrieval-augmented generation with local language models. Listed by Concordia on 14 March 2025.",
+          "links": [
+            {
+              "label": "Documentation",
+              "url": "https://www.concordia.ca/cuevents/main/2025/03/14/chatting-with-ollama-build-your-own-ai-bot.html"
+            }
+          ]
+        },
+        {
+          "title": "Laboratoire expérimental @ Take-Care-Baby MTL",
+          "body": "Michel, H., Lespinasse, F. (2024-2025). Monthly multi-disciplinary open mic for Montreal francophone community [ instagram page , video edit ] ( Mechanical meanderings , responding to performers’ interventions)",
+          "links": [
+            {
+              "label": "instagram page",
+              "url": "https://www.instagram.com/laboratoireexperimental/profilecard/?igsh=OWthZzVmdmhydDg0"
+            },
+            {
+              "label": "video edit",
+              "url": "https://photos.app.goo.gl/cvy6h6fzKKg9ox7EA"
+            }
+          ]
+        },
+        {
+          "title": "Sensorium Colaboratory @ Centre for Sensory Studies, Milieux & Applied AI Institutes",
+          "body": "Lespinasse, F., Bellemare-Pépin, A., Gruni, P., Seibel, T., Thölke, P., Howes, D. (Oct. 2024). Sensorium Colaboratory: a series of Arts-Science workshops exploring biofeedback and GenAI. Supported by the Applied AI and Milieux institute, in collaboration with the Centre for Sensory Studies. [ instagram stories ]",
+          "links": [
+            {
+              "label": "instagram stories",
+              "url": "https://www.instagram.com/s/aGlnaGxpZ2h0OjE3OTQ1NzA1MDAwODcyODUx?story_media_id=3471549383945166653_13245061&igsh=Mmo5azRiazg2MWpj"
+            }
+          ]
+        },
+        {
+          "title": "ARTS : Le Média – Événement rave multiculturel",
+          "body": "Thölke, P., Bellemare-Pépin, A., Harel, Y., & Lespinasse, F. (Oct. 2023). Neuro-AI Immersive installation : Mechanical Poet. KAIROS. [ personal archive ]",
+          "links": [
+            {
+              "label": "personal archive",
+              "url": "https://photos.app.goo.gl/9TfUvG9mNE3EAzzq6"
+            }
+          ]
+        },
+        {
+          "title": "Neuro-AI Creative Hack Night",
+          "body": "Workshop & Party for OHBM Conference (Jul. 2023). Co-organized by UNIQUE & Courtois-NeuroMod [ tweets ]",
+          "links": [
+            {
+              "label": "tweets",
+              "url": "https://x.com/ai_unique/status/1683603139256111107?s=20"
+            }
+          ]
+        },
+        {
+          "title": "La Forêt Dorée, milieu communautaire pour les arts",
+          "body": "Bellemare-Pépin, A., Lespinasse, F., Tremblay, T.J. (2023) Poésie pour les plantes: musique procédurale depuis l’activité électrophysiologique des plantes et poésie collective [ la forêt dorée ]",
+          "links": [
+            {
+              "label": "la forêt dorée",
+              "url": "https://journalmetro.com/local/ville-marie/3053722/vivre-dans-un-open-mic/"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Public engagement",
+      "entries": [
+        {
+          "title": "Townships Bookfest — Beyond the AI moment: a public dialogue for readers and writers",
+          "body": "November 2026 · Invited guest, interviewed by Linda Morra, host of Getting Lit with Linda.",
+          "links": [
+            {
+              "label": "Event announcement",
+              "url": "https://www.instagram.com/p/DfnRRBSFKI4/"
+            },
+            {
+              "label": "CBC coverage of the festival",
+              "url": "https://www.cbc.ca/listen/live-radio/1-87-quebec-am/clip/16249017-book-fest-returns-eastern-townships"
+            }
+          ]
+        },
+        {
+          "title": "Podcast pour Écothèque avec le collectif Éco-Motion",
+          "body": "Lespinasse, F., Béliveau I. (2023) Discussion sur les éco-émotions [ podcast , site web ]",
+          "links": [
+            {
+              "label": "podcast",
+              "url": "https://open.spotify.com/episode/3TSsK1xZGkXqcF2IPM2aYM?si=Ts8-IoTJTWulLEbnhDQwVQ"
+            },
+            {
+              "label": "site web",
+              "url": "https://www.letempsdemiliter.com/"
+            }
+          ]
+        },
+        {
+          "title": "Conférence pour l’organisme de vulgarisation scientifique BistroBrain",
+          "body": "Lespinasse, F. (2022) Ton cerveau manque de cœur! [ rediffusion ]",
+          "links": [
+            {
+              "label": "rediffusion",
+              "url": "https://youtu.be/t0MaEmar5gI"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Performance & literature",
+      "entries": [
+        {
+          "title": "Sherbrooke prend la parole, festival de poésie de Sherbrooke (maintenant, En Verve et Poésie)",
+          "body": "Lespinasse, F. (2022) Granularité [ liste des emplacements de poèmes ]",
+          "links": [
+            {
+              "label": "liste des emplacements de poèmes",
+              "url": "https://docs.google.com/spreadsheets/d/1ejNurJfpNaQCFAdxR-6qj2qbmqQLuRLD/edit?usp=sharing&ouid=108087792446961875752&rtpof=true&sd=true"
+            }
+          ]
+        },
+        {
+          "title": "Fragments 1ère édition, Revue des étudiants·es en psychologie de l’UQAM - Oeuvres visuelles et textuelles",
+          "body": "Lespinasse, F. (2023) Particules. Éditrice-en-chef : Nessa Ghassemi-Bakhtiari [ site web , visual essay ]",
+          "links": [
+            {
+              "label": "site web",
+              "url": "https://revuefragments.ca/"
+            },
+            {
+              "label": "visual essay",
+              "url": "https://docs.google.com/document/d/1udVQx1aaU01HbUP7Cv7vmuAmHqmpthuzplr-r18wGcE/edit?usp=sharing"
+            }
+          ]
+        },
+        {
+          "title": "Production théâtre amateur, L’Atelier cours de théâtre",
+          "body": "Acteur. Mise en scène et réalisation par Lili-Rachel Morin. (2022) Au milieu des milliards [ site web ]",
+          "links": [
+            {
+              "label": "site web",
+              "url": "https://coursdetheatre.ca/"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Community work",
+      "entries": [
+        {
+          "title": "Intervenant, formateur, et animateur de méditation",
+          "body": "MenZoÉ - Organisme à but non-lucratif | 2019-2023 [ Site Web ]",
+          "links": [
+            {
+              "label": "Site Web",
+              "url": "https://www.menzoe.org/"
+            }
+          ]
+        },
+        {
+          "title": "Vulgarisateur/conseiller scientifique et intervenant",
+          "body": "Collectif Éco-Motion - Organisme à but non-lucratif | 2019-2023 [ Site Web ]",
+          "links": [
+            {
+              "label": "Site Web",
+              "url": "http://collectif-ecomotion.org/"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Talks, posters & non-refereed contributions",
+      "entries": [
+        {
+          "title": "CuttingEEG Montréal - panéliste et présentateur - collaborateur",
+          "body": "Thölke, P., Bellemare-Pépin, A., Harel, Y., Lespinasse, F. (2023) Goofi-pipe: an accessible and modality-agnostic biofeedback framework for exploratory experiments [ site web ]",
+          "links": [
+            {
+              "label": "site web",
+              "url": "https://cuttinggardens2023.org/gardens/montreal/"
+            }
+          ]
+        },
+        {
+          "title": "Society for Psychophysiological Research — Poster, second author",
+          "body": "Picard, M.-E., Lespinasse, F., Miedema, M., Chen, J.-I., Pinsard, B., Boyle, J., Bellec, P., & Rainville, P. (2023). Physprep: physiological data preparation workflow adapted for MR settings. Conference abstract, Psychophysiology, 60, S121–S122.",
+          "links": []
+        },
+        {
+          "title": "Organization for human brain mapping - poster - 1er auteur",
+          "body": "Lespinasse, F., Bellec, P., Boyle, J., Pinsard, B., Rainville, P. (2023) CNeuroMod-Friends: does intersubject correlation of heart-rate yield localized brain synchronization while watching TV?",
+          "links": []
+        },
+        {
+          "title": "Société européenne de neurosciences cognitives et affectives (ESCAN) - présentation orale",
+          "body": "Lespinasse, F., Bellec, P., Boyle, J., Pinsard, B., Rainville, P. (2022) Sync-in with friends [ programme p.43, slides ]",
+          "links": [
+            {
+              "label": "programme",
+              "url": "https://www.escan2022.eu/wp-content/uploads/2022/07/program_18072022_complete_lastlast.pdf"
+            },
+            {
+              "label": "slides",
+              "url": "https://docs.google.com/presentation/u/0/d/1GOJuciMT-vTKWzTBYuNv-sQevOjfan-9GPSLK0Q9cZw/edit"
+            }
+          ]
+        },
+        {
+          "title": "Conférence pour étudiants en anthropologie Université de Montréal - Conférencier invité",
+          "body": "Lespinasse, F. (2021) Neuroscience et Anthropologie - ANT-3450 [ présentation ]",
+          "links": [
+            {
+              "label": "présentation",
+              "url": "https://docs.google.com/presentation/d/16J5Xo9iYNdptA8YiHRw75ViXlQpMKwWwsCcaJnSbah8/edit?usp=sharing"
+            }
+          ]
+        },
+        {
+          "title": "Organization for human brain mapping - poster - 1er auteur",
+          "body": "Lespinasse F. , et al. (2021) physiopy / phys2bids: BIDS formatting of physiological signals [ poster # 2482 ]",
+          "links": [
+            {
+              "label": "poster # 2482",
+              "url": "https://www.humanbrainmapping.org/files/ohbm2021_abstracts_v2.pdf"
+            }
+          ]
+        },
+        {
+          "title": "Organization for human brain mapping - poster - 1er auteur",
+          "body": "Lespinasse, F. , Bellec, P., Boyle, J., Pinsard, B., Rainville, P. (2021) Neuromod Movie10: Standardized processing of large-scale cardiorespiratory signals in MR environment [ poster # 2550 ]",
+          "links": [
+            {
+              "label": "poster # 2550",
+              "url": "https://www.humanbrainmapping.org/files/ohbm2021_abstracts_v2.pdf"
+            }
+          ]
+        },
+        {
+          "title": "Organization for human brain mapping - poster - collaborateur",
+          "body": "Boyle, J. Pinsard, B. et al. (2021) The Courtois project on neuronal modeling 2021 data release [ poster # 2224 ]",
+          "links": [
+            {
+              "label": "poster # 2224",
+              "url": "https://www.humanbrainmapping.org/files/ohbm2021_abstracts_v2.pdf"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "contact_url": "https://lespinasse-field-notes.sangfrois.chatgpt.site/#contact"
+}
